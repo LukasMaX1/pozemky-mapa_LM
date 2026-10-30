@@ -206,6 +206,8 @@ map.on("baselayerchange",e=>{const k=Object.keys(baseKey).find(k=>baseKey[k]===e
 const legend=L.control({position:"bottomright"});legend.onAdd=()=>{const d=L.DomUtil.create("div","pill leg");d.innerHTML='Skóre: <b style="color:#2f7d4a">75+</b> · <b style="color:#2f6b45">55+</b> · <b style="color:#a16207">40+</b> · <b style="color:#b4232c">&lt;40</b><br>Cena voči limitu: <b style="color:#2f7d4a">≤75 %</b> · <b style="color:#2f6b45">≤95 %</b> · <b style="color:#a16207">±5 %</b> · <b style="color:#b4232c">nad</b>';return d};legend.addTo(map);
 
 let D=null,ranked=[],markers={};
+const IMGBASE="https://raw.githubusercontent.com/LukasMaX1/pozemky-mapa_LM/img-cache/img/";let IMG={};
+fetch("https://raw.githubusercontent.com/LukasMaX1/pozemky-mapa_LM/img-cache/manifest.json?t="+Date.now()).then(r=>r.ok?r.json():{}).then(m=>{IMG=m||{}}).catch(()=>{});
 const LS={get(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let seenL=LS.get("pk-seen",{}),rateL=LS.get("pk-rate",{}),showMine=false;
 Object.keys(rateL).forEach(k=>{if(typeof rateL[k]==="string")rateL[k]={v:rateL[k],t:1}});
@@ -225,7 +227,7 @@ function popupHtml(e,rank){
   const ut=["elektrina","voda","kanalizacia","plyn","optika"].filter(k=>u[k]===true).join(", ")||"neuvedené";
   const la=p.lat.toFixed(5),ln=p.lng.toFixed(5);
   const pc=p.priceHistory&&p.priceHistory.length>1?p.priceHistory[p.priceHistory.length-2].price:null;
-  const img=p.imageUrl&&safeUrl(p.imageUrl);const r=rate[p.id]||"";const first=(p.links&&p.links[0]&&safeUrl(p.links[0].url))||img;
+  const img=IMG[p.id]?IMGBASE+encodeURIComponent(p.id)+".jpg?v="+IMG[p.id].sha:(p.imageUrl&&safeUrl(p.imageUrl));const r=rate[p.id]||"";const first=(p.links&&p.links[0]&&safeUrl(p.links[0].url))||img;
   return '<div class="pp"><h3>'+(rank?'#'+rank+' ':'')+esc(p.village)+'</h3><div class="t">'+esc(p.title||"")+'</div>'+
    '<div class="media">'+(img?'<a href="'+esc(first)+'" target="_blank" rel="noopener"><img src="'+esc(img)+'" alt="Foto z inzerátu" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></a>':'')+sketch(p)+'</div>'+
    '<div class="rate">'+RATES.map(x=>'<button type="button" class="r-'+x[0]+(r===x[0]?' on':'')+'" data-rate="'+x[0]+'" data-id="'+esc(p.id)+'">'+x[1]+'</button>').join("")+'</div>'+
