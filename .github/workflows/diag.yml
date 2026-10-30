@@ -1,0 +1,11 @@
+name: Diagnostika katastra
+on:
+  push:
+    branches: [main]
+    paths: [tools/diag_wfs.py]
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install --quiet requests && python3 tools/diag_wfs.py
