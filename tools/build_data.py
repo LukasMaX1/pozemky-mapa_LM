@@ -5,7 +5,7 @@ import json, sys, os, datetime
 plots_dir, settings_path = sys.argv[1], sys.argv[2]
 notes_dir = sys.argv[3] if len(sys.argv) > 3 else None
 KEEP_SETTINGS = ["directions","villages","areaMin","areaMax","priceMax","terrain","maxRatio","showReserved","origin"]
-KEEP_PLOT = ["village","title","direction","minutes","minutesOrigin","originKey","lat","lng","precise","parcel","cadastralArea","area","price","width","length","terrain","utilities","mainRoad","category","reserved","summary","links","photoUrl","imageUrl","firstSeen","lastSeen","priceHistory","gone","goneReason","source","check","utilDetail","shape","access","street","permit","project","zoning","landType","upOk","dimsNote","agent","published","multi","flood","invalid","kind","kindNote","firstPublished","locSource"]
+KEEP_PLOT = ["village","title","direction","minutes","minutesOrigin","originKey","lat","lng","precise","parcel","cadastralArea","area","price","width","length","terrain","utilities","mainRoad","category","reserved","summary","links","photoUrl","imageUrl","firstSeen","lastSeen","priceHistory","gone","goneReason","source","check","utilDetail","shape","access","street","permit","project","zoning","landType","upOk","dimsNote","agent","published","multi","flood","invalid","kind","kindNote","firstPublished","locSource","description","listingTitle"]
 s = json.load(open(settings_path))
 s = s.get("data", s)
 plots = []
@@ -18,7 +18,7 @@ for f in sorted(os.listdir(plots_dir)):
     if notes_dir and os.path.exists(os.path.join(notes_dir, f)):
         n = json.load(open(os.path.join(notes_dir, f)))
         n = n.get("data", n) if isinstance(n.get("data"), dict) else n
-        for k in ("rating", "ratingAt", "seenAt"):
+        for k in ("rating", "ratingAt", "seenAt", "parcelFound"):
             if n.get(k): p[k] = n[k]
     plots.append(p)
 out = {"generated": datetime.datetime.now(datetime.timezone.utc).isoformat(), "settings": {k: s[k] for k in KEEP_SETTINGS if k in s}, "plots": plots}

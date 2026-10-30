@@ -62,6 +62,36 @@ body{font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:v
 .toast{position:fixed;z-index:1200;left:50%;transform:translateX(-50%);bottom:calc(90px + env(safe-area-inset-bottom));background:#1d2420;color:#fff;border-radius:10px;padding:8px 14px;font-size:13px}
 .toast[hidden]{display:none}
 .leaflet-control-layers{font-size:13px}
+/* detail pozemku */
+.det{position:fixed;inset:0;z-index:1300;background:rgba(10,14,12,.55);display:flex;justify-content:center;align-items:flex-start;overflow-y:auto;overscroll-behavior:contain;padding:max(8px,env(safe-area-inset-top)) 0 max(8px,env(safe-area-inset-bottom))}
+.det[hidden]{display:none}
+.detin{background:var(--surface);width:min(820px,100%);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.dbar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:8px;justify-content:space-between;padding:8px 10px 8px 14px;background:var(--surface);border-bottom:1px solid var(--line)}
+.dbar b{font-size:16px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dgal{position:relative;background:#111}.dgal .gm{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;height:min(52vh,420px)}
+.dgal .gm::-webkit-scrollbar{display:none}.dgal .gm img{flex:0 0 100%;width:100%;height:100%;object-fit:contain;scroll-snap-align:center}
+.dgal .nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.5);color:#fff;font-size:22px}
+.dgal .nav.l{left:8px}.dgal .nav.r{right:8px}.dgal .cnt{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font:600 12px ui-monospace,monospace;border-radius:6px;padding:2px 8px}
+.thumbs{display:flex;gap:4px;overflow-x:auto;padding:6px;background:#111}.thumbs img{flex:0 0 auto;width:64px;height:48px;object-fit:cover;border-radius:5px;opacity:.55;border:2px solid transparent}.thumbs img.on{opacity:1;border-color:#fff}
+.dbody{padding:12px 14px 18px;display:flex;flex-direction:column;gap:8px}
+.dhead{display:flex;gap:10px;align-items:flex-start}.dhead .t{flex:1;min-width:0}.dhead h3{margin:0;font-size:19px}.dhead .sub{font-size:12.5px;color:var(--muted)}
+.dpr{text-align:right}.dpr .p{font-size:18px;font-weight:700}.dpr .op{font-size:12px;color:var(--muted)}.dpr .op span{color:var(--ok);font-weight:700}
+.sc{flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:700 13px ui-monospace,monospace;border:2.5px solid currentColor}
+.fl{font:13px ui-monospace,monospace}.chips{display:flex;flex-wrap:wrap;gap:4px}.chip{font-size:11.5px;border-radius:999px;padding:0 8px;background:var(--bg);color:var(--muted)}
+.chip.y{color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,transparent)}.chip.m{color:var(--warn);background:color-mix(in srgb,var(--warn) 14%,transparent)}.chip.n{text-decoration:line-through}
+.tags .tag{display:inline-block;font-size:10.5px;font-weight:700;text-transform:uppercase;border:1px solid currentColor;border-radius:4px;padding:0 5px;margin:0 4px 4px 0}
+.ki{font-size:12.5px;background:var(--bg);border-radius:8px;padding:6px 9px;line-height:1.5}
+.dtext{font-size:14px;line-height:1.55;white-space:pre-line}
+.dsec{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:4px}
+.drate{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.drate button{font:600 13px system-ui,sans-serif;border:1px solid var(--line);border-radius:9px;padding:7px 4px;background:var(--surface);color:var(--fg)}
+.drate button.on{color:#fff}.drate .r-yes.on{background:#2f7d4a}.drate .r-maybe.on{background:#a16207}.drate .r-no.on{background:#b4232c}.drate .r-hide.on{background:#5f6b63}
+.dl{display:flex;flex-wrap:wrap;gap:6px}.dl a,.dl button{font:600 12.5px system-ui,sans-serif;color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:5px 9px;background:var(--surface)}
+.pf{border:1px dashed var(--line);border-radius:10px;padding:8px 10px;font-size:13px;display:flex;flex-direction:column;gap:6px}
+.pf .cand{display:flex;gap:6px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:5px}
+.pf .cand b{font-family:ui-monospace,monospace}.pf .ok{color:var(--ok);font-weight:700}.pf .warn{color:var(--warn)}
+.lbx{position:fixed;inset:0;z-index:1400;background:#000;display:flex;flex-direction:column}.lbx[hidden]{display:none}
+.lbx .gm{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.lbx .gm img{flex:0 0 100%;width:100%;height:100%;object-fit:contain;scroll-snap-align:center}
+.lbx button{position:absolute;top:calc(10px + env(safe-area-inset-top));right:10px;z-index:2;background:rgba(255,255,255,.15);color:#fff;border:0;border-radius:8px;padding:8px 12px;font-weight:700}
 </style>
 </head>
 <body>
@@ -79,6 +109,8 @@ body{font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:v
 </div>
 <div class="sheet" id="sheet" hidden><div class="sh"><b id="shTitle">Pozemky</b><button class="btn" id="shClose" type="button">Zavrieť</button></div><div class="list" id="list"></div></div>
 <div class="toast" id="toast" hidden></div>
+<div class="det" id="det" hidden role="dialog" aria-modal="true" aria-label="Detail pozemku"><div class="detin" id="detIn"></div></div>
+<div class="lbx" id="lbx" hidden><button type="button" id="lbxX">Zavrieť ✕</button><div class="gm" id="lbxGm"></div></div>
 <div class="pill zhint" id="zhint" hidden>Priblíž pre hranice parciel</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
@@ -220,7 +252,8 @@ function mergeState(){rate={};seen={};
   (D?D.plots:[]).forEach(p=>{const l=rateL[p.id],dt=ts(p.ratingAt);
     if(l&&l.t>dt){if(l.v)rate[p.id]=l.v}else if(p.rating)rate[p.id]=p.rating;
     if(seenL[p.id]||p.seenAt)seen[p.id]=Math.max(ts(seenL[p.id]),ts(p.seenAt))||1})}
-function pending(){return (D?D.plots:[]).filter(p=>{const l=rateL[p.id];return (l&&l.t>ts(p.ratingAt))||(seenL[p.id]&&!p.seenAt)})}
+function pcPending(p){const o=LS.get("pk-parcel",{})[p.id];if(!o)return null;const srv=p.parcelFound||null;if(o.del)return srv?o:null;if(srv&&srv.label===o.label&&Math.abs((srv.lat||0)-o.lat)<1e-5)return null;return o}
+function pending(){return (D?D.plots:[]).filter(p=>{const l=rateL[p.id];return (l&&l.t>ts(p.ratingAt))||(seenL[p.id]&&!p.seenAt)||pcPending(p)})}
 const RATES=[["yes","👍 Páči"],["maybe","🤔 Možno"],["no","👎 Nepáči"],["hide","🚫 Skryť"]];
 const BADGE={yes:"👍",maybe:"🤔",no:"👎"};
 function sketch(p){let w=p.width,l=p.length,dim=!!(w&&l);if(!dim&&p.area){w=Math.sqrt(p.area);l=w}if(!(w&&l))return "";const s=70/Math.max(w,l),pw=w*s,pl=l*s,x=(96-pw)/2,y=(96-pl)/2;
@@ -250,7 +283,7 @@ function popupHtml(e,rank){
 }
 function updSync(){const n=pending().length,b=document.getElementById("btnSync");b.hidden=!n;b.textContent="↗ Preniesť do aplikácie ("+n+")"}
 document.getElementById("btnSync").onclick=()=>{const code={yes:"y",maybe:"m",no:"n",hide:"h"};
-  const parts=pending().map(p=>{const l=rateL[p.id];return p.id+"--"+(l&&l.t>ts(p.ratingAt)?(l.v?code[l.v]:"x"):"s")});
+  const parts=pending().map(p=>{const l=rateL[p.id];const pc=pcPending(p);return p.id+"--"+(l&&l.t>ts(p.ratingAt)?(l.v?code[l.v]:"x"):"s")+(pc?(pc.del?"~D":"~P~"+encodeURIComponent(pc.label)+"~"+pc.lat+"~"+pc.lng+"~"+Math.round(pc.area||0)):"")});
   if(!parts.length)return;window.open("https://claude.ai/artifact/GsnHdCBC455XFP5HD1rgrP#imp-"+parts.join("---"),"_blank","noopener");
   toast("Otváram aplikáciu – hodnotenia sa prenesú automaticky.")};
 function draw(){
@@ -261,11 +294,11 @@ function draw(){
   const hid=ev.filter(e=>e.hidden);
   const placed={};
   const add=(e,rank,layer)=>{
-    let ll=[e.p.lat,e.p.lng];const k=ll.join(",");const n=placed[k]||0;placed[k]=n+1;if(n)ll=[ll[0]+n*0.0012,ll[1]+n*0.0016];
+    const pf=parcelOf(e.p);let ll=pf?[pf.lat,pf.lng]:[e.p.lat,e.p.lng];const k=ll.join(",");
+    if(pf&&pf.ring)L.polygon(pf.ring.map(q=>[q[1],q[0]]),{color:"#f59e0b",weight:2.5,fillOpacity:.12,interactive:false}).addTo(layer);const n=placed[k]||0;placed[k]=n+1;if(n)ll=[ll[0]+n*0.0012,ll[1]+n*0.0016];
     const r=rate[e.p.id];
     const mk=sn=>L.divIcon({className:"",html:'<div class="pinw"><div class="pin'+(rank?'':' dim')+(sn?' seen':'')+(r==='no'?' r-no':'')+'" style="width:26px;height:26px;background:'+(rank?scoreHex(e.score):'#5f6b63')+'">'+(rank||'×')+'</div>'+(BADGE[r]?'<span class="badge">'+BADGE[r]+'</span>':'')+'</div>',iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-12]});
-    const m=L.marker(ll,{icon:mk(!!seen[e.p.id]),zIndexOffset:rank?(r==='yes'?2000:1000)-rank:0}).bindPopup(()=>popupHtml(e,rank),{maxWidth:300,autoPanPaddingTopLeft:[10,70]});
-    m.on("popupopen",()=>{if(!seen[e.p.id]){seen[e.p.id]=seenL[e.p.id]=Date.now();LS.set("pk-seen",seenL);m.setIcon(mk(true));updSync()}});
+    const m=L.marker(ll,{icon:mk(!!seen[e.p.id]),zIndexOffset:rank?(r==='yes'?2000:1000)-rank:0}).on("click",()=>{openDet(e,rank);if(!seen[e.p.id]){seen[e.p.id]=seenL[e.p.id]=Date.now();LS.set("pk-seen",seenL);m.setIcon(mk(true));updSync()}});
     m.addTo(layer);markers[e.p.id]=m;
   };
   const off=id=>rate[id]==="hide"||rate[id]==="no";
@@ -281,7 +314,7 @@ function draw(){
   return ranked;
 }
 function fit(){const pts=ranked.map(e=>[e.p.lat,e.p.lng]);const o=originOf(D.st);pts.push([o.lat,o.lng]);if(pts.length)map.fitBounds(pts,{padding:[40,40],maxZoom:14})}
-document.getElementById("list").addEventListener("click",ev=>{const r=ev.target.closest(".row[data-id]");if(!r)return;const m=markers[r.dataset.id];if(!m)return;document.getElementById("sheet").hidden=true;map.flyTo(m.getLatLng(),16,{duration:.8});setTimeout(()=>m.openPopup(),850)});
+document.getElementById("list").addEventListener("click",ev=>{const r=ev.target.closest(".row[data-id]");if(!r)return;const m=markers[r.dataset.id];if(!m)return;document.getElementById("sheet").hidden=true;map.flyTo(m.getLatLng(),16,{duration:.8});setTimeout(()=>m.fire("click"),900);return;setTimeout(()=>m.openPopup(),850)});
 document.getElementById("btnList").onclick=()=>{const s=document.getElementById("sheet");s.hidden=!s.hidden};
 document.getElementById("shClose").onclick=()=>document.getElementById("sheet").hidden=true;
 document.getElementById("btnHidden").onclick=e=>{if(map.hasLayer(hiddenLayer)){map.removeLayer(hiddenLayer);e.target.textContent="Vyradené: skryté"}else{map.addLayer(hiddenLayer);e.target.textContent="Vyradené: zobrazené"}};
@@ -290,10 +323,104 @@ document.getElementById("btnMine").onclick=()=>{showMine=!showMine;draw()};
 document.addEventListener("click",ev=>{const b=ev.target.closest&&ev.target.closest("[data-rate]");if(!b)return;const id=b.dataset.id,v=b.dataset.rate;
   const nv=rate[id]===v?null:v;rateL[id]={v:nv,t:Date.now()};LS.set("pk-rate",rateL);if(!seenL[id]){seenL[id]=Date.now();LS.set("pk-seen",seenL)}mergeState();map.closePopup();draw();updSync();
   toast(nv?({yes:"Označené: páči sa",maybe:"Označené: možno",no:"Označené: nepáči sa",hide:"Skryté z mapy"})[v]:"Označenie zrušené");
-  const m=markers[id];if(m&&rate[id]!=="hide"&&rate[id]!=="no")setTimeout(()=>m.openPopup(),50)});
+  if(DET===id&&rate[id]!=="hide"&&rate[id]!=="no"){const e=ranked.find(x=>x.p.id===id)||{p:D.plots.find(p=>p.id===id),score:0,flags:[],parts:[]};openDet(e,ranked.indexOf(e)+1,false)}else if(DET===id)closeDet()});
 let me=null;
 document.getElementById("btnLocate").onclick=()=>{if(!navigator.geolocation){toast("Poloha nie je dostupná.");return}navigator.geolocation.getCurrentPosition(pos=>{const ll=[pos.coords.latitude,pos.coords.longitude];if(me)me.remove();me=L.circleMarker(ll,{radius:8,color:"#fff",weight:3,fillColor:"#2563a6",fillOpacity:1}).addTo(map).bindTooltip("Tu si");map.flyTo(ll,16)},()=>toast("Polohu sa nepodarilo zistiť. Povoľ prístup k polohe."),{enableHighAccuracy:true,timeout:10000})};
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-copy]");if(!b)return;const t=b.getAttribute("data-copy");(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("Skopírované: "+t),()=>toast("Parcela: "+t))});
+
+/* ---------- detail pozemku (ako karta v aplikácii) ---------- */
+let DET=null;
+const ftxt=t=>esc(String(t||"").replace(/\s+-\s+(?=[A-ZÁČĎÉÍĽĹŇÓÔŔŠŤÚÝŽ0-9])/g,"\n• "));
+function fday(iso){if(!iso)return "";const d=new Date(iso);return isNaN(d)?String(iso):d.toLocaleDateString("sk-SK")}
+function galFor(p){if(rate[p.id]==="hide"||rate[p.id]==="no")return [];const g=IMG[p.id];if(g&&g.photos)return g.photos.map(x=>IMGBASE+encodeURIComponent(x.file)+"?v="+x.sha);return p.imageUrl&&safeUrl(p.imageUrl)?[p.imageUrl]:[]}
+function utilChipsM(p){const u=p.utilities||{},d=p.utilDetail||{};return [["elektrina","elektrina"],["voda","voda"],["kanalizacia","kanalizácia"],["plyn","plyn"],["optika","optika"]].map(([k,l])=>{const det=d[k]||"";const c=u[k]===true?(det==="na pozemku"||!det?"y":"m"):u[k]===false?"n":"";return '<span class="chip '+c+'" title="'+esc(l+": "+(det||(u[k]===true?"áno":u[k]===false?"nie":"neuvedené")))+'">'+esc(l+(u[k]===true&&det&&det!=="na pozemku"&&det!=="spomenutá"?" · "+det:"")+(u[k]===false&&det?" · "+det:""))+'</span>'}).join("")}
+function openDet(e,rank,push){
+  const p=e.p;DET=p.id;const st=D.st;const pf=parcelOf(p);const ll=pf?[pf.lat,pf.lng]:[p.lat,p.lng];
+  const ppm=(p.price&&p.area)?Math.round(p.price/p.area):null;const gal=galFor(p);const r=rate[p.id]||"";
+  const h=(p.priceHistory||[]).filter(x=>x&&x.price!=null);const prev=h.length>1?Math.max(...h.slice(0,-1).map(x=>x.price)):null;
+  const ck=p.check||{};const tags=[];
+  if(p.kind)tags.push(['#2f6b45',p.kind+" pozemok"]);
+  tags.push(ck.status==="overený"?['#2f7d4a',"✔ overené z inzerátu"]:['#a16207',"⚠ neoverené"]);
+  if(p.reserved)tags.push(['#a16207',"rezervované"]);if(p.permit)tags.push(['#2f6b45',"stavebné povolenie"]);else if(p.project)tags.push(['#2f6b45',"projekt RD"]);
+  if(e.hidden)tags.push(['#a16207',"vyradený: "+e.hidden]);
+  const ki=[p.shape&&["Tvar",p.shape+(p.dimsNote?" ("+p.dimsNote+")":"")],p.access&&["Prístup",p.access],p.street&&["Ulica",p.street],p.landType&&["Druh",p.landType],p.kindNote&&["Druh",p.kindNote],p.agent&&["Predáva",p.agent],(p.firstPublished||p.firstSeen)&&["Prvé zverejnenie",fday(p.firstPublished||p.firstSeen)],["Poloha",pf?"parcela "+pf.label+" (overená v katastri)":(p.precise?(p.locSource||"podľa inzerátu"):"približná – stred obce")]].filter(Boolean);
+  const la=ll[0].toFixed(5),ln=ll[1].toFixed(5);
+  const box=document.getElementById("detIn");
+  box.innerHTML='<div class="dbar"><b>'+(rank?'#'+rank+' ':'')+esc(p.village)+' · '+esc(fmtEur(p.price))+'</b><button class="btn" type="button" id="detX">Zavrieť ✕</button></div>'+
+   (gal.length?'<div class="dgal"><div class="gm" id="dGm">'+gal.map((u,i)=>'<img src="'+esc(u)+'" alt="Foto '+(i+1)+'" data-i="'+i+'"'+(i>2?' loading="lazy"':'')+' onerror="this.remove()">').join("")+'</div>'+(gal.length>1?'<button class="nav l" type="button" data-nav="-1" aria-label="Predošlá">‹</button><button class="nav r" type="button" data-nav="1" aria-label="Ďalšia">›</button>':'')+'<span class="cnt" id="dCnt">1 / '+gal.length+'</span></div>'+(gal.length>1?'<div class="thumbs" id="dTh">'+gal.map((u,i)=>'<img src="'+esc(u)+'" alt="" data-t="'+i+'"'+(i?'':' class="on"')+' loading="lazy">').join("")+'</div>':''):'')+
+   '<div class="dbody"><div class="dhead"><div class="t"><h3>'+({yes:"👍 ",maybe:"🤔 ",no:"👎 "}[r]||"")+esc(p.village)+'</h3><div class="sub">'+esc(p.listingTitle||p.title||"")+'</div></div>'+
+    '<div class="dpr">'+(prev&&prev>p.price?'<div class="op"><s>'+esc(fmtEur(prev))+'</s> <span>−'+Math.round((prev-p.price)/prev*100)+' %</span></div>':'')+'<div class="p" style="color:'+priceHex(p.price,st.priceMax)+'">'+esc(fmtEur(p.price))+'</div>'+(ppm?'<div class="op" style="color:'+ppmHex(ppm)+';font-weight:700">'+esc(fmtNum(ppm))+' €/m²</div>':'')+'</div>'+
+    '<div class="sc" style="color:'+scoreHex(e.score||0)+'">'+(e.score||0)+'</div></div>'+
+    '<div class="fl">'+[p.area?fmtNum(p.area)+' m²':'výmera ?',(p.width&&p.length)?p.width+'×'+p.length+' m':'rozmery ?',p.terrain||'terén ?',(e.mins!=null?'~'+e.mins+' min':'dojazd ?')].map(esc).join(' · ')+(p.parcel||pf?' · parc. '+esc(pf?pf.label:p.parcel):'')+'</div>'+
+    '<div class="chips">'+utilChipsM(p)+'</div>'+
+    '<div class="tags">'+tags.map(t=>'<span class="tag" style="color:'+t[0]+'">'+esc(t[1])+'</span>').join("")+'</div>'+
+    '<div class="ki">'+ki.map(x=>esc(x[0])+': <b>'+esc(x[1])+'</b>').join(" · ")+'</div>'+
+    '<div class="drate">'+RATES.map(x=>'<button type="button" class="r-'+x[0]+(r===x[0]?' on':'')+'" data-rate="'+x[0]+'" data-id="'+esc(p.id)+'">'+x[1]+'</button>').join("")+'</div>'+
+    '<div class="dl">'+(p.links||[]).map(l=>{const u=safeUrl(l.url);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(l.portal||"Inzerát")+' ↗</a>':""}).join("")+'</div>'+
+    '<div class="dl"><a href="https://zbgis.skgeodesy.sk/mapka/sk/kataster?pos='+la+','+ln+',18" target="_blank" rel="noopener">🗺 Kataster ZBGIS ↗</a><a href="https://www.google.com/maps/@?api=1&map_action=map&center='+la+','+ln+'&zoom=18&basemap=satellite" target="_blank" rel="noopener">Satelit ↗</a><a href="https://www.google.com/maps/dir/?api=1&destination='+la+','+ln+'" target="_blank" rel="noopener">Navigovať ↗</a><button type="button" id="dShow">📍 Ukázať na mape</button>'+((pf||p.parcel)?'<button type="button" data-copy="'+esc((pf?pf.label:p.parcel)+(p.cadastralArea?" "+p.cadastralArea:""))+'">📋 Parcela</button>':'')+'</div>'+
+    '<div class="pf" id="pf">'+(pf?'<div class="ok">✔ Parcela '+esc(pf.label)+' ('+esc(fmtNum(pf.area))+' m²) je overená v katastri.</div><div><button class="btn" type="button" id="pfGo">Hľadať znova</button> <button class="btn" type="button" id="pfDel">Zrušiť</button></div>':'<div><b>🔎 Parcela v katastri</b> – vyhľadá parcely s výmerou '+(p.area?esc(fmtNum(p.area))+' m²':'?')+' v okolí'+(p.parcel?' a číslom '+esc(p.parcel):'')+'.</div><div><button class="btn pri" type="button" id="pfGo"'+(p.area?'':' disabled')+'>Nájsť parcelu</button></div>')+'<div id="pfRes"></div></div>'+
+    '<div class="dsec">Text inzerátu</div><div class="dtext">'+(p.description?ftxt(p.description):esc(p.summary||"")+'\n\n<span style="color:var(--muted)">Celý text sa doplní pri rannej kontrole inzerátov.</span>')+'</div>'+
+    (p.description&&p.summary?'<div class="dsec">Zhrnutie</div><div class="dtext">'+esc(p.summary)+'</div>':'')+
+   '</div>';
+  const d=document.getElementById("det");d.hidden=false;d.scrollTop=0;
+  if(push!==false){try{history.pushState({det:p.id},"")}catch(x){}}
+  const gm=document.getElementById("dGm");
+  if(gm){const cnt=document.getElementById("dCnt"),th=document.getElementById("dTh");const cur=()=>Math.round(gm.scrollLeft/Math.max(1,gm.clientWidth));
+    gm.onscroll=()=>{const i=cur();cnt.textContent=(i+1)+" / "+gm.children.length;if(th){[...th.children].forEach((t,k)=>t.classList.toggle("on",k===i));const t=th.children[i];if(t)t.scrollIntoView({block:"nearest",inline:"center"})}};
+    const go=i=>gm.scrollTo({left:Math.max(0,Math.min(gm.children.length-1,i))*gm.clientWidth,behavior:"smooth"});
+    box.querySelectorAll("[data-nav]").forEach(b=>b.onclick=()=>go(cur()+(+b.dataset.nav)));
+    if(th)th.onclick=ev=>{const t=ev.target.closest("[data-t]");if(t)go(+t.dataset.t)};
+    gm.onclick=ev=>{const im=ev.target.closest("img");if(!im)return;const lb=document.getElementById("lbx"),g2=document.getElementById("lbxGm");g2.innerHTML=gal.map(u=>'<img src="'+esc(u)+'" alt="">').join("");lb.hidden=false;requestAnimationFrame(()=>{g2.scrollLeft=(+im.dataset.i)*g2.clientWidth})};}
+  document.getElementById("detX").onclick=()=>closeDet();
+  document.getElementById("dShow").onclick=()=>{closeDet();map.flyTo(ll,17,{duration:.8})};
+  document.getElementById("pfGo").onclick=()=>findParcel(p);
+  const del=document.getElementById("pfDel");if(del)del.onclick=()=>{const o=LS.get("pk-parcel",{});o[p.id]={del:true,t:Date.now()};LS.set("pk-parcel",o);draw();openDet(e,rank,false);updSync()};
+}
+function closeDet(fromPop){const d=document.getElementById("det");if(d.hidden)return;d.hidden=true;document.getElementById("detIn").innerHTML="";DET=null;if(parcHL){parcHL.remove();parcHL=null}if(!fromPop){try{if(history.state&&history.state.det)history.back()}catch(x){}}}
+document.getElementById("det").addEventListener("click",e=>{if(e.target.id==="det")closeDet()});
+document.getElementById("lbxX").onclick=()=>{document.getElementById("lbx").hidden=true;document.getElementById("lbxGm").innerHTML=""};
+addEventListener("popstate",()=>{if(!document.getElementById("lbx").hidden){document.getElementById("lbxX").click();return}closeDet(true)});
+addEventListener("keydown",e=>{if(e.key==="Escape"){if(!document.getElementById("lbx").hidden)document.getElementById("lbxX").click();else closeDet()}});
+
+/* ---------- vyhľadanie parcely v katastri (ÚGKK INSPIRE WFS, beží v tvojom prehliadači) ---------- */
+let parcHL=null;
+function parcelOf(p){const o=LS.get("pk-parcel",{})[p.id];if(o&&o.del)return null;if(o&&o.label)return o;return p.parcelFound||null}
+function ringArea(r){let a=0;const k=Math.PI/180,R=6378137,lat0=r[0][1]*k;for(let i=0;i<r.length-1;i++){const x1=r[i][0]*k*R*Math.cos(lat0),y1=r[i][1]*k*R,x2=r[i+1][0]*k*R*Math.cos(lat0),y2=r[i+1][1]*k*R;a+=x1*y2-x2*y1}return Math.abs(a/2)}
+function centroid(r){let x=0,y=0;r.forEach(c=>{x+=c[0];y+=c[1]});return [y/r.length,x/r.length]}
+function parseWfs(txt){
+  const out=[];
+  if(/^\s*\{/.test(txt)){const j=JSON.parse(txt);(j.features||[]).forEach(f=>{const pr=f.properties||{};let ring=null;const g=f.geometry;if(g){const c=g.type==="MultiPolygon"?g.coordinates[0][0]:g.type==="Polygon"?g.coordinates[0]:null;ring=c}
+    const av=pr.areaValue&&typeof pr.areaValue==="object"?pr.areaValue.value:pr.areaValue;out.push({label:pr.label||pr.parcelNumber||"",ref:pr.nationalCadastralReference||pr.inspireId||"",area:av!=null?+av:null,ring})});return out}
+  const x=new DOMParser().parseFromString(txt,"application/xml");
+  const els=x.getElementsByTagNameNS("*","CadastralParcel");
+  for(const el of els){const g=n=>{const e=el.getElementsByTagNameNS("*",n)[0];return e?e.textContent.trim():""};
+    const pl=g("posList");let ring=null;if(pl){const v=pl.split(/\s+/).map(Number);ring=[];for(let i=0;i+1<v.length;i+=2)ring.push([v[i],v[i+1]])}
+    out.push({label:g("label"),ref:g("nationalCadastralReference"),area:g("areaValue")?+g("areaValue"):null,ring})}
+  return out}
+function fixRing(r){if(!r||!r.length)return r;return r[0][0]>40?r.map(c=>[c[1],c[0]]):r} // [lng,lat]
+async function findParcel(p){
+  const res=document.getElementById("pfRes");if(!res)return;res.innerHTML='<div>Hľadám v katastri…</div>';
+  const pr=p.precise&&p.check&&p.check.status==="overený";const dLat=pr?0.006:0.022,dLng=pr?0.009:0.032;
+  const bb=[p.lat-dLat,p.lng-dLng,p.lat+dLat,p.lng+dLng].map(v=>v.toFixed(5)).join(",")+",urn:ogc:def:crs:EPSG::4326";
+  const base="https://inspirews.skgeodesy.sk/geoserver/cp/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=cp:CP.CadastralParcel&srsName=urn:ogc:def:crs:EPSG::4326&count=6000&bbox="+encodeURIComponent(bb);
+  let feats=null,err="";
+  for(const u of [base+"&outputFormat=application%2Fjson",base]){
+    try{const r=await fetch(u);const t=await r.text();if(!r.ok){err="HTTP "+r.status;continue}feats=parseWfs(t);if(feats.length)break}catch(e){err=String(e&&e.message||e)}}
+  if(!feats||!feats.length){res.innerHTML='<div class="warn">Kataster sa nepodarilo načítať ('+esc(err||"žiadne parcely")+'). Over parcelu ručne v ZBGIS – odkaz vyššie.</div>';return}
+  feats.forEach(f=>{f.ring=fixRing(f.ring);if(f.area==null&&f.ring)f.area=Math.round(ringArea(f.ring))});
+  const tol=Math.max(1,p.area*0.004);
+  let c=feats.filter(f=>f.ring&&f.area!=null&&Math.abs(f.area-p.area)<=tol);
+  const lab=String(p.parcel||"").replace(/^[^\d]*/,"");
+  c.forEach(f=>{const ce=centroid(f.ring);f.lat=ce[0];f.lng=ce[1];f.dist=Math.hypot((f.lat-p.lat)*111.2,(f.lng-p.lng)*73.4);f.match=!!lab&&String(f.label).replace(/^[^\d]*/,"")===lab});
+  c.sort((a,b)=>(b.match-a.match)||(Math.abs(a.area-p.area)-Math.abs(b.area-p.area))||(a.dist-b.dist));c=c.slice(0,8);
+  if(!c.length){res.innerHTML='<div class="warn">V okolí ('+feats.length+' parciel) som nenašiel parcelu s výmerou '+esc(fmtNum(p.area))+' m². Pozemok môže vzniknúť delením väčšej parcely – over v ZBGIS.</div>';return}
+  res.innerHTML='<div>'+(c.length===1?'Našla sa 1 parcela':'Kandidáti: '+c.length)+' (z '+feats.length+' parciel v okolí). Ťukni „Ukáž“ a over podľa fotiek a ortofota:</div>'+c.map((f,i)=>'<div class="cand"><b>'+esc(f.label||"?")+'</b><span>'+esc(fmtNum(f.area))+' m²</span><span style="color:var(--muted)">'+f.dist.toFixed(1)+' km od bodu</span>'+(f.match?'<span class="ok">číslo sedí s inzerátom</span>':'')+'<button class="btn" type="button" data-pc="'+i+'">Ukáž</button><button class="btn pri" type="button" data-ps="'+i+'">✔ Je to ona</button></div>').join("");
+  res.onclick=ev=>{const s=ev.target.closest("[data-pc]"),k=ev.target.closest("[data-ps]");
+    if(s){const f=c[+s.dataset.pc];if(parcHL)parcHL.remove();parcHL=L.polygon(f.ring.map(q=>[q[1],q[0]]),{color:"#f59e0b",weight:4,fillOpacity:.25}).addTo(map);document.getElementById("det").hidden=true;map.flyToBounds(parcHL.getBounds(),{maxZoom:18,padding:[40,40]});
+      toast("Parcela "+(f.label||"")+" – ťukni na pozemok na mape pre návrat do detailu.");}
+    if(k){const f=c[+k.dataset.ps];const o=LS.get("pk-parcel",{});o[p.id]={label:f.label,ref:f.ref,area:f.area,lat:+f.lat.toFixed(6),lng:+f.lng.toFixed(6),ring:f.ring.map(q=>[+q[0].toFixed(6),+q[1].toFixed(6)]),t:Date.now()};LS.set("pk-parcel",o);
+      toast("Uložené: parcela "+f.label+". Prenes do aplikácie tlačidlom ↗.");draw();updSync();const e2=ranked.find(x=>x.p.id===p.id)||{p,score:0,flags:[],parts:[]};openDet(e2,ranked.indexOf(e2)+1,false)}};
+}
 
 fetch("data.json?v="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(j=>{
   const st=Object.assign({},DEF,j.settings||{});st.directions=Object.assign({},DEF.directions,(j.settings||{}).directions||{});
