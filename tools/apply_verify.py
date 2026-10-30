@@ -96,6 +96,13 @@ def main(plots_dir, ver_path, out_dir):
             for k in ("agent", "published", "listingTitle"):
                 if d.get(k):
                     p[k] = d[k]
+        prev = p.get("check") or {}
+        if st == "neoverený" and prev.get("status") == "overený" and any(l.get("state") == "chyba" for l in v.get("links", [])):
+            # dočasná chyba portálu: ponechať poslednú úspešnú kontrolu
+            p["check"] = dict(prev, lastError=v["checked"][:10])
+            if json.dumps(p, sort_keys=True, ensure_ascii=False) != before:
+                json.dump(p, open(os.path.join(out_dir, f), "w"), ensure_ascii=False, indent=1)
+            continue
         p["check"] = {"status": st, "at": v["checked"][:10], "issues": v.get("issues", []), "photos": len(d.get("images") or [])}
         if json.dumps(p, sort_keys=True, ensure_ascii=False) != before:
             json.dump(p, open(os.path.join(out_dir, f), "w"), ensure_ascii=False, indent=1)

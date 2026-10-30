@@ -2,7 +2,7 @@
 Zdroj: vlastná galéria inzerátu zo štruktúrovaných dát detailu (out/verify.json z verify_listings.py),
 nikdy nie fotky „podobných inzerátov“ zo stránky. Bez overeného detailu sa fotky nesťahujú.
 Vetva img-cache slúži na prenos fotiek do aplikácie a pre mapu."""
-import json, os, io, re, hashlib, requests
+import json, os, io, re, hashlib, shutil, requests
 from urllib.parse import urlparse, urljoin
 from urllib import robotparser
 from PIL import Image
@@ -69,6 +69,10 @@ def save(u, path):
     return hashlib.sha1(b.getvalue()).hexdigest()[:12]
 man = {}
 try:
+    PREV = json.load(open("prev/manifest.json"))
+except Exception:
+    PREV = {}
+try:
     VER = json.load(open("out/verify.json"))
 except Exception:
     VER = {}
@@ -79,6 +83,17 @@ for p in d.get("plots", []):
     if v.get("status") in ("zrušený", "chybný"):
         continue
     urls = [u for u in (v.get("data") or {}).get("images", []) if not BAD.search(u)][:MAXP]
+    if not urls and PREV.get(p["id"]) and any(l.get("state") == "chyba" for l in v.get("links", [])):
+        # detail sa dnes nenačítal (chyba portálu) – ponechať včerajšie fotky
+        kept = []
+        for ph in PREV[p["id"]].get("photos", []):
+            src = os.path.join("prev", "img", ph["file"])
+            if os.path.exists(src):
+                shutil.copy(src, os.path.join("out", "img", ph["file"]))
+                kept.append(ph)
+        if kept:
+            man[p["id"]] = {"sha": kept[0]["sha"], "photos": kept}
+        continue
     if not urls and p.get("imageUrl", "").startswith("https://") and "unitedclassifieds" not in p["imageUrl"]:
         urls = [p["imageUrl"]]
     photos = []

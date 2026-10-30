@@ -18,6 +18,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install --quiet pillow requests
+      - name: Včerajšie fotky (záloha pri výpadku portálu)
+        run: |
+          mkdir -p prev
+          git fetch -q origin img-cache && git archive FETCH_HEAD | tar -x -C prev || true
       - run: python3 tools/verify_listings.py
       - run: python3 tools/fetch_images.py
       - name: Uložiť do vetvy img-cache

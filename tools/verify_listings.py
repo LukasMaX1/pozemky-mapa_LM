@@ -9,10 +9,12 @@ import sys
 from urllib import robotparser
 from urllib.parse import urlparse
 
+import time
+
 import requests
 
 sys.path.insert(0, os.path.dirname(__file__))
-from extract import extract, merge_area, parse_page  # noqa: E402
+from extract import GAL_RE, extract, merge_area, parse_page  # noqa: E402
 
 UA = "Mozilla/5.0 (Linux; Android 14) pozemky-mapa/1.0 (osobne pouzitie)"
 H = {"User-Agent": UA, "Accept-Language": "sk"}
@@ -55,11 +57,20 @@ def check_link(u, cache):
         return res
     if u in cache:
         return dict(cache[u])
-    try:
-        r = requests.get(u, headers=H, timeout=25, allow_redirects=True)
-    except Exception as e:
+    r, err = None, None
+    for wait in (0, 4, 12, 30):
+        time.sleep(wait or 0.7)  # šetrné tempo, pri chybe servera opakovať
+        try:
+            r = requests.get(u, headers=H, timeout=25, allow_redirects=True)
+            err = None
+            if r.status_code not in (429, 500, 502, 503, 504):
+                break
+            err = f"HTTP {r.status_code}"
+        except Exception as e:
+            err = str(e)[:120]
+    if r is None or err:
         res["state"] = "chyba"
-        res["error"] = str(e)[:120]
+        res["error"] = err or "bez odpovede"
         return res
     res["final"] = r.url
     if r.status_code in (404, 410) or (kind == "nehn" and "/detail/" not in r.url):
@@ -121,10 +132,13 @@ def main():
             data["published"] = min((l["published"] for l in ok if l.get("published")), default=None)
             data["modified"] = max((l["modified"] for l in ok if l.get("modified")), default=None)
             data["listingTitle"] = best.get("title")
-            imgs = []
+            imgs, keys = [], set()
             for l in ok:
                 for i in l.get("images", []):
-                    if i not in imgs:
+                    m = GAL_RE.match(i)
+                    key = m.group(1) if m else i.split("?")[0]
+                    if key not in keys:
+                        keys.add(key)
                         imgs.append(i)
             data["images"] = imgs
             areas = {round(l["area"]) for l in ok if l.get("area")}
