@@ -89,6 +89,9 @@ body{font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:v
 .pf{border:1px dashed var(--line);border-radius:10px;padding:8px 10px;font-size:13px;display:flex;flex-direction:column;gap:6px}
 .pf .cand{display:flex;gap:6px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:5px}
 .pf .cand b{font-family:ui-monospace,monospace}.pf .ok{color:var(--ok);font-weight:700}.pf .warn{color:var(--warn)}
+.pff{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:6px}.pff label{display:flex;flex-direction:column;font-size:11.5px;color:var(--muted);gap:2px}
+.pff input,.pff select{font:14px system-ui,sans-serif;padding:5px 7px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--fg);min-width:0}
+.pfh{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px;align-items:center}.pfh .chip{border:1px solid var(--line);cursor:pointer;font-weight:600;color:var(--accent)}
 .pcp{position:fixed;z-index:1250;left:max(8px,env(safe-area-inset-left));right:max(8px,env(safe-area-inset-right));bottom:calc(12px + env(safe-area-inset-bottom));background:var(--surface);border:2px solid #f59e0b;border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.3);padding:10px 12px;display:flex;flex-direction:column;gap:8px;max-width:520px;margin:0 auto}
 .pcp[hidden]{display:none}.pcp .r1{display:flex;align-items:center;gap:8px;justify-content:space-between}.pcp .r1 b{font-size:15px}.pcp .r2{display:flex;gap:6px;flex-wrap:wrap}
 .pcp .btn{padding:8px 11px;font-size:13.5px}
@@ -363,7 +366,7 @@ function openDet(e,rank,push){
     '<div class="drate">'+RATES.map(x=>'<button type="button" class="r-'+x[0]+(r===x[0]?' on':'')+'" data-rate="'+x[0]+'" data-id="'+esc(p.id)+'">'+x[1]+'</button>').join("")+'</div>'+
     '<div class="dl">'+(p.links||[]).map(l=>{const u=safeUrl(l.url);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(l.portal||"Inzerát")+' ↗</a>':""}).join("")+'</div>'+
     '<div class="dl"><a href="'+esc(zbgisUrl(pf||(p.parcel?{label:p.parcel}:null),la,ln))+'" target="_blank" rel="noopener">🗺 '+(pf?'Parcela '+esc(pf.label)+' v ZBGIS':'Kataster ZBGIS')+' ↗</a>'+(pf?'<a href="https://zbgis.skgeodesy.sk/mapka/sk/kataster?pos='+la+','+ln+',19" target="_blank" rel="noopener">ZBGIS – poloha ↗</a><button type="button" id="dShowP">🟧 Parcela na mape</button>':'')+'<a href="https://www.google.com/maps/@?api=1&map_action=map&center='+la+','+ln+'&zoom=18&basemap=satellite" target="_blank" rel="noopener">Satelit ↗</a><a href="https://www.google.com/maps/dir/?api=1&destination='+la+','+ln+'" target="_blank" rel="noopener">Navigovať ↗</a><button type="button" id="dShow">📍 Ukázať na mape</button>'+((pf||p.parcel)?'<button type="button" data-copy="'+esc((pf?pf.label:p.parcel)+(p.cadastralArea?" "+p.cadastralArea:""))+'">📋 Parcela</button>':'')+'</div>'+
-    '<div class="pf" id="pf">'+(pf?'<div class="ok">✔ Parcela '+esc(pf.label)+' ('+esc(fmtNum(pf.area))+' m²) je overená v katastri.</div><div><button class="btn" type="button" id="pfGo">Hľadať znova</button> <button class="btn" type="button" id="pfDel">Zrušiť</button></div>':'<div><b>🔎 Parcela v katastri</b> – vyhľadá parcely s výmerou '+(p.area?esc(fmtNum(p.area))+' m²':'?')+' v okolí'+(p.parcel?' a číslom '+esc(p.parcel):'')+'.</div><div><button class="btn pri" type="button" id="pfGo"'+(p.area?'':' disabled')+'>Nájsť parcelu</button></div>')+'<div id="pfRes"></div></div>'+
+    '<div class="pf" id="pf">'+(pf?'<div class="ok">✔ Parcela '+esc(pf.label)+' ('+esc(fmtNum(pf.area))+' m²) je overená v katastri.</div><div><button class="btn" type="button" id="pfDel">Zrušiť potvrdenie</button></div>':'<div><b>🔎 Parcela v katastri</b></div>')+pfForm(p)+'<div id="pfRes"></div></div>'+
     '<div class="dsec">Text inzerátu</div><div class="dtext">'+(p.description?ftxt(p.description):esc(p.summary||"")+'\n\n<span style="color:var(--muted)">Celý text sa doplní pri rannej kontrole inzerátov.</span>')+'</div>'+
     (p.description&&p.summary?'<div class="dsec">Zhrnutie</div><div class="dtext">'+esc(p.summary)+'</div>':'')+
    '</div>';
@@ -379,7 +382,8 @@ function openDet(e,rank,push){
   document.getElementById("detX").onclick=()=>closeDet();
   document.getElementById("dShow").onclick=()=>{closeDet();map.flyTo(ll,17,{duration:.8})};
   const sp=document.getElementById("dShowP");if(sp)sp.onclick=()=>{closeDet();if(pf.ring){if(parcHL)parcHL.remove();parcHL=L.polygon(pf.ring.map(q=>[q[1],q[0]]),{color:"#f59e0b",weight:4,fillOpacity:.25}).addTo(map);map.flyToBounds(parcHL.getBounds(),{maxZoom:19,padding:[60,60]})}else map.flyTo(ll,19)};
-  document.getElementById("pfGo").onclick=()=>findParcel(p);
+  document.getElementById("pfGo").onclick=()=>findParcel(p,pfOpts());
+  document.getElementById("pf").addEventListener("click",ev=>{const c=ev.target.closest("[data-sa]");if(c){document.getElementById("pfArea").value=c.dataset.sa;findParcel(p,pfOpts())}const l=ev.target.closest("[data-sl]");if(l){document.getElementById("pfLab").value=l.dataset.sl;findParcel(p,pfOpts())}});
   const del=document.getElementById("pfDel");if(del)del.onclick=()=>{const o=LS.get("pk-parcel",{});o[p.id]={del:true,t:Date.now()};LS.set("pk-parcel",o);draw();openDet(e,rank,false);updSync()};
 }
 function closeDet(fromPop){const d=document.getElementById("det");if(d.hidden)return;d.hidden=true;document.getElementById("detIn").innerHTML="";DET=null;if(parcHL){parcHL.remove();parcHL=null}if(!fromPop){try{if(history.state&&history.state.det)history.back()}catch(x){}}}
@@ -395,7 +399,7 @@ function handleHash(){const m=(location.hash||"").match(/^#(find|show)=([a-z0-9-
   const p=D.plots.find(x=>x.id===m[2]);if(!p){toast("Pozemok sa na mape nenašiel.");return}
   const e=ranked.find(x=>x.p.id===p.id)||{p,score:0,flags:[],parts:[]};const pf=parcelOf(p);
   map.setView(pf?[pf.lat,pf.lng]:[p.lat,p.lng],17);openDet(e,ranked.indexOf(e)+1);
-  if(m[1]==="find"&&p.area){setTimeout(()=>{const r=document.getElementById("pfRes");if(r)r.scrollIntoView({block:"center"});findParcel(p)},300)}}
+  if(m[1]==="find"&&p.area){setTimeout(()=>{const r=document.getElementById("pfRes");if(r)r.scrollIntoView({block:"center"});findParcel(p,pfOpts())},300)}}
 addEventListener("hashchange",handleHash);
 /* ---------- vyhľadanie parcely v katastri (ÚGKK INSPIRE WFS, beží v tvojom prehliadači) ---------- */
 let parcHL=null,PC=null;
@@ -439,9 +443,30 @@ function parseWfs(txt){
     out.push({label:g("label"),ref:g("nationalCadastralReference"),area:g("areaValue")?+g("areaValue"):null,ring})}
   return out}
 function fixRing(r){if(!r||!r.length)return r;return r[0][0]>40?r.map(c=>[c[1],c[0]]):r} // [lng,lat]
-async function findParcel(p){
+function areaHints(p){const t=String((p.listingTitle||"")+" "+(p.title||"")+" "+(p.description||"")+" "+(p.summary||"")).replace(/\u00a0/g," ");const out=new Map();
+  const add=(v,why)=>{v=Math.round(v);if(v>=150&&v<=30000&&!out.has(v))out.set(v,why)};
+  if(p.area)add(p.area,"výmera z inzerátu");
+  for(const m of t.matchAll(/(\d{1,3}(?:[ .]\d{3})+|\d{3,5})(?:[,.]\d+)?\s*(?:m2|m²|m\s?2\b|štvorcov)/gi))add(+m[1].replace(/[ .]/g,""),"spomenuté v texte");
+  for(const m of t.matchAll(/(\d{1,3}(?:[,.]\d+)?)\s*(?:á|a)r(?:ov|y|e)?\b/gi)){const v=+m[1].replace(",",".");if(v>=1.5&&v<=300)add(v*100,"spomenuté v ároch")}
+  if(p.width&&p.length)add(p.width*p.length,"šírka × dĺžka");
+  return [...out.entries()]}
+function labelHints(p){const t=String((p.description||"")+" "+(p.summary||""));const out=new Set();if(p.parcel)out.add(String(p.parcel));
+  for(const m of t.matchAll(/(?:parc(?:ela|elné|\.)?\s*(?:č(?:\.|íslo)?)?|C-?KN|KN-?C|reg\.\s*C)\s*[:.]?\s*(?:C-?KN|KN-?C)?\s*(\d{1,5}\/\d{1,4})/gi))out.add(m[1]);return [...out]}
+function pfForm(p){const ah=areaHints(p),lh=labelHints(p);
+  return '<div class="pff"><label>Výmera m² <input id="pfArea" type="number" inputmode="numeric" min="50" step="1" value="'+(p.area||"")+'"></label>'+
+   '<label>Číslo parcely <input id="pfLab" type="text" placeholder="napr. 361/4" value="'+esc(lh[0]||"")+'"></label>'+
+   '<label>Tolerancia <select id="pfTol"><option value="0.005">±0,5 %</option><option value="0.02">±2 %</option><option value="0.05">±5 %</option><option value="0.15">±15 %</option></select></label>'+
+   '<label>Okolie <select id="pfRad"><option value="auto">podľa polohy</option><option value="1">±1 km</option><option value="3">±3 km</option><option value="5">±5 km</option></select></label></div>'+
+   (ah.length>1?'<div class="pfh">Výmery v inzeráte: '+ah.map(a=>'<button type="button" class="chip" data-sa="'+a[0]+'" title="'+esc(a[1])+'">'+esc(fmtNum(a[0]))+' m²</button>').join("")+'</div>':'')+
+   (lh.length>1?'<div class="pfh">Parcely v texte: '+lh.map(l=>'<button type="button" class="chip" data-sl="'+esc(l)+'">'+esc(l)+'</button>').join("")+'</div>':'')+
+   '<div><button class="btn pri" type="button" id="pfGo">🔎 Nájsť parcelu</button> <span style="font-size:12px;color:var(--muted)">Hľadá podľa výmery; ak zadáš číslo parcely, nájde ju aj bez výmery.</span></div>'}
+function pfOpts(){const g=id=>document.getElementById(id);return {area:+(g("pfArea")||{}).value||null,label:((g("pfLab")||{}).value||"").trim(),tol:+((g("pfTol")||{}).value||0.005),rad:(g("pfRad")||{}).value||"auto"}}
+async function findParcel(p,o){
+  o=o||{area:p.area,label:p.parcel||"",tol:0.005,rad:"auto"};const A=o.area;
   const res=document.getElementById("pfRes");if(!res)return;res.innerHTML='<div>Hľadám v katastri…</div>';
-  const pr=p.precise&&p.check&&p.check.status==="overený";const dLat=pr?0.006:0.022,dLng=pr?0.009:0.032;
+  const pr=p.precise&&p.check&&p.check.status==="overený";let dLat=pr?0.006:0.022,dLng=pr?0.009:0.032;
+  if(o.rad!=="auto"){const km=+o.rad;dLat=km/111.2;dLng=km/73.4}
+  if(!A&&!o.label){res.innerHTML='<div class="warn">Zadaj výmeru alebo číslo parcely.</div>';return}
   const bb=[p.lat-dLat,p.lng-dLng,p.lat+dLat,p.lng+dLng].map(v=>v.toFixed(5)).join(",")+",urn:ogc:def:crs:EPSG::4326";
   const base="https://inspirews.skgeodesy.sk/geoserver/cp/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=cp:CP.CadastralParcel&srsName=urn:ogc:def:crs:EPSG::4326&count=6000&bbox="+encodeURIComponent(bb);
   let feats=null,err="";
@@ -449,13 +474,13 @@ async function findParcel(p){
     try{const r=await fetch(u);const t=await r.text();if(!r.ok){err="HTTP "+r.status;continue}feats=parseWfs(t);if(feats.length)break}catch(e){err=String(e&&e.message||e)}}
   if(!feats||!feats.length){res.innerHTML='<div class="warn">Kataster sa nepodarilo načítať ('+esc(err||"žiadne parcely")+'). Over parcelu ručne v ZBGIS – odkaz vyššie.</div>';return}
   feats.forEach(f=>{f.ring=fixRing(f.ring);if(f.area==null&&f.ring)f.area=Math.round(ringArea(f.ring))});
-  const tol=Math.max(1,p.area*0.004);
-  let c=feats.filter(f=>f.ring&&f.area!=null&&Math.abs(f.area-p.area)<=tol);
-  const lab=String(p.parcel||"").replace(/^[^\d]*/,"");
-  c.forEach(f=>{const ce=centroid(f.ring);f.lat=ce[0];f.lng=ce[1];f.dist=Math.hypot((f.lat-p.lat)*111.2,(f.lng-p.lng)*73.4);f.match=!!lab&&String(f.label).replace(/^[^\d]*/,"")===lab});
-  c.sort((a,b)=>(b.match-a.match)||(Math.abs(a.area-p.area)-Math.abs(b.area-p.area))||(a.dist-b.dist));c=c.slice(0,8);
-  if(!c.length){res.innerHTML='<div class="warn">V okolí ('+feats.length+' parciel) som nenašiel parcelu s výmerou '+esc(fmtNum(p.area))+' m². Pozemok môže vzniknúť delením väčšej parcely – over v ZBGIS.</div>';return}
-  res.innerHTML='<div>'+(c.length===1?'Našla sa 1 parcela':'Kandidáti: '+c.length)+' (z '+feats.length+' parciel v okolí). Ťukni „Ukáž“ a over podľa fotiek a ortofota:</div>'+c.map((f,i)=>'<div class="cand"><b>'+esc(f.label||"?")+'</b><span>'+esc(fmtNum(f.area))+' m²</span><span style="color:var(--muted)">'+f.dist.toFixed(1)+' km od bodu</span>'+(f.match?'<span class="ok">číslo sedí s inzerátom</span>':'')+'<button class="btn" type="button" data-pc="'+i+'">Ukáž</button><button class="btn pri" type="button" data-ps="'+i+'">✔ Je to ona</button></div>').join("");
+  const tol=A?Math.max(1,A*o.tol):0;
+  const lab=String(o.label||"").replace(/^[^\d]*/,"");const labOf=f=>String(f.label).replace(/^[^\d]*/,"");
+  let c=feats.filter(f=>f.ring&&((A&&f.area!=null&&Math.abs(f.area-A)<=tol)||(lab&&labOf(f)===lab)));
+  c.forEach(f=>{const ce=centroid(f.ring);f.lat=ce[0];f.lng=ce[1];f.dist=Math.hypot((f.lat-p.lat)*111.2,(f.lng-p.lng)*73.4);f.match=!!lab&&labOf(f)===lab});
+  c.sort((a,b)=>(b.match-a.match)||(A?Math.abs(a.area-A)-Math.abs(b.area-A):0)||(a.dist-b.dist));c=c.slice(0,10);
+  if(!c.length){res.innerHTML='<div class="warn">V okolí ('+feats.length+' parciel) som nenašiel parcelu '+(A?'s výmerou '+esc(fmtNum(A))+' m² (±'+esc(fmtNum(Math.round(tol)))+' m²)':'')+(lab?(A?' ani ':'')+'s číslom '+esc(o.label):'')+'. Skús inú výmeru, väčšiu toleranciu alebo väčšie okolie. Pozemok môže vzniknúť delením väčšej parcely – over v ZBGIS.</div>';return}
+  res.innerHTML='<div>'+(c.length===1?'Našla sa 1 parcela':'Kandidáti: '+c.length)+' (z '+feats.length+' parciel v okolí). Ťukni „Ukáž“ a over podľa fotiek a ortofota:</div>'+c.map((f,i)=>'<div class="cand"><b>'+esc(f.label||"?")+'</b><span>'+esc(fmtNum(f.area))+' m²</span><span style="color:var(--muted)">'+f.dist.toFixed(1)+' km od bodu</span>'+(f.match?'<span class="ok">číslo sedí</span>':'')+'<button class="btn" type="button" data-pc="'+i+'">Ukáž</button><button class="btn pri" type="button" data-ps="'+i+'">✔ Je to ona</button></div>').join("");
   PC={p,c,idx:0};
   res.onclick=ev=>{const s=ev.target.closest("[data-pc]"),k=ev.target.closest("[data-ps]");
     if(s){showCand(+s.dataset.pc)}
