@@ -93,6 +93,9 @@ def main(plots_dir, ver_path, out_dir):
             if d.get("reserved") and not p.get("reserved"):
                 p["reserved"] = True
                 ch.append("rezervovaný")
+            fp = d.get("firstPublished")
+            if fp and (not p.get("firstPublished") or fp < p["firstPublished"]):
+                p["firstPublished"] = fp
             for k in ("kind", "kindNote"):
                 if d.get(k) and p.get(k) != d[k]:
                     p[k] = d[k]

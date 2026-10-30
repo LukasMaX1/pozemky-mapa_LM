@@ -37,6 +37,31 @@ def _text(t):
     return t.strip()
 
 
+def _flight_ad(html):
+    """Údaje inzerátu z Next.js flight dát (dátum vytvorenia, text s odsekmi)."""
+    parts = []
+    for m in re.finditer(r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)', html):
+        try:
+            parts.append(json.loads(m.group(1)))
+        except Exception:
+            pass
+    pay = "".join(parts)
+    i = pay.find('"advertisement":{')
+    if i < 0:
+        return None
+    ad, _ = json.JSONDecoder().raw_decode(pay[i + len('"advertisement":'):])
+    d = ad.get("description")
+    if isinstance(d, str) and re.fullmatch(r"\$[0-9a-f]+", d):
+        m = re.search(r"(?:^|\n)" + re.escape(d[1:]) + r":T([0-9a-f]+),", pay)
+        if m:
+            n = int(m.group(1), 16)
+            raw = pay[m.end():].encode("utf-8")[:n].decode("utf-8", "ignore")
+            ad["descText"] = _text(raw)
+    elif isinstance(d, str):
+        ad["descText"] = _text(d)
+    return ad
+
+
 def parse_page(html):
     out = {"images": []}
     for m in re.finditer(r"<script[^>]*application/ld\+json[^>]*>(.*?)</script>", html, re.S):
@@ -70,6 +95,16 @@ def parse_page(html):
             elif ty == "ItemPage":
                 out["published"] = (n.get("datePublished") or "")[:10] or None
                 out["modified"] = (n.get("dateModified") or "")[:10] or None
+    try:
+        ad = _flight_ad(html)
+    except Exception:
+        ad = None
+    if ad:
+        out["createdAt"] = (ad.get("createdAt") or "")[:10] or None
+        out["publishedAt"] = (ad.get("publishedAt") or "")[:10] or None
+        out["updatedAt"] = (ad.get("updatedAt") or "")[:10] or None
+        if ad.get("descText"):
+            out["descText"] = ad["descText"]
     m = re.search(r'\\"point\\":\{\\"latitude\\":\\"([\d.]+)\\",\\"longitude\\":\\"([\d.]+)\\"', html)
     if m:
         out["gps"] = [float(m.group(1)), float(m.group(2))]

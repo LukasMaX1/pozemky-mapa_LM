@@ -85,7 +85,7 @@ def check_link(u, cache):
         else:
             ex = extract(pg.get("title"), pg.get("desc"))
             res.update(state="ok", title=pg.get("title"), area=merge_area(pg, ex), price=pg.get("price") or None,
-                       agent=pg.get("agent"), published=pg.get("published"), modified=pg.get("modified"),
+                       agent=pg.get("agent"), published=pg.get("publishedAt") or pg.get("published"), modified=pg.get("updatedAt") or pg.get("modified"), createdAt=pg.get("createdAt"),
                        canonical=(pg.get("canonical") or r.url).split("?")[0], images=pg.get("images", []),
                        extract={k: v for k, v in ex.items() if k != "titleArea"}, desc=(pg.get("descText") or pg.get("desc") or "")[:8000])
             if res["price"] is not None and res["price"] < 100:
@@ -129,7 +129,8 @@ def main():
             data["area"] = best.get("area")
             data["price"] = next((l["price"] for l in ok if l.get("price")), None)
             data["agent"] = best.get("agent")
-            data["published"] = min((l["published"] for l in ok if l.get("published")), default=None)
+            data["firstPublished"] = min((l.get("createdAt") or l.get("published") for l in ok if l.get("createdAt") or l.get("published")), default=None)
+            data["published"] = max((l["published"] for l in ok if l.get("published")), default=None)
             data["modified"] = max((l["modified"] for l in ok if l.get("modified")), default=None)
             data["listingTitle"] = best.get("title")
             data["description"] = best.get("desc") or ""
@@ -177,7 +178,7 @@ def main():
             "status": status,
             "issues": issues,
             "data": data,
-            "links": [{k: l.get(k) for k in ("url", "portal", "state", "final", "canonical", "area", "price", "title", "agent", "published", "modified", "error")} for l in links if l["state"] not in ("vyhľadávanie", "chybný")],
+            "links": [{k: l.get(k) for k in ("url", "portal", "state", "final", "canonical", "area", "price", "title", "agent", "createdAt", "published", "modified", "error")} for l in links if l["state"] not in ("vyhľadávanie", "chybný")],
             "removedLinks": bad,
             "dupLinks": dup,
         }

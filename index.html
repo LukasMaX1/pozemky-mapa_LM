@@ -229,7 +229,7 @@ function ppmHex(ppm){const v=D.plots.filter(p=>!p.gone&&!p.invalid&&p.price&&p.a
 function popupHtml(e,rank){
   const p=e.p,st=D.st;const ppm=(p.price&&p.area)?Math.round(p.price/p.area):null;const u=p.utilities||{};
   const ud=p.utilDetail||{};const ut=["elektrina","voda","kanalizacia","plyn","optika"].filter(k=>u[k]!==undefined).map(k=>(u[k]?"":"✗ ")+k+(ud[k]&&ud[k]!=="spomenutá"?" ("+ud[k]+")":"")).join(", ")||"neuvedené";
-  const ck=p.check||{};const extra=[p.shape&&("tvar: "+p.shape),p.access,p.street,p.permit&&"stavebné povolenie",(!p.permit&&p.project)&&"projekt RD",p.agent&&("predáva: "+p.agent)].filter(Boolean).join(" · ");
+  const ck=p.check||{};const extra=[p.shape&&("tvar: "+p.shape),p.access,p.street,p.permit&&"stavebné povolenie",(!p.permit&&p.project)&&"projekt RD",p.agent&&("predáva: "+p.agent),(p.firstPublished||p.firstSeen)&&("prvé zverejnenie: "+new Date(p.firstPublished||p.firstSeen).toLocaleDateString("sk-SK"))].filter(Boolean).join(" · ");
   const la=p.lat.toFixed(5),ln=p.lng.toFixed(5);
   const pc=p.priceHistory&&p.priceHistory.length>1?p.priceHistory[p.priceHistory.length-2].price:null;
   const nophoto=rate[p.id]==="hide"||rate[p.id]==="no";
