@@ -98,6 +98,22 @@ body{font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:v
 .lbx{position:fixed;inset:0;z-index:1400;background:#000;display:flex;flex-direction:column}.lbx[hidden]{display:none}
 .lbx .gm{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.lbx .gm img{flex:0 0 100%;width:100%;height:100%;object-fit:contain;scroll-snap-align:center}
 .lbx button{position:absolute;top:calc(10px + env(safe-area-inset-top));right:10px;z-index:2;background:rgba(255,255,255,.15);color:#fff;border:0;border-radius:8px;padding:8px 12px;font-weight:700}
+.mc{display:grid;grid-template-columns:118px 1fr;gap:10px;padding:8px 10px;border-bottom:1px solid var(--line);cursor:pointer}
+.mc.seen{box-shadow:inset 3px 0 0 var(--fg)}.mc.sel{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.mi{position:relative;height:88px;border-radius:8px;overflow:hidden;background:var(--bg)}.mi img{width:100%;height:100%;object-fit:cover;display:block}
+.mi .nsk{width:100%;height:100%;display:grid;place-items:center}.mi .nsk svg{height:84px;width:auto}
+.mi .num{position:absolute;left:4px;top:4px;width:22px;height:22px;font-size:11px}.mi .gc{position:absolute;right:4px;bottom:4px;background:rgba(0,0,0,.6);color:#fff;font-size:10.5px;border-radius:5px;padding:0 5px}
+.mb{min-width:0;display:flex;flex-direction:column;gap:3px}.mh{display:flex;justify-content:space-between;gap:6px;align-items:baseline}.mh b{font-size:14.5px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mp{font-weight:700;white-space:nowrap;font-size:14px}.mp s{font-weight:400;color:var(--muted);font-size:11px}.ms{font-size:12px;color:var(--muted)}
+.mt{display:flex;flex-wrap:wrap;gap:2px 8px;font-size:10.5px;font-weight:700;text-transform:uppercase}
+.mr{display:flex;gap:4px}.mr button{width:32px;height:26px;padding:0;border:1px solid var(--line);border-radius:7px;background:var(--surface);font-size:14px}
+.mr button.on{border-color:var(--fg)}.mr .r-yes.on{background:#2f7d4a}.mr .r-maybe.on{background:#a16207}.mr .r-no.on{background:#b4232c}.mr .r-hide.on{background:#5f6b63}
+@media (min-width:900px){
+  body.side-on .fabs{right:424px}
+  body.side-on .bar{right:424px}body.side-on .pcp{right:424px;left:12px}body.side-on .toast{left:calc(50% - 212px)}
+  .sheet{left:auto;top:calc(70px + env(safe-area-inset-top));bottom:12px;right:12px;width:400px;max-height:none;border-radius:14px}
+  body.side-on #m{right:424px}
+}
 </style>
 </head>
 <body>
@@ -260,7 +276,8 @@ function mergeState(){rate={};seen={};
     if(l&&l.t>dt){if(l.v)rate[p.id]=l.v}else if(p.rating)rate[p.id]=p.rating;
     if(seenL[p.id]||p.seenAt)seen[p.id]=Math.max(ts(seenL[p.id]),ts(p.seenAt))||1})}
 function pcPending(p){const o=LS.get("pk-parcel",{})[p.id];if(!o||o.t===0)return null;const srv=p.parcelFound||null;if(o.del)return srv?o:null;if(srv&&srv.label===o.label&&Math.abs((srv.lat||0)-o.lat)<1e-5)return null;return o}
-function pending(){return (D?D.plots:[]).filter(p=>{const l=rateL[p.id];return (l&&l.t>ts(p.ratingAt))||(seenL[p.id]&&!p.seenAt)||pcPending(p)})}
+let sentL=LS.get("pk-sent",{});
+function pending(){return (D?D.plots:[]).filter(p=>{const l=rateL[p.id],sn=sentL[p.id]||0;const pc=pcPending(p);return (l&&l.t>ts(p.ratingAt)&&l.t>sn)||(seenL[p.id]&&!p.seenAt&&!sn)||(pc&&(pc.t||0)>sn)})}
 const RATES=[["yes","👍 Páči"],["maybe","🤔 Možno"],["no","👎 Nepáči"],["hide","🚫 Skryť"]];
 const BADGE={yes:"👍",maybe:"🤔",no:"👎"};
 function sketch(p){let w=p.width,l=p.length,dim=!!(w&&l);if(!dim&&p.area){w=Math.sqrt(p.area);l=w}if(!(w&&l))return "";const s=70/Math.max(w,l),pw=w*s,pl=l*s,x=(96-pw)/2,y=(96-pl)/2;
@@ -288,12 +305,25 @@ function popupHtml(e,rank){
    '<div class="ln"><a href="https://zbgis.skgeodesy.sk/mapka/sk/kataster?pos='+la+','+ln+',18" target="_blank" rel="noopener">Kataster ZBGIS ↗</a>'+(p.parcel?'<button type="button" data-copy="'+esc(p.parcel+(p.cadastralArea?" "+p.cadastralArea:""))+'">📋 Kopírovať parcelu</button>':'')+'<a href="https://www.google.com/maps/dir/?api=1&destination='+la+','+ln+'" target="_blank" rel="noopener">Navigovať ↗</a></div>'+
    '<div class="t" style="margin-top:4px">Poloha '+(p.precise?'podľa ulice z inzerátu':'približná (stred obce)')+'</div></div>';
 }
-function updSync(){const n=pending().length,b=document.getElementById("btnSync");b.hidden=!n;b.textContent="↗ Preniesť do aplikácie ("+n+")"}
-function doSync(){document.getElementById("btnSync").click()}
-document.getElementById("btnSync").onclick=()=>{const code={yes:"y",maybe:"m",no:"n",hide:"h"};
-  const parts=pending().map(p=>{const l=rateL[p.id];const pc=pcPending(p);return p.id+"--"+(l&&l.t>ts(p.ratingAt)?(l.v?code[l.v]:"x"):"s")+(pc?(pc.del?"~D":"~P~"+encodeURIComponent(pc.label)+"~"+pc.lat+"~"+pc.lng+"~"+Math.round(pc.area||0)+"~"+((String(pc.ref||"").match(/\b(8\d{5})\b/)||[])[1]||"")):"")});
-  if(!parts.length)return;window.open("https://claude.ai/artifact/GsnHdCBC455XFP5HD1rgrP#imp-"+parts.join("---"),"_blank","noopener");
-  toast("Otváram aplikáciu – hodnotenia sa prenesú automaticky.")};
+function mcard(e,rank){const p=e.p,st=D.st,r=rate[p.id]||"";const g=galFor(p);const pf=parcelOf(p);
+  const ppm=(p.price&&p.area)?Math.round(p.price/p.area):null;const h=(p.priceHistory||[]).filter(x=>x&&x.price!=null);const prev=h.length>1?Math.max(...h.slice(0,-1).map(x=>x.price)):null;
+  return '<div class="mc'+(seen[p.id]?' seen':'')+(DET===p.id?' sel':'')+'" data-id="'+esc(p.id)+'">'+
+   '<div class="mi">'+(g.length?'<img src="'+esc(g[0])+'" alt="" loading="lazy" onerror="this.remove()">':'<div class="nsk">'+sketch(p)+'</div>')+'<span class="num" style="background:'+scoreHex(e.score)+'">'+rank+'</span>'+(g.length>1?'<span class="gc">'+g.length+' 📷</span>':'')+'</div>'+
+   '<div class="mb"><div class="mh"><b>'+(seen[p.id]?'':'<span style="color:#2563a6">● </span>')+({yes:"👍 ",maybe:"🤔 ",no:"👎 "}[r]||"")+esc(p.village)+'</b><span class="mp" style="color:'+priceHex(p.price,st.priceMax)+'">'+(prev&&prev>p.price?'<s>'+esc(fmtEur(prev))+'</s> ':'')+esc(fmtEur(p.price))+'</span></div>'+
+   '<div class="ms">'+[p.area?fmtNum(p.area)+' m²':'',(p.width&&p.length)?p.width+'×'+p.length+' m':'',p.terrain||'',e.mins!=null?'~'+e.mins+' min':''].filter(Boolean).map(esc).join(' · ')+(ppm?' · <b style="color:'+ppmHex(ppm)+'">'+fmtNum(ppm)+' €/m²</b>':'')+'</div>'+
+   '<div class="chips">'+utilChipsM(p)+'</div>'+
+   '<div class="mt">'+(p.kind?'<span style="color:#2f6b45">'+esc(p.kind)+'</span>':'')+((p.check||{}).status==="overený"?'<span style="color:#2f7d4a">✔ overené</span>':'<span style="color:#a16207">⚠ neoverené</span>')+(pf?'<span style="color:#d97706">🟧 parcela '+esc(pf.label)+'</span>':'')+(p.reserved?'<span style="color:#a16207">rezervované</span>':'')+'</div>'+
+   '<div class="mr">'+RATES.map(x=>'<button type="button" class="r-'+x[0]+(r===x[0]?' on':'')+'" data-rate="'+x[0]+'" data-id="'+esc(p.id)+'" title="'+esc(x[1])+'">'+x[1].split(" ")[0]+'</button>').join("")+'</div>'+
+   '</div></div>'}
+const APP="https://claude.ai/artifact/GsnHdCBC455XFP5HD1rgrP";
+function updSync(){const n=pending().length;const a=document.getElementById("appLink");a.textContent=n?"Aplikácia ↗ ("+n+")":"Aplikácia";a.title=n?n+" zmien sa prenesie pri otvorení aplikácie":"";document.getElementById("btnSync").hidden=true}
+function syncUrl(mark){const code={yes:"y",maybe:"m",no:"n",hide:"h"};const pend=pending();
+  const parts=pend.map(p=>{const l=rateL[p.id];const pc=pcPending(p);return p.id+"--"+(l&&l.t>ts(p.ratingAt)?(l.v?code[l.v]:"x"):"s")+(pc?(pc.del?"~D":"~P~"+encodeURIComponent(pc.label)+"~"+pc.lat+"~"+pc.lng+"~"+Math.round(pc.area||0)+"~"+((String(pc.ref||"").match(/\b(8\d{5})\b/)||[])[1]||"")):"")});
+  if(mark&&parts.length){const t=Date.now();pend.forEach(p=>{sentL[p.id]=t});LS.set("pk-sent",sentL)}
+  return APP+(parts.length?"#imp-"+parts.join("---"):"")}
+function doSync(){const u=syncUrl(true);window.open(u,"_blank","noopener");updSync();toast("Otváram aplikáciu – zmeny z mapy sa prenesú automaticky.")}
+document.getElementById("btnSync").onclick=doSync;
+document.getElementById("appLink").addEventListener("click",ev=>{const n=pending().length;ev.currentTarget.href=syncUrl(true);setTimeout(updSync,100);if(n)toast("Zmeny z mapy ("+n+") sa prenášajú do aplikácie.")});
 function draw(){
   plotsLayer.clearLayers();hiddenLayer.clearLayers();originLayer.clearLayers();markers={};
   const st=D.st,vil=parseVillages(st.villages);
@@ -318,13 +348,19 @@ function draw(){
   [10,20,30].forEach(r=>L.circle([o.lat,o.lng],{radius:r*1000,color:"#2563a6",weight:1.5,dashArray:"5 7",fill:false,interactive:false}).addTo(originLayer));
   document.getElementById("sub").textContent=ranked.length+" pozemkov · aktualizované "+new Date(D.generated).toLocaleString("sk-SK",{day:"numeric",month:"numeric",hour:"2-digit",minute:"2-digit"});
   document.getElementById("shTitle").textContent="Pozemky ("+ranked.length+")";
-  document.getElementById("list").innerHTML=ranked.map((e,i)=>((rate[e.p.id]==="hide"||rate[e.p.id]==="no")&&!showMine)?"":'<div class="row" data-id="'+esc(e.p.id)+'"><div class="num" style="background:'+scoreHex(e.score)+'">'+(i+1)+'</div><div><div class="v">'+(BADGE[rate[e.p.id]]?BADGE[rate[e.p.id]]+' ':'')+(seen[e.p.id]?'':'<span style="color:#2563a6">● </span>')+esc(e.p.village)+'</div><div class="s">'+(e.p.area?esc(fmtNum(e.p.area))+' m²':'')+(e.mins!=null?' · '+(e.est?'~':'')+e.mins+' min':'')+' · '+e.score+' b.</div></div><div class="p" style="color:'+priceHex(e.p.price,st.priceMax)+'">'+esc(fmtEur(e.p.price))+'</div></div>').join("")||'<div class="row">Žiadne pozemky nespĺňajú nastavenia.</div>';
+  document.getElementById("list").innerHTML=ranked.map((e,i)=>((rate[e.p.id]==="hide"||rate[e.p.id]==="no")&&!showMine)?"":mcard(e,i+1)).join("")||'<div class="row">Žiadne pozemky nespĺňajú nastavenia.</div>';
   return ranked;
 }
 function fit(){const pts=ranked.map(e=>[e.p.lat,e.p.lng]);const o=originOf(D.st);pts.push([o.lat,o.lng]);if(pts.length)map.fitBounds(pts,{padding:[40,40],maxZoom:14})}
-document.getElementById("list").addEventListener("click",ev=>{const r=ev.target.closest(".row[data-id]");if(!r)return;const m=markers[r.dataset.id];if(!m)return;document.getElementById("sheet").hidden=true;map.flyTo(m.getLatLng(),16,{duration:.8});setTimeout(()=>m.fire("click"),900);return;setTimeout(()=>m.openPopup(),850)});
-document.getElementById("btnList").onclick=()=>{const s=document.getElementById("sheet");s.hidden=!s.hidden};
-document.getElementById("shClose").onclick=()=>document.getElementById("sheet").hidden=true;
+document.getElementById("list").addEventListener("click",ev=>{if(ev.target.closest("[data-rate]"))return;const r=ev.target.closest(".mc[data-id]");if(!r)return;const id=r.dataset.id;const m=markers[id];const p=D.plots.find(x=>x.id===id);if(!p)return;
+  if(!wide())document.getElementById("sheet").hidden=true;const pf=parcelOf(p);map.flyTo(pf?[pf.lat,pf.lng]:[p.lat,p.lng],17,{duration:.7});
+  const e=ranked.find(x=>x.p.id===id)||{p,score:0,flags:[],parts:[]};setTimeout(()=>{if(m)m.fire("click");else openDet(e,0)},750)});
+function wide(){return innerWidth>=900}
+function sideSync(){document.body.classList.toggle("side-on",wide()&&!document.getElementById("sheet").hidden);setTimeout(()=>map.invalidateSize(),50)}
+document.getElementById("btnList").onclick=()=>{const s=document.getElementById("sheet");s.hidden=!s.hidden;sideSync()};
+if(wide()){document.getElementById("sheet").hidden=false;setTimeout(sideSync,0)}
+addEventListener("resize",sideSync);
+document.getElementById("shClose").onclick=()=>{document.getElementById("sheet").hidden=true;sideSync()};
 document.getElementById("btnHidden").onclick=e=>{if(map.hasLayer(hiddenLayer)){map.removeLayer(hiddenLayer);e.target.textContent="Vyradené: skryté"}else{map.addLayer(hiddenLayer);e.target.textContent="Vyradené: zobrazené"}};
 map.on("overlayadd overlayremove",()=>{document.getElementById("btnHidden").textContent="Vyradené: "+(map.hasLayer(hiddenLayer)?"zobrazené":"skryté")});
 document.getElementById("btnMine").onclick=()=>{showMine=!showMine;draw()};
@@ -394,7 +430,16 @@ addEventListener("popstate",()=>{if(!document.getElementById("lbx").hidden){docu
 addEventListener("keydown",e=>{if(e.key==="Escape"){if(!document.getElementById("lbx").hidden)document.getElementById("lbxX").click();else closeDet()}});
 
 /* odkaz z aplikácie: #find=<id> (nájsť parcelu) alebo #show=<id> (otvoriť detail) */
-function handleHash(){const hh=(location.hash||"").replace(/%7E/gi,"~");const m=hh.match(/^#(find|show)=([a-z0-9-]{1,120})(?:~([^~]*)~([\d.]+)~([\d.]+)(?:~(\d*))?)?$/);if(!m||!D)return;
+function importAppState(st){let n=0;const code={y:"yes",m:"maybe",n:"no",h:"hide"};
+  st.split(",").forEach(it=>{const t=it.split("~");const id=t[0];if(!/^[a-z0-9-]{1,120}$/.test(id))return;const v=code[t[1]]||null,at=+t[2]||0;
+    const l=rateL[id];if(at&&(!l||l.t<at)){rateL[id]={v,t:at};sentL[id]=Math.max(sentL[id]||0,at);n++}
+    if(t[3]==="1"&&!seenL[id]){seenL[id]=Date.now();sentL[id]=Math.max(sentL[id]||0,1)}
+    if(t[5]&&isFinite(+t[5])){let lab=t[4]||"";for(let k=0;k<3&&/%[0-9a-f]{2}/i.test(lab);k++){try{lab=decodeURIComponent(lab)}catch(e){break}}
+      const o=LS.get("pk-parcel",{});const cur=o[id];if(!cur||cur.label!==lab||Math.abs((cur.lat||0)-(+t[5]))>1e-5){o[id]={label:lab,lat:+t[5],lng:+t[6],ref:t[7]||"",t:0,ring:cur&&cur.label===lab?cur.ring:undefined};LS.set("pk-parcel",o);n++}}});
+  LS.set("pk-rate",rateL);LS.set("pk-seen",seenL);LS.set("pk-sent",sentL);mergeState();draw();updSync();return n}
+function handleHash(){let raw=(location.hash||"").replace(/^#/,"").replace(/%7E/gi,"~");if(!raw||!D)return;
+  const parts=raw.split("&");const stp=parts.find(x=>x.startsWith("st="));if(stp){importAppState(stp.slice(3));try{history.replaceState(null,"",location.pathname+location.search)}catch(x){}}
+  const hh="#"+(parts.find(x=>/^(find|show)=/.test(x))||"");const m=hh.match(/^#(find|show)=([a-z0-9-]{1,120})(?:~([^~]*)~([\d.]+)~([\d.]+)(?:~(\d*))?)?$/);if(!m||!D)return;
   try{history.replaceState(null,"",location.pathname+location.search)}catch(x){}
   const p=D.plots.find(x=>x.id===m[2]);if(!p){toast("Pozemok sa na mape nenašiel.");return}
   const e=ranked.find(x=>x.p.id===p.id)||{p,score:0,flags:[],parts:[]};let pf=parcelOf(p);
