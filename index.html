@@ -415,8 +415,9 @@ async function highlightParcel(p,pf){
       const hit=f.find(x=>x.ring&&lab&&String(x.label).replace(/^[^\d]*/,"")===lab)||f.filter(x=>x.ring).sort((a,b)=>{const ca=centroid(a.ring),cb=centroid(b.ring);return Math.hypot(ca[0]-pf.lat,ca[1]-pf.lng)-Math.hypot(cb[0]-pf.lat,cb[1]-pf.lng)})[0];
       if(hit){ring=hit.ring;const o=LS.get("pk-parcel",{});if(!o[p.id]||!o[p.id].label){o[p.id]=Object.assign({},pf,{ring:ring.map(q=>[+q[0].toFixed(6),+q[1].toFixed(6)]),t:0});LS.set("pk-parcel",o)}}break}catch(e){}}}
   if(parcHL)parcHL.remove();
-  if(ring){parcHL=L.polygon(ring.map(q=>[q[1],q[0]]),{color:"#f59e0b",weight:4,fillOpacity:.25}).addTo(map);map.fitBounds(parcHL.getBounds(),{maxZoom:19,padding:[60,60]})}
-  else map.setView([pf.lat,pf.lng],19);
+  map.stop();
+  if(ring){parcHL=L.polygon(ring.map(q=>[q[1],q[0]]),{color:"#f59e0b",weight:4,fillOpacity:.25}).addTo(map);const go=()=>map.fitBounds(parcHL.getBounds(),{maxZoom:19,padding:[60,60],animate:false});go();setTimeout(go,700)}
+  else{map.setView([pf.lat,pf.lng],19,{animate:false});setTimeout(()=>map.setView([pf.lat,pf.lng],19,{animate:false}),700)}
   const box=document.getElementById("pcp");box.hidden=false;
   box.innerHTML='<div class="r1"><b>🟧 '+esc(p.village)+' · parcela '+esc(pf.label||"?")+'</b><span style="color:var(--muted);font-size:12px">'+(pf.area?esc(fmtNum(pf.area))+' m²':'')+'</span></div><div class="r2"><button class="btn" type="button" id="hpDet">ℹ Detail</button><a class="btn" style="text-decoration:none" href="'+esc(zbgisUrl(pf,pf.lat,pf.lng))+'" target="_blank" rel="noopener">ZBGIS ↗</a><button class="btn" type="button" id="hpX">✕</button></div>';
   document.getElementById("hpDet").onclick=()=>{box.hidden=true;const e=ranked.find(x=>x.p.id===p.id)||{p,score:0,flags:[],parts:[]};openDet(e,ranked.indexOf(e)+1)};
