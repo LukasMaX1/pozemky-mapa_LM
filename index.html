@@ -286,6 +286,7 @@ function popupHtml(e,rank){
    '<div class="t" style="margin-top:4px">Poloha '+(p.precise?'podľa ulice z inzerátu':'približná (stred obce)')+'</div></div>';
 }
 function updSync(){const n=pending().length,b=document.getElementById("btnSync");b.hidden=!n;b.textContent="↗ Preniesť do aplikácie ("+n+")"}
+function doSync(){document.getElementById("btnSync").click()}
 document.getElementById("btnSync").onclick=()=>{const code={yes:"y",maybe:"m",no:"n",hide:"h"};
   const parts=pending().map(p=>{const l=rateL[p.id];const pc=pcPending(p);return p.id+"--"+(l&&l.t>ts(p.ratingAt)?(l.v?code[l.v]:"x"):"s")+(pc?(pc.del?"~D":"~P~"+encodeURIComponent(pc.label)+"~"+pc.lat+"~"+pc.lng+"~"+Math.round(pc.area||0)+"~"+((String(pc.ref||"").match(/\b(8\d{5})\b/)||[])[1]||"")):"")});
   if(!parts.length)return;window.open("https://claude.ai/artifact/GsnHdCBC455XFP5HD1rgrP#imp-"+parts.join("---"),"_blank","noopener");
@@ -404,10 +405,18 @@ function showCand(i){if(!PC)return;const n=PC.c.length;PC.idx=((i%n)+n)%n;const 
   document.getElementById("pcOk").onclick=()=>confirmCand(PC.idx)}
 function confirmCand(i){if(!PC)return;const p=PC.p,f=PC.c[i];const o=LS.get("pk-parcel",{});
   o[p.id]={label:f.label,ref:f.ref,area:f.area,lat:+f.lat.toFixed(6),lng:+f.lng.toFixed(6),ring:f.ring.map(q=>[+q[0].toFixed(6),+q[1].toFixed(6)]),t:Date.now()};LS.set("pk-parcel",o);
-  document.getElementById("pcp").hidden=true;if(parcHL){parcHL.remove();parcHL=null}PC=null;draw();updSync();
-  toast("Parcela "+f.label+" potvrdená – prenášam do aplikácie…");
-  setTimeout(()=>document.getElementById("btnSync").click(),400);
-  const e2=ranked.find(x=>x.p.id===p.id)||{p,score:0,flags:[],parts:[]};openDet(e2,ranked.indexOf(e2)+1,false)}
+  PC=null;draw();updSync();
+  // pohľad na parcelu ostáva: zvýraznenie aj priblíženie zostanú, panel sa prepne na potvrdený stav
+  const box=document.getElementById("pcp");box.hidden=false;
+  box.innerHTML='<div class="r1"><b>✔ Parcela '+esc(f.label)+' potvrdená</b><span style="color:var(--muted);font-size:12px">'+esc(fmtNum(f.area))+' m²</span></div>'+
+   '<div style="font-size:12.5px;color:var(--muted)">Prenos do aplikácie sa otvoril v novej karte – táto mapa ostáva tu.</div>'+
+   '<div class="r2"><button class="btn" type="button" id="pcSync">↗ Preniesť znova</button><button class="btn" type="button" id="pcDet">ℹ Detail</button><button class="btn" type="button" id="pcClose">✕ Zavrieť</button></div>';
+  const e2=ranked.find(x=>x.p.id===p.id)||{p,score:0,flags:[],parts:[]};
+  document.getElementById("pcSync").onclick=()=>doSync(true);
+  document.getElementById("pcDet").onclick=()=>{box.hidden=true;openDet(e2,ranked.indexOf(e2)+1)};
+  document.getElementById("pcClose").onclick=()=>{box.hidden=true;if(parcHL){parcHL.remove();parcHL=null}};
+  try{if(history.state&&history.state.det)history.replaceState(null,"")}catch(x){}DET=null;document.getElementById("detIn").innerHTML="";
+  setTimeout(()=>doSync(false),300)}
 function parcelOf(p){const o=LS.get("pk-parcel",{})[p.id];if(o&&o.del)return null;if(o&&o.label)return o;return p.parcelFound||null}
 function ringArea(r){let a=0;const k=Math.PI/180,R=6378137,lat0=r[0][1]*k;for(let i=0;i<r.length-1;i++){const x1=r[i][0]*k*R*Math.cos(lat0),y1=r[i][1]*k*R,x2=r[i+1][0]*k*R*Math.cos(lat0),y2=r[i+1][1]*k*R;a+=x1*y2-x2*y1}return Math.abs(a/2)}
 function centroid(r){let x=0,y=0;r.forEach(c=>{x+=c[0];y+=c[1]});return [y/r.length,x/r.length]}
