@@ -68,8 +68,8 @@ def save(u, path):
     return hashlib.sha1(b.getvalue()).hexdigest()[:12]
 man = {}
 for p in d.get("plots", []):
-    if p.get("gone"):
-        continue
+    if p.get("gone") or p.get("rating") in ("hide", "no"):
+        continue  # skryté a nepáčiace sa: fotky nesťahovať (a tým sa zmažú z img-cache)
     urls = []
     for l in p.get("links", []):
         u = l.get("url", "")

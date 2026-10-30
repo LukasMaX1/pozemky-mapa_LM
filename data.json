@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T17:06:24.278095+00:00",
+ "generated": "2026-10-30T18:04:31.917631+00:00",
  "settings": {
   "directions": {
    "J": {
@@ -387,7 +387,8 @@
    ],
    "gone": false,
    "source": "web",
-   "id": "bidovce-714"
+   "id": "bidovce-714",
+   "seenAt": "2026-10-30T17:36:22.261Z"
   },
   {
    "village": "Bidovce",
@@ -426,7 +427,8 @@
    ],
    "gone": false,
    "source": "web",
-   "id": "bidovce-726"
+   "id": "bidovce-726",
+   "seenAt": "2026-10-30T17:39:38.622Z"
   },
   {
    "village": "Bidovce",
@@ -464,7 +466,10 @@
     }
    ],
    "gone": false,
-   "id": "bidovce-824"
+   "id": "bidovce-824",
+   "rating": "hide",
+   "ratingAt": "2026-10-30T17:30:04.314Z",
+   "seenAt": "2026-10-30T17:22:03.085Z"
   },
   {
    "village": "Bohdanovce",
@@ -512,7 +517,8 @@
    ],
    "gone": false,
    "source": "rk",
-   "id": "bohdanovce-715"
+   "id": "bohdanovce-715",
+   "seenAt": "2026-10-30T17:36:13.784Z"
   },
   {
    "village": "Bohdanovce",
@@ -716,7 +722,8 @@
    ],
    "gone": false,
    "source": "web",
-   "id": "cakanovce-625"
+   "id": "cakanovce-625",
+   "seenAt": "2026-10-30T17:39:58.270Z"
   },
   {
    "village": "Čakanovce",
@@ -755,7 +762,8 @@
    ],
    "gone": false,
    "source": "web",
-   "id": "cakanovce-688"
+   "id": "cakanovce-688",
+   "seenAt": "2026-10-30T17:40:23.388Z"
   },
   {
    "village": "Čaňa",
@@ -1539,7 +1547,8 @@
    ],
    "gone": false,
    "source": "web",
-   "id": "nizna-hutka-515"
+   "id": "nizna-hutka-515",
+   "seenAt": "2026-10-30T17:27:53.147Z"
   },
   {
    "village": "Nižná Hutka – Komočov",
@@ -1993,7 +2002,10 @@
     }
    ],
    "gone": false,
-   "id": "ploske-831"
+   "id": "ploske-831",
+   "rating": "maybe",
+   "ratingAt": "2026-10-30T17:32:28.905Z",
+   "seenAt": "2026-10-30T17:30:06.873Z"
   },
   {
    "village": "Ploské – Ortáše",
@@ -2031,7 +2043,8 @@
     }
    ],
    "gone": false,
-   "id": "ploske-ortase-670"
+   "id": "ploske-ortase-670",
+   "seenAt": "2026-10-30T17:23:19.139Z"
   },
   {
    "village": "Rozhanovce",
@@ -2151,7 +2164,8 @@
    "lastSeen": "2026-10-30T16:30:00+01:00",
    "priceHistory": [],
    "gone": false,
-   "id": "rozhanovce-758"
+   "id": "rozhanovce-758",
+   "seenAt": "2026-10-30T17:39:23.766Z"
   },
   {
    "village": "Rozhanovce",
