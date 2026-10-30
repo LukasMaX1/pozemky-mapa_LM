@@ -113,6 +113,8 @@ function evaluate(p,st,vil){
   // exclusions
   if(p.category==="nestavebny")hidden="nestavebný / investičný pozemok";
   else if(p.category==="rekreacny")hidden="rekreačný pozemok";
+  if(p.upOk===false)hidden=hidden||"nie je v územnom pláne na výstavbu";
+  if(p.shape==="úzky pás")hidden=hidden||"úzky pás (podľa inzerátu)";
   if(v.exclude)hidden=hidden||"obec je vylúčená v nastaveniach";
   if(dir&&!dir.on)hidden=hidden||"smer "+(DIRS[p.direction]||p.direction)+" je vypnutý";
   const lim=v.maxMin!=null?v.maxMin:(dir?dir.maxMin:30);
@@ -225,7 +227,8 @@ function sketch(p){let w=p.width,l=p.length,dim=!!(w&&l);if(!dim&&p.area){w=Math
   return '<svg viewBox="0 0 96 96"><rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+pw.toFixed(1)+'" height="'+pl.toFixed(1)+'" fill="#cfe8d6" stroke="#c2410c" stroke-width="1.5"/>'+(dim?'<text x="48" y="'+(y-3).toFixed(1)+'" text-anchor="middle" font-size="8" fill="#5f6b63">'+esc(fmtNum(w))+' m</text><text x="'+(x+pw+2).toFixed(1)+'" y="'+(y+pl/2).toFixed(1)+'" font-size="8" fill="#5f6b63">'+esc(fmtNum(l))+'</text>':'<text x="48" y="'+(y+pl+9).toFixed(1)+'" text-anchor="middle" font-size="7" fill="#5f6b63">≈ štvorec</text>')+'<text x="48" y="'+(y+pl/2+3).toFixed(1)+'" text-anchor="middle" font-size="9" font-weight="600" fill="#1d2420">'+(p.area?esc(fmtNum(p.area))+' m²':'')+'</text></svg>'}
 function popupHtml(e,rank){
   const p=e.p,st=D.st;const ppm=(p.price&&p.area)?Math.round(p.price/p.area):null;const u=p.utilities||{};
-  const ut=["elektrina","voda","kanalizacia","plyn","optika"].filter(k=>u[k]===true).join(", ")||"neuvedené";
+  const ud=p.utilDetail||{};const ut=["elektrina","voda","kanalizacia","plyn","optika"].filter(k=>u[k]!==undefined).map(k=>(u[k]?"":"✗ ")+k+(ud[k]&&ud[k]!=="spomenutá"?" ("+ud[k]+")":"")).join(", ")||"neuvedené";
+  const ck=p.check||{};const extra=[p.shape&&("tvar: "+p.shape),p.access,p.street,p.permit&&"stavebné povolenie",(!p.permit&&p.project)&&"projekt RD",p.agent&&("predáva: "+p.agent)].filter(Boolean).join(" · ");
   const la=p.lat.toFixed(5),ln=p.lng.toFixed(5);
   const pc=p.priceHistory&&p.priceHistory.length>1?p.priceHistory[p.priceHistory.length-2].price:null;
   const nophoto=rate[p.id]==="hide"||rate[p.id]==="no";
@@ -238,7 +241,7 @@ function popupHtml(e,rank){
    '<div class="f"><b style="color:'+priceHex(p.price,st.priceMax)+';font-size:15px">'+esc(fmtEur(p.price))+'</b>'+(ppm?' · '+esc(fmtNum(ppm))+' €/m²':'')+(pc&&pc!==p.price?' <span style="color:#555">(predtým '+esc(fmtEur(pc))+')</span>':'')+'<br>'+
    (p.area?esc(fmtNum(p.area))+' m²':'výmera ?')+((p.width&&p.length)?' · '+esc(p.width)+'×'+esc(p.length)+' m':'')+' · '+esc(p.terrain||'terén ?')+' · '+(e.mins!=null?(e.est?'~':'')+esc(e.mins)+' min':'dojazd ?')+'<br>Siete: '+esc(ut)+
    (p.parcel?'<br>Parcela <b>'+esc(p.parcel)+'</b>'+(p.cadastralArea?', k.ú. '+esc(p.cadastralArea):''):'')+'</div>'+
-   '<div>'+(e.hidden?'<span class="tag" style="color:#a16207">vyradený: '+esc(e.hidden)+'</span>':'<span class="tag" style="color:'+scoreHex(e.score)+'">skóre '+e.score+'</span>')+(p.reserved?'<span class="tag" style="color:#a16207">rezervované</span>':'')+'</div>'+
+   '<div>'+(e.hidden?'<span class="tag" style="color:#a16207">vyradený: '+esc(e.hidden)+'</span>':'<span class="tag" style="color:'+scoreHex(e.score)+'">skóre '+e.score+'</span>')+(p.reserved?'<span class="tag" style="color:#a16207">rezervované</span>':'')+(ck.status==="overený"?'<span class="tag" style="color:#15803d">✔ overené z inzerátu</span>':'<span class="tag" style="color:#a16207">⚠ neoverené</span>')+'</div>'+(extra?'<div class="t">'+esc(extra)+'</div>':'')+
    (p.summary?'<div class="sum">'+esc(p.summary)+'</div>':'')+
    '<div class="ln">'+(p.links||[]).map(l=>{const h=safeUrl(l.url);return h?'<a href="'+esc(h)+'" target="_blank" rel="noopener">'+esc(l.portal||"Inzerát")+' ↗</a>':""}).join("")+'</div>'+
    '<div class="ln"><a href="https://zbgis.skgeodesy.sk/mapka/sk/kataster?pos='+la+','+ln+',18" target="_blank" rel="noopener">Kataster ZBGIS ↗</a>'+(p.parcel?'<button type="button" data-copy="'+esc(p.parcel+(p.cadastralArea?" "+p.cadastralArea:""))+'">📋 Kopírovať parcelu</button>':'')+'<a href="https://www.google.com/maps/dir/?api=1&destination='+la+','+ln+'" target="_blank" rel="noopener">Navigovať ↗</a></div>'+
@@ -252,7 +255,7 @@ document.getElementById("btnSync").onclick=()=>{const code={yes:"y",maybe:"m",no
 function draw(){
   plotsLayer.clearLayers();hiddenLayer.clearLayers();originLayer.clearLayers();markers={};
   const st=D.st,vil=parseVillages(st.villages);
-  const ev=D.plots.filter(p=>!p.gone&&p.lat!=null).map(p=>evaluate(p,st,vil));
+  const ev=D.plots.filter(p=>!p.gone&&!p.invalid&&p.lat!=null).map(p=>evaluate(p,st,vil));
   ranked=ev.filter(e=>!e.hidden).sort((a,b)=>b.score-a.score);
   const hid=ev.filter(e=>e.hidden);
   const placed={};
