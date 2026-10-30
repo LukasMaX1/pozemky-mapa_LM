@@ -5,7 +5,7 @@ import json, sys, os, datetime
 plots_dir, settings_path = sys.argv[1], sys.argv[2]
 notes_dir = sys.argv[3] if len(sys.argv) > 3 else None
 KEEP_SETTINGS = ["directions","villages","areaMin","areaMax","priceMax","terrain","maxRatio","showReserved","origin"]
-KEEP_PLOT = ["village","title","direction","minutes","minutesOrigin","originKey","lat","lng","precise","parcel","cadastralArea","area","price","width","length","terrain","utilities","mainRoad","category","reserved","summary","links","photoUrl","imageUrl","firstSeen","lastSeen","priceHistory","gone","goneReason","source"]
+KEEP_PLOT = ["village","title","direction","minutes","minutesOrigin","originKey","lat","lng","precise","parcel","cadastralArea","area","price","width","length","terrain","utilities","mainRoad","category","reserved","summary","links","photoUrl","imageUrl","firstSeen","lastSeen","priceHistory","gone","goneReason","source","check","utilDetail","shape","access","street","permit","project","zoning","landType","upOk","dimsNote","agent","published","multi","flood","invalid"]
 s = json.load(open(settings_path))
 s = s.get("data", s)
 plots = []

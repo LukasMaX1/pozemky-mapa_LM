@@ -1,5 +1,6 @@
-"""Stiahne hlavné fotky inzerátov a uloží ich do out/img/<id>.jpg + out/manifest.json.
-Zdroj: imageUrl z data.json, inak og:image z detailu inzerátu (len ak robots.txt povoľuje).
+"""Stiahne fotky inzerátov a uloží ich do out/img/<id>[-n].jpg + out/manifest.json.
+Zdroj: vlastná galéria inzerátu zo štruktúrovaných dát detailu (out/verify.json z verify_listings.py),
+nikdy nie fotky „podobných inzerátov“ zo stránky. Bez overeného detailu sa fotky nesťahujú.
 Vetva img-cache slúži na prenos fotiek do aplikácie a pre mapu."""
 import json, os, io, re, hashlib, requests
 from urllib.parse import urlparse, urljoin
@@ -28,7 +29,7 @@ def allowed(u):
     return robots[host].can_fetch(UA, u)
 BAD = re.compile(r"(/_next/static/media/|logo|placeholder|OG-|og-default|banner)", re.I)
 GAL = re.compile(r'https://img\.unitedclassifieds\.sk/foto/[A-Za-z0-9_\-]+/([A-Za-z0-9_\-]+?)_(\w+)\?[^"\'\s<>\\]+')
-MAXP = 8
+MAXP = 12
 def page_photos(page):
     """Vráti zoznam URL fotiek inzerátu (najprv og:image, potom galéria), bez duplicít."""
     if "bazos." in page or not allowed(page):
@@ -67,20 +68,18 @@ def save(u, path):
     open(path, "wb").write(b.getvalue())
     return hashlib.sha1(b.getvalue()).hexdigest()[:12]
 man = {}
+try:
+    VER = json.load(open("out/verify.json"))
+except Exception:
+    VER = {}
 for p in d.get("plots", []):
     if p.get("gone") or p.get("rating") in ("hide", "no"):
         continue  # skryté a nepáčiace sa: fotky nesťahovať (a tým sa zmažú z img-cache)
-    urls = []
-    for l in p.get("links", []):
-        u = l.get("url", "")
-        if u.startswith("https://") and "bazos." not in u and "/vysledky/" not in u:
-            try:
-                urls = page_photos(u)
-            except Exception as e:
-                print("page fail", p["id"], e)
-            if urls:
-                break
-    if not urls and p.get("imageUrl", "").startswith("https://"):
+    v = VER.get(p["id"]) or {}
+    if v.get("status") in ("zrušený", "chybný"):
+        continue
+    urls = [u for u in (v.get("data") or {}).get("images", []) if not BAD.search(u)][:MAXP]
+    if not urls and p.get("imageUrl", "").startswith("https://") and "unitedclassifieds" not in p["imageUrl"]:
         urls = [p["imageUrl"]]
     photos = []
     for i, u in enumerate(urls):
