@@ -428,7 +428,7 @@ function confirmCand(i){if(!PC)return;const p=PC.p,f=PC.c[i];const o=LS.get("pk-
   document.getElementById("pcDet").onclick=()=>{box.hidden=true;openDet(e2,ranked.indexOf(e2)+1)};
   document.getElementById("pcClose").onclick=()=>{box.hidden=true;if(parcHL){parcHL.remove();parcHL=null}};
   try{if(history.state&&history.state.det)history.replaceState(null,"")}catch(x){}DET=null;document.getElementById("detIn").innerHTML="";
-  setTimeout(()=>doSync(false),300)}
+  doSync()}
 function parcelOf(p){const o=LS.get("pk-parcel",{})[p.id];if(o&&o.del)return null;if(o&&o.label)return o;return p.parcelFound||null}
 function ringArea(r){let a=0;const k=Math.PI/180,R=6378137,lat0=r[0][1]*k;for(let i=0;i<r.length-1;i++){const x1=r[i][0]*k*R*Math.cos(lat0),y1=r[i][1]*k*R,x2=r[i+1][0]*k*R*Math.cos(lat0),y2=r[i+1][1]*k*R;a+=x1*y2-x2*y1}return Math.abs(a/2)}
 function centroid(r){let x=0,y=0;r.forEach(c=>{x+=c[0];y+=c[1]});return [y/r.length,x/r.length]}
