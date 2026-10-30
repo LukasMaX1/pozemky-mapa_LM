@@ -30,6 +30,7 @@ def _text(t):
     t = re.sub(r"(?i)<br\s*/?>|</p>|</li>", "\n", t or "")
     t = re.sub(r"<[^>]+>", " ", t)
     t = t.replace("\r", "")
+    t = re.sub(r"(?<=[.!?…])[ \t\xa0]{2,}|[ \t\xa0]{2,}(?=[A-ZÁČĎÉÍĽĹŇÓÔŔŠŤÚÝŽ•✔📍📐🌱📄✅➡▪-])", "\n", t)
     t = re.sub(r"[ \t\xa0]+", " ", t)
     t = re.sub(r" *\n *", "\n", t)
     t = re.sub(r"\n{3,}", "\n\n", t)
