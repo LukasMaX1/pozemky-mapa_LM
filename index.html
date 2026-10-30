@@ -70,6 +70,7 @@ body{font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:v
   <a class="btn" id="appLink" href="https://claude.ai/artifact/GsnHdCBC455XFP5HD1rgrP" target="_blank" rel="noopener">Aplikácia</a>
 </div>
 <div class="fabs">
+  <button class="btn" id="btnSync" type="button" hidden>↗ Preniesť do aplikácie</button>
   <button class="btn" id="btnMine" type="button" hidden>Skryté mnou: 0</button>
   <button class="btn" id="btnHidden" type="button">Vyradené: skryté</button>
   <button class="btn" id="btnLocate" type="button">📍 Kde som</button>
@@ -206,7 +207,15 @@ const legend=L.control({position:"bottomright"});legend.onAdd=()=>{const d=L.Dom
 
 let D=null,ranked=[],markers={};
 const LS={get(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-let seen=LS.get("pk-seen",{}),rate=LS.get("pk-rate",{}),showMine=false;
+let seenL=LS.get("pk-seen",{}),rateL=LS.get("pk-rate",{}),showMine=false;
+Object.keys(rateL).forEach(k=>{if(typeof rateL[k]==="string")rateL[k]={v:rateL[k],t:1}});
+const ts=x=>x?(typeof x==="number"?x:Date.parse(x)||0):0;
+let rate={},seen={};
+function mergeState(){rate={};seen={};
+  (D?D.plots:[]).forEach(p=>{const l=rateL[p.id],dt=ts(p.ratingAt);
+    if(l&&l.t>dt){if(l.v)rate[p.id]=l.v}else if(p.rating)rate[p.id]=p.rating;
+    if(seenL[p.id]||p.seenAt)seen[p.id]=Math.max(ts(seenL[p.id]),ts(p.seenAt))||1})}
+function pending(){return (D?D.plots:[]).filter(p=>{const l=rateL[p.id];return (l&&l.t>ts(p.ratingAt))||(seenL[p.id]&&!p.seenAt)})}
 const RATES=[["yes","👍 Páči"],["maybe","🤔 Možno"],["no","👎 Nepáči"],["hide","🚫 Skryť"]];
 const BADGE={yes:"👍",maybe:"🤔",no:"👎"};
 function sketch(p){let w=p.width,l=p.length,dim=!!(w&&l);if(!dim&&p.area){w=Math.sqrt(p.area);l=w}if(!(w&&l))return "";const s=70/Math.max(w,l),pw=w*s,pl=l*s,x=(96-pw)/2,y=(96-pl)/2;
@@ -229,6 +238,11 @@ function popupHtml(e,rank){
    '<div class="ln"><a href="https://zbgis.skgeodesy.sk/mapka/sk/kataster?pos='+la+','+ln+',18" target="_blank" rel="noopener">Kataster ZBGIS ↗</a>'+(p.parcel?'<button type="button" data-copy="'+esc(p.parcel+(p.cadastralArea?" "+p.cadastralArea:""))+'">📋 Kopírovať parcelu</button>':'')+'<a href="https://www.google.com/maps/dir/?api=1&destination='+la+','+ln+'" target="_blank" rel="noopener">Navigovať ↗</a></div>'+
    '<div class="t" style="margin-top:4px">Poloha '+(p.precise?'podľa ulice z inzerátu':'približná (stred obce)')+'</div></div>';
 }
+function updSync(){const n=pending().length,b=document.getElementById("btnSync");b.hidden=!n;b.textContent="↗ Preniesť do aplikácie ("+n+")"}
+document.getElementById("btnSync").onclick=()=>{const code={yes:"y",maybe:"m",no:"n",hide:"h"};
+  const parts=pending().map(p=>{const l=rateL[p.id];return p.id+"--"+(l&&l.t>ts(p.ratingAt)?(l.v?code[l.v]:"x"):"s")});
+  if(!parts.length)return;window.open("https://claude.ai/artifact/GsnHdCBC455XFP5HD1rgrP#imp-"+parts.join("---"),"_blank","noopener");
+  toast("Otváram aplikáciu – hodnotenia sa prenesú automaticky.")};
 function draw(){
   plotsLayer.clearLayers();hiddenLayer.clearLayers();originLayer.clearLayers();markers={};
   const st=D.st,vil=parseVillages(st.villages);
@@ -241,7 +255,7 @@ function draw(){
     const r=rate[e.p.id];
     const mk=sn=>L.divIcon({className:"",html:'<div class="pinw"><div class="pin'+(rank?'':' dim')+(sn?' seen':'')+(r==='no'?' r-no':'')+'" style="width:26px;height:26px;background:'+(rank?scoreHex(e.score):'#5f6b63')+'">'+(rank||'×')+'</div>'+(BADGE[r]?'<span class="badge">'+BADGE[r]+'</span>':'')+'</div>',iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-12]});
     const m=L.marker(ll,{icon:mk(!!seen[e.p.id]),zIndexOffset:rank?(r==='yes'?2000:1000)-rank:0}).bindPopup(()=>popupHtml(e,rank),{maxWidth:300,autoPanPaddingTopLeft:[10,70]});
-    m.on("popupopen",()=>{if(!seen[e.p.id]){seen[e.p.id]=Date.now();LS.set("pk-seen",seen);m.setIcon(mk(true))}});
+    m.on("popupopen",()=>{if(!seen[e.p.id]){seen[e.p.id]=seenL[e.p.id]=Date.now();LS.set("pk-seen",seenL);m.setIcon(mk(true));updSync()}});
     m.addTo(layer);markers[e.p.id]=m;
   };
   const mine=ranked.filter(e=>rate[e.p.id]==="hide");
@@ -263,8 +277,8 @@ document.getElementById("btnHidden").onclick=e=>{if(map.hasLayer(hiddenLayer)){m
 map.on("overlayadd overlayremove",()=>{document.getElementById("btnHidden").textContent="Vyradené: "+(map.hasLayer(hiddenLayer)?"zobrazené":"skryté")});
 document.getElementById("btnMine").onclick=()=>{showMine=!showMine;draw()};
 document.addEventListener("click",ev=>{const b=ev.target.closest&&ev.target.closest("[data-rate]");if(!b)return;const id=b.dataset.id,v=b.dataset.rate;
-  if(rate[id]===v)delete rate[id];else rate[id]=v;LS.set("pk-rate",rate);map.closePopup();draw();
-  toast(rate[id]?({yes:"Označené: páči sa",maybe:"Označené: možno",no:"Označené: nepáči sa",hide:"Skryté z mapy"})[v]:"Označenie zrušené");
+  const nv=rate[id]===v?null:v;rateL[id]={v:nv,t:Date.now()};LS.set("pk-rate",rateL);if(!seenL[id]){seenL[id]=Date.now();LS.set("pk-seen",seenL)}mergeState();map.closePopup();draw();updSync();
+  toast(nv?({yes:"Označené: páči sa",maybe:"Označené: možno",no:"Označené: nepáči sa",hide:"Skryté z mapy"})[v]:"Označenie zrušené");
   const m=markers[id];if(m&&rate[id]!=="hide")setTimeout(()=>m.openPopup(),50)});
 let me=null;
 document.getElementById("btnLocate").onclick=()=>{if(!navigator.geolocation){toast("Poloha nie je dostupná.");return}navigator.geolocation.getCurrentPosition(pos=>{const ll=[pos.coords.latitude,pos.coords.longitude];if(me)me.remove();me=L.circleMarker(ll,{radius:8,color:"#fff",weight:3,fillColor:"#2563a6",fillOpacity:1}).addTo(map).bindTooltip("Tu si");map.flyTo(ll,16)},()=>toast("Polohu sa nepodarilo zistiť. Povoľ prístup k polohe."),{enableHighAccuracy:true,timeout:10000})};
@@ -272,7 +286,7 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
 
 fetch("data.json?v="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(j=>{
   const st=Object.assign({},DEF,j.settings||{});st.directions=Object.assign({},DEF.directions,(j.settings||{}).directions||{});
-  D={st,plots:j.plots||[],generated:j.generated};draw();fit();
+  D={st,plots:j.plots||[],generated:j.generated};mergeState();draw();fit();updSync();
 }).catch(err=>{document.getElementById("sub").textContent="Údaje sa nepodarilo načítať ("+err.message+")"});
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 </script>
