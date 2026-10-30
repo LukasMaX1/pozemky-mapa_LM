@@ -36,6 +36,19 @@ body{font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:v
 .row .p{font-weight:700;text-align:right;white-space:nowrap}
 .pin{border-radius:50%;color:#fff;font:600 11px ui-monospace,monospace;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .pin.dim{opacity:.55}
+.pin.seen{border:3px solid #1d2420;box-shadow:0 0 0 2px #fff,0 1px 4px rgba(0,0,0,.45)}
+.pin.r-no{opacity:.5}
+.badge{position:absolute;right:-7px;top:-7px;width:16px;height:16px;border-radius:50%;background:#fff;font-size:10px;line-height:16px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+.pinw{position:relative;width:26px;height:26px}
+.rate{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:8px 0 4px}
+.rate button{font:600 12px system-ui,sans-serif;border:1px solid #d3dacf;border-radius:8px;padding:6px 2px;background:#fff;color:#1d2420;cursor:pointer}
+.rate button.on{color:#fff}
+.rate .r-yes.on{background:#2f7d4a;border-color:#2f7d4a}.rate .r-maybe.on{background:#a16207;border-color:#a16207}.rate .r-no.on{background:#b4232c;border-color:#b4232c}.rate .r-hide.on{background:#5f6b63;border-color:#5f6b63}
+.media{display:flex;gap:8px;align-items:center;margin:6px 0}
+.media img{width:120px;height:84px;object-fit:cover;border-radius:8px;background:#e8ece5}
+.media svg{width:96px;height:96px;flex:none;background:#f3f5f1;border-radius:8px}
+.zhint{position:fixed;z-index:1000;left:50%;transform:translateX(-50%);top:calc(70px + env(safe-area-inset-top));font-size:12px}
+.zhint[hidden]{display:none}
 .leaflet-popup-content{margin:12px 14px;min-width:220px}
 .pp h3{margin:0 0 2px;font-size:16px}
 .pp .t{color:#555;font-size:12px}
@@ -57,12 +70,14 @@ body{font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:v
   <a class="btn" id="appLink" href="https://claude.ai/artifact/GsnHdCBC455XFP5HD1rgrP" target="_blank" rel="noopener">Aplikácia</a>
 </div>
 <div class="fabs">
+  <button class="btn" id="btnMine" type="button" hidden>Skryté mnou: 0</button>
   <button class="btn" id="btnHidden" type="button">Vyradené: skryté</button>
   <button class="btn" id="btnLocate" type="button">📍 Kde som</button>
   <button class="btn pri" id="btnList" type="button">Zoznam</button>
 </div>
 <div class="sheet" id="sheet" hidden><div class="sh"><b id="shTitle">Pozemky</b><button class="btn" id="shClose" type="button">Zavrieť</button></div><div class="list" id="list"></div></div>
 <div class="toast" id="toast" hidden></div>
+<div class="pill zhint" id="zhint" hidden>Priblíž pre hranice parciel</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
 "use strict";
@@ -175,19 +190,36 @@ const bases={"Ortofoto SR":ortoSR,"Satelit (Esri)":sat,"Mapa (OSM)":osm,"Turisti
 const baseKey={orto:ortoSR,sat,osm,topo};
 const map=L.map("m",{zoomControl:false,layers:[baseKey[base]||ortoSR,labels]}).setView([CENTER.lat,CENTER.lng],11);
 L.control.zoom({position:"bottomleft"}).addTo(map);
+function cadastre(url){const opts={layers:"CP.CadastralParcel",format:"image/png",transparent:true,version:"1.3.0",minZoom:16,maxZoom:22,attribution:"Kataster © ÚGKK SR (CC BY 4.0)"};const l=L.tileLayer.wms(url,opts);let tried=false;l.on("tileerror",()=>{if(tried)return;tried=true;l.setParams({layers:"cp:CP.CadastralParcel"})});return l}
+const parcC=cadastre("https://inspirews.skgeodesy.sk/geoserver/cp/ows?");
+const parcE=cadastre("https://inspirews.skgeodesy.sk/geoserver/cp_uo/ows?");
+let wantC=true;try{wantC=localStorage.getItem("pk-parcC")!=="0"}catch(e){}
 const plotsLayer=L.layerGroup().addTo(map),hiddenLayer=L.layerGroup(),originLayer=L.layerGroup().addTo(map);
-L.control.layers(bases,{"Názvy obcí":labels,"Kruhy vzdialenosti":originLayer,"Vyradené pozemky":hiddenLayer},{position:"topright",collapsed:true}).addTo(map);
+L.control.layers(bases,{"Parcely C (kataster)":parcC,"Parcely E (pôvodné)":parcE,"Názvy obcí":labels,"Kruhy vzdialenosti":originLayer,"Vyradené pozemky":hiddenLayer},{position:"topright",collapsed:true}).addTo(map);
 L.control.scale({imperial:false,position:"bottomleft"}).addTo(map);
+if(wantC)parcC.addTo(map);
+map.on("overlayadd",e=>{if(e.layer===parcC)try{localStorage.setItem("pk-parcC","1")}catch(x){}});map.on("overlayremove",e=>{if(e.layer===parcC)try{localStorage.setItem("pk-parcC","0")}catch(x){}});
+function zhint(){document.getElementById("zhint").hidden=!(map.hasLayer(parcC)||map.hasLayer(parcE))||map.getZoom()>=16}
+map.on("zoomend overlayadd overlayremove",zhint);
 map.on("baselayerchange",e=>{const k=Object.keys(baseKey).find(k=>baseKey[k]===e.layer);try{localStorage.setItem("pk-base",k)}catch(x){}});
 const legend=L.control({position:"bottomright"});legend.onAdd=()=>{const d=L.DomUtil.create("div","pill leg");d.innerHTML='Skóre: <b style="color:#2f7d4a">75+</b> · <b style="color:#2f6b45">55+</b> · <b style="color:#a16207">40+</b> · <b style="color:#b4232c">&lt;40</b><br>Cena voči limitu: <b style="color:#2f7d4a">≤75 %</b> · <b style="color:#2f6b45">≤95 %</b> · <b style="color:#a16207">±5 %</b> · <b style="color:#b4232c">nad</b>';return d};legend.addTo(map);
 
 let D=null,ranked=[],markers={};
+const LS={get(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let seen=LS.get("pk-seen",{}),rate=LS.get("pk-rate",{}),showMine=false;
+const RATES=[["yes","👍 Páči"],["maybe","🤔 Možno"],["no","👎 Nepáči"],["hide","🚫 Skryť"]];
+const BADGE={yes:"👍",maybe:"🤔",no:"👎"};
+function sketch(p){let w=p.width,l=p.length,dim=!!(w&&l);if(!dim&&p.area){w=Math.sqrt(p.area);l=w}if(!(w&&l))return "";const s=70/Math.max(w,l),pw=w*s,pl=l*s,x=(96-pw)/2,y=(96-pl)/2;
+  return '<svg viewBox="0 0 96 96"><rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+pw.toFixed(1)+'" height="'+pl.toFixed(1)+'" fill="#cfe8d6" stroke="#c2410c" stroke-width="1.5"/>'+(dim?'<text x="48" y="'+(y-3).toFixed(1)+'" text-anchor="middle" font-size="8" fill="#5f6b63">'+esc(fmtNum(w))+' m</text><text x="'+(x+pw+2).toFixed(1)+'" y="'+(y+pl/2).toFixed(1)+'" font-size="8" fill="#5f6b63">'+esc(fmtNum(l))+'</text>':'<text x="48" y="'+(y+pl+9).toFixed(1)+'" text-anchor="middle" font-size="7" fill="#5f6b63">≈ štvorec</text>')+'<text x="48" y="'+(y+pl/2+3).toFixed(1)+'" text-anchor="middle" font-size="9" font-weight="600" fill="#1d2420">'+(p.area?esc(fmtNum(p.area))+' m²':'')+'</text></svg>'}
 function popupHtml(e,rank){
   const p=e.p,st=D.st;const ppm=(p.price&&p.area)?Math.round(p.price/p.area):null;const u=p.utilities||{};
   const ut=["elektrina","voda","kanalizacia","plyn","optika"].filter(k=>u[k]===true).join(", ")||"neuvedené";
   const la=p.lat.toFixed(5),ln=p.lng.toFixed(5);
   const pc=p.priceHistory&&p.priceHistory.length>1?p.priceHistory[p.priceHistory.length-2].price:null;
+  const img=p.imageUrl&&safeUrl(p.imageUrl);const r=rate[p.id]||"";const first=(p.links&&p.links[0]&&safeUrl(p.links[0].url))||img;
   return '<div class="pp"><h3>'+(rank?'#'+rank+' ':'')+esc(p.village)+'</h3><div class="t">'+esc(p.title||"")+'</div>'+
+   '<div class="media">'+(img?'<a href="'+esc(first)+'" target="_blank" rel="noopener"><img src="'+esc(img)+'" alt="Foto z inzerátu" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></a>':'')+sketch(p)+'</div>'+
+   '<div class="rate">'+RATES.map(x=>'<button type="button" class="r-'+x[0]+(r===x[0]?' on':'')+'" data-rate="'+x[0]+'" data-id="'+esc(p.id)+'">'+x[1]+'</button>').join("")+'</div>'+
    '<div class="f"><b style="color:'+priceHex(p.price,st.priceMax)+';font-size:15px">'+esc(fmtEur(p.price))+'</b>'+(ppm?' · '+esc(fmtNum(ppm))+' €/m²':'')+(pc&&pc!==p.price?' <span style="color:#555">(predtým '+esc(fmtEur(pc))+')</span>':'')+'<br>'+
    (p.area?esc(fmtNum(p.area))+' m²':'výmera ?')+((p.width&&p.length)?' · '+esc(p.width)+'×'+esc(p.length)+' m':'')+' · '+esc(p.terrain||'terén ?')+' · '+(e.mins!=null?(e.est?'~':'')+esc(e.mins)+' min':'dojazd ?')+'<br>Siete: '+esc(ut)+
    (p.parcel?'<br>Parcela <b>'+esc(p.parcel)+'</b>'+(p.cadastralArea?', k.ú. '+esc(p.cadastralArea):''):'')+'</div>'+
@@ -206,17 +238,21 @@ function draw(){
   const placed={};
   const add=(e,rank,layer)=>{
     let ll=[e.p.lat,e.p.lng];const k=ll.join(",");const n=placed[k]||0;placed[k]=n+1;if(n)ll=[ll[0]+n*0.0012,ll[1]+n*0.0016];
-    const ic=L.divIcon({className:"",html:'<div class="pin'+(rank?'':' dim')+'" style="width:26px;height:26px;background:'+(rank?scoreHex(e.score):'#5f6b63')+'">'+(rank||'×')+'</div>',iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-12]});
-    const m=L.marker(ll,{icon:ic,zIndexOffset:rank?1000-rank:0}).bindPopup(()=>popupHtml(e,rank),{maxWidth:300,autoPanPaddingTopLeft:[10,70]});
+    const r=rate[e.p.id];
+    const mk=sn=>L.divIcon({className:"",html:'<div class="pinw"><div class="pin'+(rank?'':' dim')+(sn?' seen':'')+(r==='no'?' r-no':'')+'" style="width:26px;height:26px;background:'+(rank?scoreHex(e.score):'#5f6b63')+'">'+(rank||'×')+'</div>'+(BADGE[r]?'<span class="badge">'+BADGE[r]+'</span>':'')+'</div>',iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-12]});
+    const m=L.marker(ll,{icon:mk(!!seen[e.p.id]),zIndexOffset:rank?(r==='yes'?2000:1000)-rank:0}).bindPopup(()=>popupHtml(e,rank),{maxWidth:300,autoPanPaddingTopLeft:[10,70]});
+    m.on("popupopen",()=>{if(!seen[e.p.id]){seen[e.p.id]=Date.now();LS.set("pk-seen",seen);m.setIcon(mk(true))}});
     m.addTo(layer);markers[e.p.id]=m;
   };
-  ranked.forEach((e,i)=>add(e,i+1,plotsLayer));hid.forEach(e=>add(e,0,hiddenLayer));
+  const mine=ranked.filter(e=>rate[e.p.id]==="hide");
+  const bm=document.getElementById("btnMine");bm.textContent=(showMine?"Skryté mnou (zobrazené): ":"Skryté mnou: ")+mine.length;bm.hidden=!mine.length;
+  ranked.forEach((e,i)=>{if(rate[e.p.id]!=="hide"||showMine)add(e,i+1,plotsLayer)});hid.forEach(e=>add(e,0,hiddenLayer));
   const o=originOf(st);
   L.marker([o.lat,o.lng],{icon:L.divIcon({className:"",html:'<div class="pin" style="width:18px;height:18px;background:#2563a6"></div>',iconSize:[18,18],iconAnchor:[9,9]})}).bindTooltip(esc(o.label)).addTo(originLayer);
   [10,20,30].forEach(r=>L.circle([o.lat,o.lng],{radius:r*1000,color:"#2563a6",weight:1.5,dashArray:"5 7",fill:false,interactive:false}).addTo(originLayer));
   document.getElementById("sub").textContent=ranked.length+" pozemkov · aktualizované "+new Date(D.generated).toLocaleString("sk-SK",{day:"numeric",month:"numeric",hour:"2-digit",minute:"2-digit"});
   document.getElementById("shTitle").textContent="Pozemky ("+ranked.length+")";
-  document.getElementById("list").innerHTML=ranked.map((e,i)=>'<div class="row" data-id="'+esc(e.p.id)+'"><div class="num" style="background:'+scoreHex(e.score)+'">'+(i+1)+'</div><div><div class="v">'+esc(e.p.village)+'</div><div class="s">'+(e.p.area?esc(fmtNum(e.p.area))+' m²':'')+(e.mins!=null?' · '+(e.est?'~':'')+e.mins+' min':'')+' · '+e.score+' b.</div></div><div class="p" style="color:'+priceHex(e.p.price,st.priceMax)+'">'+esc(fmtEur(e.p.price))+'</div></div>').join("")||'<div class="row">Žiadne pozemky nespĺňajú nastavenia.</div>';
+  document.getElementById("list").innerHTML=ranked.map((e,i)=>(rate[e.p.id]==="hide"&&!showMine)?"":'<div class="row" data-id="'+esc(e.p.id)+'"><div class="num" style="background:'+scoreHex(e.score)+'">'+(i+1)+'</div><div><div class="v">'+(BADGE[rate[e.p.id]]?BADGE[rate[e.p.id]]+' ':'')+(seen[e.p.id]?'':'<span style="color:#2563a6">● </span>')+esc(e.p.village)+'</div><div class="s">'+(e.p.area?esc(fmtNum(e.p.area))+' m²':'')+(e.mins!=null?' · '+(e.est?'~':'')+e.mins+' min':'')+' · '+e.score+' b.</div></div><div class="p" style="color:'+priceHex(e.p.price,st.priceMax)+'">'+esc(fmtEur(e.p.price))+'</div></div>').join("")||'<div class="row">Žiadne pozemky nespĺňajú nastavenia.</div>';
   return ranked;
 }
 function fit(){const pts=ranked.map(e=>[e.p.lat,e.p.lng]);const o=originOf(D.st);pts.push([o.lat,o.lng]);if(pts.length)map.fitBounds(pts,{padding:[40,40],maxZoom:14})}
@@ -225,6 +261,11 @@ document.getElementById("btnList").onclick=()=>{const s=document.getElementById(
 document.getElementById("shClose").onclick=()=>document.getElementById("sheet").hidden=true;
 document.getElementById("btnHidden").onclick=e=>{if(map.hasLayer(hiddenLayer)){map.removeLayer(hiddenLayer);e.target.textContent="Vyradené: skryté"}else{map.addLayer(hiddenLayer);e.target.textContent="Vyradené: zobrazené"}};
 map.on("overlayadd overlayremove",()=>{document.getElementById("btnHidden").textContent="Vyradené: "+(map.hasLayer(hiddenLayer)?"zobrazené":"skryté")});
+document.getElementById("btnMine").onclick=()=>{showMine=!showMine;draw()};
+document.addEventListener("click",ev=>{const b=ev.target.closest&&ev.target.closest("[data-rate]");if(!b)return;const id=b.dataset.id,v=b.dataset.rate;
+  if(rate[id]===v)delete rate[id];else rate[id]=v;LS.set("pk-rate",rate);map.closePopup();draw();
+  toast(rate[id]?({yes:"Označené: páči sa",maybe:"Označené: možno",no:"Označené: nepáči sa",hide:"Skryté z mapy"})[v]:"Označenie zrušené");
+  const m=markers[id];if(m&&rate[id]!=="hide")setTimeout(()=>m.openPopup(),50)});
 let me=null;
 document.getElementById("btnLocate").onclick=()=>{if(!navigator.geolocation){toast("Poloha nie je dostupná.");return}navigator.geolocation.getCurrentPosition(pos=>{const ll=[pos.coords.latitude,pos.coords.longitude];if(me)me.remove();me=L.circleMarker(ll,{radius:8,color:"#fff",weight:3,fillColor:"#2563a6",fillOpacity:1}).addTo(map).bindTooltip("Tu si");map.flyTo(ll,16)},()=>toast("Polohu sa nepodarilo zistiť. Povoľ prístup k polohe."),{enableHighAccuracy:true,timeout:10000})};
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-copy]");if(!b)return;const t=b.getAttribute("data-copy");(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("Skopírované: "+t),()=>toast("Parcela: "+t))});

@@ -4,7 +4,7 @@ Notes and private fields are never included."""
 import json, sys, os, datetime
 plots_dir, settings_path = sys.argv[1], sys.argv[2]
 KEEP_SETTINGS = ["directions","villages","areaMin","areaMax","priceMax","terrain","maxRatio","showReserved","origin"]
-KEEP_PLOT = ["village","title","direction","minutes","minutesOrigin","originKey","lat","lng","precise","parcel","cadastralArea","area","price","width","length","terrain","utilities","mainRoad","category","reserved","summary","links","photoUrl","firstSeen","lastSeen","priceHistory","gone","goneReason","source"]
+KEEP_PLOT = ["village","title","direction","minutes","minutesOrigin","originKey","lat","lng","precise","parcel","cadastralArea","area","price","width","length","terrain","utilities","mainRoad","category","reserved","summary","links","photoUrl","imageUrl","firstSeen","lastSeen","priceHistory","gone","goneReason","source"]
 s = json.load(open(settings_path))
 s = s.get("data", s)
 plots = []
