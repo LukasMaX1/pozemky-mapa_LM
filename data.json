@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T20:33:55.514432+00:00",
+ "generated": "2026-10-30T20:55:02.470055+00:00",
  "settings": {
   "directions": {
    "J": {
@@ -1434,6 +1434,7 @@
     "photos": 0,
     "status": "neoverený"
    },
+   "invalid": true,
    "id": "durkov-751"
   },
   {
@@ -1679,6 +1680,7 @@
     "photos": 0,
     "status": "neoverený"
    },
+   "invalid": true,
    "id": "haniska-623"
   },
   {
@@ -2256,6 +2258,7 @@
     "photos": 0,
     "status": "neoverený"
    },
+   "invalid": true,
    "id": "nizna-hutka-603",
    "seenAt": "2026-10-30T19:16:55.289Z"
   },
@@ -3072,10 +3075,6 @@
    "summary": "Ponuka Reality s VAMI, asi 10 km od Košíc. Cenu a siete over.",
    "links": [
     {
-     "portal": "Bazoš",
-     "url": "https://reality.bazos.sk/inzerat/195423438/stavebny-pozemok-rozhanovce-ke-okolie.php"
-    },
-    {
      "portal": "Nehnuteľnosti.sk",
      "url": "https://www.nehnutelnosti.sk/detail/JuRBK0rQiE7/na-predaj-stavebny-pozemok-876-m2-rozhanovce-kosice-okolie"
     }
@@ -3254,6 +3253,7 @@
     "photos": 0,
     "status": "neoverený"
    },
+   "invalid": true,
    "id": "trstany-588"
   },
   {
@@ -3411,6 +3411,7 @@
     "photos": 0,
     "status": "neoverený"
    },
+   "invalid": true,
    "id": "vajkovce-826"
   },
   {
