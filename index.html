@@ -389,6 +389,14 @@ addEventListener("popstate",()=>{if(!document.getElementById("lbx").hidden){docu
   if(!document.getElementById("pcp").hidden){document.getElementById("pcBack").click();try{history.pushState({det:DET},"")}catch(x){}return}closeDet(true)});
 addEventListener("keydown",e=>{if(e.key==="Escape"){if(!document.getElementById("lbx").hidden)document.getElementById("lbxX").click();else closeDet()}});
 
+/* odkaz z aplikácie: #find=<id> (nájsť parcelu) alebo #show=<id> (otvoriť detail) */
+function handleHash(){const m=(location.hash||"").match(/^#(find|show)=([a-z0-9-]{1,120})$/);if(!m||!D)return;
+  try{history.replaceState(null,"",location.pathname+location.search)}catch(x){}
+  const p=D.plots.find(x=>x.id===m[2]);if(!p){toast("Pozemok sa na mape nenašiel.");return}
+  const e=ranked.find(x=>x.p.id===p.id)||{p,score:0,flags:[],parts:[]};const pf=parcelOf(p);
+  map.setView(pf?[pf.lat,pf.lng]:[p.lat,p.lng],17);openDet(e,ranked.indexOf(e)+1);
+  if(m[1]==="find"&&p.area){setTimeout(()=>{const r=document.getElementById("pfRes");if(r)r.scrollIntoView({block:"center"});findParcel(p)},300)}}
+addEventListener("hashchange",handleHash);
 /* ---------- vyhľadanie parcely v katastri (ÚGKK INSPIRE WFS, beží v tvojom prehliadači) ---------- */
 let parcHL=null,PC=null;
 function zbgisUrl(pf,lat,lng){const la=(+lat).toFixed(6),ln=(+lng).toFixed(6);const ku=pf&&String(pf.ref||pf.ku||"").match(/\b(8\d{5})\b/);
@@ -456,7 +464,7 @@ async function findParcel(p){
 
 fetch("data.json?v="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(j=>{
   const st=Object.assign({},DEF,j.settings||{});st.directions=Object.assign({},DEF.directions,(j.settings||{}).directions||{});
-  D={st,plots:j.plots||[],generated:j.generated};mergeState();draw();fit();updSync();
+  D={st,plots:j.plots||[],generated:j.generated};mergeState();draw();fit();updSync();handleHash();
 }).catch(err=>{document.getElementById("sub").textContent="Údaje sa nepodarilo načítať ("+err.message+")"});
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 </script>
