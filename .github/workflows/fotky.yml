@@ -2,7 +2,7 @@ name: Stiahnuť fotky pozemkov
 on:
   push:
     branches: [main]
-    paths: [data.json]
+    paths: [data.json, tools/fetch_images.py]
   workflow_dispatch:
 permissions:
   contents: write
