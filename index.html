@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pozemky Košice – mapa</title>
+<meta name="theme-color" content="#2f6b45">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{--bg:#f3f5f1;--surface:#fff;--fg:#1d2420;--muted:#5f6b63;--line:#d3dacf;--accent:#2f6b45;--ok:#2f7d4a;--warn:#a16207;--bad:#b4232c;--info:#2563a6}
+@media (prefers-color-scheme:dark){:root{--bg:#121614;--surface:#1a201d;--fg:#e4ebe6;--muted:#9aa79f;--line:#2f3833;--accent:#6fbf8a;--ok:#6fcf8e;--warn:#e3b341;--bad:#f2777f;--info:#7fb2ec}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+#m{position:fixed;inset:0}
+.bar{position:fixed;z-index:1000;left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));top:calc(10px + env(safe-area-inset-top));display:flex;gap:8px;align-items:center;pointer-events:none}
+.bar>*{pointer-events:auto}
+.pill{background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:8px 12px;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.title{flex:1;min-width:0}
+.title b{display:block;font-size:15px}
+.title span{font-size:12px;color:var(--muted);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:9px 12px;font:600 14px system-ui,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.18);cursor:pointer}
+.btn.pri{background:var(--accent);color:#fff;border-color:var(--accent)}
+.fabs{position:fixed;z-index:1000;right:max(10px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:8px}
+.sheet{position:fixed;z-index:1100;left:0;right:0;bottom:0;max-height:62vh;background:var(--surface);border-radius:16px 16px 0 0;box-shadow:0 -6px 24px rgba(0,0,0,.25);display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}
+.sheet[hidden]{display:none}
+.sh{display:flex;justify-content:space-between;align-items:center;padding:12px 16px 8px;border-bottom:1px solid var(--line)}
+.sh b{font-size:16px}
+.list{overflow:auto;padding:4px 0}
+.row{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);cursor:pointer}
+.num{width:26px;height:26px;border-radius:50%;color:#fff;font:600 12px ui-monospace,monospace;display:flex;align-items:center;justify-content:center}
+.row .v{font-weight:600}
+.row .s{font-size:12px;color:var(--muted)}
+.row .p{font-weight:700;text-align:right;white-space:nowrap}
+.pin{border-radius:50%;color:#fff;font:600 11px ui-monospace,monospace;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
+.pin.dim{opacity:.55}
+.leaflet-popup-content{margin:12px 14px;min-width:220px}
+.pp h3{margin:0 0 2px;font-size:16px}
+.pp .t{color:#555;font-size:12px}
+.pp .f{margin:6px 0;font-size:13px}
+.pp .sum{font-size:12px;color:#444;margin:4px 0}
+.pp .ln{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pp .ln a,.pp .ln button{font:600 12px system-ui,sans-serif;color:#2f6b45;text-decoration:none;border:1px solid #d3dacf;border-radius:7px;padding:4px 8px;background:#fff;cursor:pointer}
+.pp .tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;border:1px solid currentColor;border-radius:4px;padding:0 5px;margin-right:4px}
+.leg{font-size:11px;line-height:1.5}
+.toast{position:fixed;z-index:1200;left:50%;transform:translateX(-50%);bottom:calc(90px + env(safe-area-inset-bottom));background:#1d2420;color:#fff;border-radius:10px;padding:8px 14px;font-size:13px}
+.toast[hidden]{display:none}
+.leaflet-control-layers{font-size:13px}
+</style>
+</head>
+<body>
+<div id="m"></div>
+<div class="bar">
+  <div class="pill title"><b>Pozemky Košice</b><span id="sub">Načítavam…</span></div>
+  <a class="btn" id="appLink" href="https://claude.ai/artifact/GsnHdCBC455XFP5HD1rgrP" target="_blank" rel="noopener">Aplikácia</a>
+</div>
+<div class="fabs">
+  <button class="btn" id="btnHidden" type="button">Vyradené: skryté</button>
+  <button class="btn" id="btnLocate" type="button">📍 Kde som</button>
+  <button class="btn pri" id="btnList" type="button">Zoznam</button>
+</div>
+<div class="sheet" id="sheet" hidden><div class="sh"><b id="shTitle">Pozemky</b><button class="btn" id="shClose" type="button">Zavrieť</button></div><div class="list" id="list"></div></div>
+<div class="toast" id="toast" hidden></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+"use strict";
+const CENTER={lat:48.7206,lng:21.2575};
+const DIRS={S:"Sever · Prešov/D1",V:"Východ · Bidovce/D1",J:"Juh · R4",Z:"Západ"};
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function safeUrl(u){try{const x=new URL(u);return (x.protocol==="https:"||x.protocol==="http:")?x.href:null}catch(e){return null}}
+function fmtEur(n){return n==null?"—":new Intl.NumberFormat("sk-SK",{maximumFractionDigits:0}).format(n)+" €"}
+function fmtNum(n){return new Intl.NumberFormat("sk-SK",{maximumFractionDigits:0}).format(n)}
+
+function norm(t){return String(t||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").trim()}
+
+function parseVillages(txt){
+  const m={};
+  String(txt||"").split(/\n|;/).forEach(line=>{
+    const p=line.split(/[=:]/);if(p.length<2)return;
+    const name=norm(p[0]);const v=norm(p.slice(1).join(":"));if(!name)return;
+    const o=m[name]||{};
+    if(/vyluc|exclude|nie/.test(v))o.exclude=true;
+    if(/prefer|uprednost/.test(v))o.prefer=true;
+    const n=parseInt(v,10);if(!isNaN(n))o.maxMin=n;
+    m[name]=o;
+  });
+  return m;
+}
+
+function evaluate(p,st,vil){
+  const parts=[];const flags=[];let hidden=null;
+  const v=vil[norm(p.village)]||{};
+  const dir=st.directions[p.direction]||null;
+  // exclusions
+  if(p.category==="nestavebny")hidden="nestavebný / investičný pozemok";
+  else if(p.category==="rekreacny")hidden="rekreačný pozemok";
+  if(v.exclude)hidden=hidden||"obec je vylúčená v nastaveniach";
+  if(dir&&!dir.on)hidden=hidden||"smer "+(DIRS[p.direction]||p.direction)+" je vypnutý";
+  const lim=v.maxMin!=null?v.maxMin:(dir?dir.maxMin:30);
+  const mf=minutesFor(p,st);const mins=mf.min;
+  if(mins!=null&&mins>lim)hidden=hidden||("dojazd "+(mf.est?"~":"")+mins+" min > limit "+lim+" min");
+  if(p.reserved&&!st.showReserved)hidden=hidden||"rezervované";
+  const ratio=(p.width&&p.length)?Math.max(p.width,p.length)/Math.min(p.width,p.length):null;
+  if(ratio!=null&&ratio>st.maxRatio)hidden=hidden||("úzky pás (pomer 1:"+ratio.toFixed(1)+")");
+  if(st.terrain==="rovina"&&p.terrain&&p.terrain!=="rovina")hidden=hidden||"nie je rovinatý";
+
+  // price 25
+  let pp;const pmax=st.priceMax;
+  if(p.price==null){pp=12;parts.push(["Cena","neuvedená",pp,25])}
+  else if(p.price<=pmax){pp=25;parts.push(["Cena","v limite",pp,25])}
+  else if(p.price<=pmax*1.05){pp=12;flags.push(["edge","cena na hrane"]);parts.push(["Cena","do +5 % nad limit",pp,25])}
+  else if(p.price<=pmax*1.15){pp=5;flags.push(["edge","nad limitom"]);parts.push(["Cena","do +15 % nad limit",pp,25])}
+  else{pp=0;flags.push(["edge","nad limitom"]);parts.push(["Cena","výrazne nad limitom",pp,25])}
+  // area 20
+  let ap;const a=p.area;
+  if(a==null){ap=8;parts.push(["Výmera","neuvedená",ap,20])}
+  else if(a>=st.areaMin&&a<=st.areaMax){ap=20;parts.push(["Výmera","v rozsahu",ap,20])}
+  else{const d=a<st.areaMin?(st.areaMin-a)/st.areaMin:(a-st.areaMax)/st.areaMax;
+    if(d<=.1){ap=12;parts.push(["Výmera","±10 % mimo rozsahu",ap,20])}
+    else if(d<=.2){ap=5;parts.push(["Výmera","±20 % mimo rozsahu",ap,20])}
+    else{ap=0;parts.push(["Výmera","mimo rozsahu",ap,20])}
+    flags.push(["edge","výmera mimo"]);}
+  // distance 15 + priority 5
+  let dp;
+  if(mins==null){dp=7;parts.push(["Dojazd","neznámy",dp,15])}
+  else{const r=mins/lim;dp=r<=.6?15:r<=.85?12:r<=1?9:0;parts.push(["Dojazd",(mf.est?"~":"")+mins+" / "+lim+" min do: "+originOf(st).label,dp,15])}
+  let pr=0;if(dir&&dir.priority)pr+=5;if(v.prefer){pr=5;flags.push(["pref","preferovaná obec"])}
+  parts.push(["Smer / priorita",(DIRS[p.direction]||"—"),Math.min(pr,5),5]);
+  // terrain 10
+  const tp=p.terrain==="rovina"?10:p.terrain==="mierny svah"?5:p.terrain==="svah"?0:5;
+  parts.push(["Terén",p.terrain||"neuvedený",tp,10]);
+  // shape 15
+  let sp;
+  if(ratio==null){sp=7;parts.push(["Tvar","rozmery neuvedené",sp,15])}
+  else{sp=ratio<=1.3?15:ratio<=1.7?12:ratio<=2?8:3;parts.push(["Tvar","pomer 1:"+ratio.toFixed(2),sp,15])}
+  // utilities 10
+  const u=p.utilities||{};const up=(u.elektrina?3:0)+(u.voda?3:0)+(u.kanalizacia?2:0)+(u.plyn?1:0)+(u.optika?1:0);
+  parts.push(["Siete",Object.keys(u).filter(k=>u[k]).join(", ")||"neuvedené",up,10]);
+  // main road
+  let rp=0;if(p.mainRoad===true){rp=-3;parts.push(["Hlavná cesta","pri hlavnej ceste",rp,0])}
+  const score=Math.max(0,Math.min(100,pp+ap+dp+Math.min(pr,5)+tp+sp+up+rp));
+  if(p.reserved)flags.push(["res","rezervované"]);
+  return {p,score,parts,flags,hidden,ratio,lim,mins,est:mf.est};
+}
+
+
+const KX=73.4, KY=111.2; // km per degree lng / lat around Košice
+function toKm(lat,lng){return [(lng-CENTER.lng)*KX,(lat-CENTER.lat)*KY]}
+function toLatLng(x,y){return {lat:CENTER.lat+y/KY,lng:CENTER.lng+x/KX}}
+function originOf(st){const o=st.origin;return (o&&isFinite(o.lat)&&isFinite(o.lng))?o:{label:"centrum Košíc",lat:CENTER.lat,lng:CENTER.lng,isCenter:true}}
+function originKey(o){return o.isCenter?"center":(+o.lat).toFixed(4)+","+(+o.lng).toFixed(4)}
+function distKm(p,o){if(p.lat==null||p.lng==null)return null;const a=toKm(p.lat,p.lng),b=toKm(o.lat,o.lng);return Math.hypot(a[0]-b[0],a[1]-b[1])}
+function minutesFor(p,st){
+  const o=originOf(st);
+  if(o.isCenter)return {min:p.minutes??null,est:false};
+  if(p.minutesOrigin!=null&&p.originKey===originKey(o))return {min:p.minutesOrigin,est:false};
+  const d=distKm(p,o);if(d==null)return {min:null,est:true};
+  return {min:Math.round(4+(d*1.3)/(d>8?65:40)*60),est:true};
+}
+
+function scoreHex(s){return s>=75?"#2f7d4a":s>=55?"#2f6b45":s>=40?"#a16207":"#b4232c"}
+function priceHex(p,max){if(p==null)return "#5f6b63";const r=p/max;return r<=.75?"#2f7d4a":r<=.95?"#2f6b45":r<=1.05?"#a16207":"#b4232c"}
+const DEF={directions:{S:{maxMin:30,priority:true,on:true},V:{maxMin:30,priority:true,on:true},J:{maxMin:15,priority:false,on:true},Z:{maxMin:15,priority:false,on:true}},villages:"",areaMin:600,areaMax:900,priceMax:120000,terrain:"svah_ok",maxRatio:2.5,showReserved:true,count:15};
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>e.hidden=true,2500)}
+
+const ortoSR=L.tileLayer("https://ofmozaika.tiles.freemap.sk/{z}/{x}/{y}.jpg",{maxZoom:20,maxNativeZoom:19,attribution:"Ortofotomozaika SR © ÚGKK SR, NLC · freemap.sk"});
+const sat=L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{maxZoom:20,maxNativeZoom:19,attribution:"Esri World Imagery"});
+const osm=L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"© OpenStreetMap"});
+const topo=L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",{maxZoom:17,attribution:"© OpenTopoMap · OpenStreetMap"});
+const labels=L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",{maxZoom:20,maxNativeZoom:19,attribution:"Esri"});
+let base="orto";try{base=localStorage.getItem("pk-base")||"orto"}catch(e){}
+const bases={"Ortofoto SR":ortoSR,"Satelit (Esri)":sat,"Mapa (OSM)":osm,"Turistická / reliéf":topo};
+const baseKey={orto:ortoSR,sat,osm,topo};
+const map=L.map("m",{zoomControl:false,layers:[baseKey[base]||ortoSR,labels]}).setView([CENTER.lat,CENTER.lng],11);
+L.control.zoom({position:"bottomleft"}).addTo(map);
+const plotsLayer=L.layerGroup().addTo(map),hiddenLayer=L.layerGroup(),originLayer=L.layerGroup().addTo(map);
+L.control.layers(bases,{"Názvy obcí":labels,"Kruhy vzdialenosti":originLayer,"Vyradené pozemky":hiddenLayer},{position:"topright",collapsed:true}).addTo(map);
+L.control.scale({imperial:false,position:"bottomleft"}).addTo(map);
+map.on("baselayerchange",e=>{const k=Object.keys(baseKey).find(k=>baseKey[k]===e.layer);try{localStorage.setItem("pk-base",k)}catch(x){}});
+const legend=L.control({position:"bottomright"});legend.onAdd=()=>{const d=L.DomUtil.create("div","pill leg");d.innerHTML='Skóre: <b style="color:#2f7d4a">75+</b> · <b style="color:#2f6b45">55+</b> · <b style="color:#a16207">40+</b> · <b style="color:#b4232c">&lt;40</b><br>Cena voči limitu: <b style="color:#2f7d4a">≤75 %</b> · <b style="color:#2f6b45">≤95 %</b> · <b style="color:#a16207">±5 %</b> · <b style="color:#b4232c">nad</b>';return d};legend.addTo(map);
+
+let D=null,ranked=[],markers={};
+function popupHtml(e,rank){
+  const p=e.p,st=D.st;const ppm=(p.price&&p.area)?Math.round(p.price/p.area):null;const u=p.utilities||{};
+  const ut=["elektrina","voda","kanalizacia","plyn","optika"].filter(k=>u[k]===true).join(", ")||"neuvedené";
+  const la=p.lat.toFixed(5),ln=p.lng.toFixed(5);
+  const pc=p.priceHistory&&p.priceHistory.length>1?p.priceHistory[p.priceHistory.length-2].price:null;
+  return '<div class="pp"><h3>'+(rank?'#'+rank+' ':'')+esc(p.village)+'</h3><div class="t">'+esc(p.title||"")+'</div>'+
+   '<div class="f"><b style="color:'+priceHex(p.price,st.priceMax)+';font-size:15px">'+esc(fmtEur(p.price))+'</b>'+(ppm?' · '+esc(fmtNum(ppm))+' €/m²':'')+(pc&&pc!==p.price?' <span style="color:#555">(predtým '+esc(fmtEur(pc))+')</span>':'')+'<br>'+
+   (p.area?esc(fmtNum(p.area))+' m²':'výmera ?')+((p.width&&p.length)?' · '+esc(p.width)+'×'+esc(p.length)+' m':'')+' · '+esc(p.terrain||'terén ?')+' · '+(e.mins!=null?(e.est?'~':'')+esc(e.mins)+' min':'dojazd ?')+'<br>Siete: '+esc(ut)+
+   (p.parcel?'<br>Parcela <b>'+esc(p.parcel)+'</b>'+(p.cadastralArea?', k.ú. '+esc(p.cadastralArea):''):'')+'</div>'+
+   '<div>'+(e.hidden?'<span class="tag" style="color:#a16207">vyradený: '+esc(e.hidden)+'</span>':'<span class="tag" style="color:'+scoreHex(e.score)+'">skóre '+e.score+'</span>')+(p.reserved?'<span class="tag" style="color:#a16207">rezervované</span>':'')+'</div>'+
+   (p.summary?'<div class="sum">'+esc(p.summary)+'</div>':'')+
+   '<div class="ln">'+(p.links||[]).map(l=>{const h=safeUrl(l.url);return h?'<a href="'+esc(h)+'" target="_blank" rel="noopener">'+esc(l.portal||"Inzerát")+' ↗</a>':""}).join("")+'</div>'+
+   '<div class="ln"><a href="https://zbgis.skgeodesy.sk/mapka/sk/kataster?pos='+la+','+ln+',18" target="_blank" rel="noopener">Kataster ZBGIS ↗</a>'+(p.parcel?'<button type="button" data-copy="'+esc(p.parcel+(p.cadastralArea?" "+p.cadastralArea:""))+'">📋 Kopírovať parcelu</button>':'')+'<a href="https://www.google.com/maps/dir/?api=1&destination='+la+','+ln+'" target="_blank" rel="noopener">Navigovať ↗</a></div>'+
+   '<div class="t" style="margin-top:4px">Poloha '+(p.precise?'podľa ulice z inzerátu':'približná (stred obce)')+'</div></div>';
+}
+function draw(){
+  plotsLayer.clearLayers();hiddenLayer.clearLayers();originLayer.clearLayers();markers={};
+  const st=D.st,vil=parseVillages(st.villages);
+  const ev=D.plots.filter(p=>!p.gone&&p.lat!=null).map(p=>evaluate(p,st,vil));
+  ranked=ev.filter(e=>!e.hidden).sort((a,b)=>b.score-a.score);
+  const hid=ev.filter(e=>e.hidden);
+  const placed={};
+  const add=(e,rank,layer)=>{
+    let ll=[e.p.lat,e.p.lng];const k=ll.join(",");const n=placed[k]||0;placed[k]=n+1;if(n)ll=[ll[0]+n*0.0012,ll[1]+n*0.0016];
+    const ic=L.divIcon({className:"",html:'<div class="pin'+(rank?'':' dim')+'" style="width:26px;height:26px;background:'+(rank?scoreHex(e.score):'#5f6b63')+'">'+(rank||'×')+'</div>',iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-12]});
+    const m=L.marker(ll,{icon:ic,zIndexOffset:rank?1000-rank:0}).bindPopup(()=>popupHtml(e,rank),{maxWidth:300,autoPanPaddingTopLeft:[10,70]});
+    m.addTo(layer);markers[e.p.id]=m;
+  };
+  ranked.forEach((e,i)=>add(e,i+1,plotsLayer));hid.forEach(e=>add(e,0,hiddenLayer));
+  const o=originOf(st);
+  L.marker([o.lat,o.lng],{icon:L.divIcon({className:"",html:'<div class="pin" style="width:18px;height:18px;background:#2563a6"></div>',iconSize:[18,18],iconAnchor:[9,9]})}).bindTooltip(esc(o.label)).addTo(originLayer);
+  [10,20,30].forEach(r=>L.circle([o.lat,o.lng],{radius:r*1000,color:"#2563a6",weight:1.5,dashArray:"5 7",fill:false,interactive:false}).addTo(originLayer));
+  document.getElementById("sub").textContent=ranked.length+" pozemkov · aktualizované "+new Date(D.generated).toLocaleString("sk-SK",{day:"numeric",month:"numeric",hour:"2-digit",minute:"2-digit"});
+  document.getElementById("shTitle").textContent="Pozemky ("+ranked.length+")";
+  document.getElementById("list").innerHTML=ranked.map((e,i)=>'<div class="row" data-id="'+esc(e.p.id)+'"><div class="num" style="background:'+scoreHex(e.score)+'">'+(i+1)+'</div><div><div class="v">'+esc(e.p.village)+'</div><div class="s">'+(e.p.area?esc(fmtNum(e.p.area))+' m²':'')+(e.mins!=null?' · '+(e.est?'~':'')+e.mins+' min':'')+' · '+e.score+' b.</div></div><div class="p" style="color:'+priceHex(e.p.price,st.priceMax)+'">'+esc(fmtEur(e.p.price))+'</div></div>').join("")||'<div class="row">Žiadne pozemky nespĺňajú nastavenia.</div>';
+  return ranked;
+}
+function fit(){const pts=ranked.map(e=>[e.p.lat,e.p.lng]);const o=originOf(D.st);pts.push([o.lat,o.lng]);if(pts.length)map.fitBounds(pts,{padding:[40,40],maxZoom:14})}
+document.getElementById("list").addEventListener("click",ev=>{const r=ev.target.closest(".row[data-id]");if(!r)return;const m=markers[r.dataset.id];if(!m)return;document.getElementById("sheet").hidden=true;map.flyTo(m.getLatLng(),16,{duration:.8});setTimeout(()=>m.openPopup(),850)});
+document.getElementById("btnList").onclick=()=>{const s=document.getElementById("sheet");s.hidden=!s.hidden};
+document.getElementById("shClose").onclick=()=>document.getElementById("sheet").hidden=true;
+document.getElementById("btnHidden").onclick=e=>{if(map.hasLayer(hiddenLayer)){map.removeLayer(hiddenLayer);e.target.textContent="Vyradené: skryté"}else{map.addLayer(hiddenLayer);e.target.textContent="Vyradené: zobrazené"}};
+map.on("overlayadd overlayremove",()=>{document.getElementById("btnHidden").textContent="Vyradené: "+(map.hasLayer(hiddenLayer)?"zobrazené":"skryté")});
+let me=null;
+document.getElementById("btnLocate").onclick=()=>{if(!navigator.geolocation){toast("Poloha nie je dostupná.");return}navigator.geolocation.getCurrentPosition(pos=>{const ll=[pos.coords.latitude,pos.coords.longitude];if(me)me.remove();me=L.circleMarker(ll,{radius:8,color:"#fff",weight:3,fillColor:"#2563a6",fillOpacity:1}).addTo(map).bindTooltip("Tu si");map.flyTo(ll,16)},()=>toast("Polohu sa nepodarilo zistiť. Povoľ prístup k polohe."),{enableHighAccuracy:true,timeout:10000})};
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-copy]");if(!b)return;const t=b.getAttribute("data-copy");(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("Skopírované: "+t),()=>toast("Parcela: "+t))});
+
+fetch("data.json?v="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(j=>{
+  const st=Object.assign({},DEF,j.settings||{});st.directions=Object.assign({},DEF.directions,(j.settings||{}).directions||{});
+  D={st,plots:j.plots||[],generated:j.generated};draw();fit();
+}).catch(err=>{document.getElementById("sub").textContent="Údaje sa nepodarilo načítať ("+err.message+")"});
+if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
+</script>
+</body>
+</html>

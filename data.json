@@ -1,0 +1,707 @@
+{
+ "generated": "2026-10-30T16:36:09.077822+00:00",
+ "settings": {
+  "directions": {
+   "J": {
+    "maxMin": 20,
+    "on": true,
+    "priority": false
+   },
+   "S": {
+    "maxMin": 30,
+    "on": true,
+    "priority": true
+   },
+   "V": {
+    "maxMin": 30,
+    "on": true,
+    "priority": true
+   },
+   "Z": {
+    "maxMin": 15,
+    "on": true,
+    "priority": false
+   }
+  },
+  "villages": "",
+  "areaMin": 600,
+  "areaMax": 900,
+  "priceMax": 120000,
+  "terrain": "svah_ok",
+  "maxRatio": 2.5,
+  "showReserved": true
+ },
+ "plots": [
+  {
+   "village": "Bačkovík",
+   "title": "Rovinatý pozemok 800 m², 16 × 50 m",
+   "direction": "V",
+   "minutes": 25,
+   "lat": 48.703,
+   "lng": 21.535,
+   "area": 800,
+   "price": 109990,
+   "width": 16,
+   "length": 50,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Nová štvrť s rozbehnutou výstavbou. Úzky a dlhý tvar.",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/192029903/stavebny-pozemok-v-obci-trstany.php"
+    }
+   ],
+   "firstSeen": "2026-10-27",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-27",
+     "price": 109990
+    }
+   ],
+   "gone": false,
+   "id": "backovik-800"
+  },
+  {
+   "village": "Beniakovce",
+   "title": "Stavebný pozemok 564 m², časť Roveň",
+   "direction": "S",
+   "minutes": 13,
+   "lat": 48.783,
+   "lng": 21.318,
+   "area": 564,
+   "price": 124900,
+   "width": 17,
+   "length": 35,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Pravidelný tvar, slnečný, medzi novostavbami, alej stromov na severnej hranici. Drahší (221 €/m²).",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Jua-8STFIBH/stavebny-pozemok-564-m2-beniakovce"
+    }
+   ],
+   "firstSeen": "2026-10-27",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-27",
+     "price": 124900
+    }
+   ],
+   "gone": false,
+   "id": "beniakovce-564"
+  },
+  {
+   "village": "Beniakovce",
+   "title": "Stavebný pozemok 691 m², okamžitá výstavba",
+   "direction": "S",
+   "minutes": 13,
+   "lat": 48.783,
+   "lng": 21.318,
+   "area": 691,
+   "price": 124800,
+   "width": 19,
+   "length": 36,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": false,
+    "optika": true,
+    "voda": false
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Elektrická skrinka na pozemku, voda a kanalizácia zatiaľ individuálne. Vlastná asfaltová cesta s chodníkmi a osvetlením (RECLOUD).",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuXnt3YTcKv/stavebny-pozemok-beniakovce"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-13",
+     "price": 124800
+    }
+   ],
+   "gone": false,
+   "id": "beniakovce-691"
+  },
+  {
+   "village": "Bidovce",
+   "title": "Stavebný pozemok 824 m², tichá lokalita",
+   "direction": "V",
+   "minutes": 18,
+   "lat": 48.745,
+   "lng": 21.433,
+   "area": 824,
+   "price": 90000,
+   "width": 21,
+   "length": 33,
+   "terrain": null,
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": true,
+    "voda": true
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Obecná voda, elektrina, kanalizácia. Kľudná časť obce, pri zjazde z D1 (ARCHEUS).",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuQzkFObzzT/stavebny-pozemok-1624-m2-obec-bidovce"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-13",
+     "price": 90000
+    }
+   ],
+   "gone": false,
+   "id": "bidovce-824"
+  },
+  {
+   "village": "Ďurkov",
+   "title": "Stavebný pozemok 751 m²",
+   "direction": "V",
+   "minutes": 20,
+   "lat": 48.718,
+   "lng": 21.482,
+   "area": 751,
+   "price": null,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Exkluzívna ponuka Diamond Reality. Obec hneď pri konci D1. Cenu zisti.",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/181386255/stavebny-pozemok-kosice-okolie-ruskov-stav-povolenie.php"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "durkov-751"
+  },
+  {
+   "village": "Ďurkov",
+   "title": "Stavebný pozemok 872 m², intravilán",
+   "direction": "V",
+   "minutes": 20,
+   "lat": 48.718,
+   "lng": 21.482,
+   "area": 872,
+   "price": null,
+   "width": null,
+   "length": null,
+   "terrain": null,
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Ideálne rozmery podľa makléra (Diamond Reality). Cenu a siete zisti.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/vysledky/pozemky-rodinne-domy/durkov/predaj"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "durkov-872"
+  },
+  {
+   "village": "Haniska",
+   "title": "Stavebný pozemok 623 m², cca 36 × 17 m",
+   "direction": "J",
+   "minutes": 18,
+   "lat": 48.625,
+   "lng": 21.255,
+   "area": 623,
+   "price": null,
+   "width": 17,
+   "length": 36,
+   "terrain": "rovina",
+   "utilities": {
+    "kanalizacia": false
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Pri R4 a závode Volvo. Obec zatiaľ bez kanalizácie (žumpa).",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/196331212/stavebny-pozemok.php"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "haniska-623"
+  },
+  {
+   "village": "Kysak – Brezie",
+   "title": "Pozemok 800 m² na chatu",
+   "direction": "S",
+   "minutes": 25,
+   "lat": 48.858,
+   "lng": 21.215,
+   "area": 800,
+   "price": 58800,
+   "width": null,
+   "length": null,
+   "terrain": null,
+   "utilities": {},
+   "mainRoad": null,
+   "category": "rekreacny",
+   "reserved": false,
+   "summary": "Uprostred lesa, určené na chalupu/chatu (ADOMIS).",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Ju8ONjhixVe/predame-stavebny-pozemok-800m2-kysakuprostred-prirody-na-vystavbu-chalupychaty-800m2kosice-okolie"
+    }
+   ],
+   "firstSeen": "2026-10-27",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-27",
+     "price": 58800
+    }
+   ],
+   "gone": false,
+   "id": "kysak-800"
+  },
+  {
+   "village": "Nižná Hutka – Komočov",
+   "title": "Rovinatý pozemok 603 m², všetky siete",
+   "direction": "J",
+   "minutes": 14,
+   "lat": 48.69,
+   "lng": 21.345,
+   "area": 603,
+   "price": null,
+   "width": 20,
+   "length": 30,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": true,
+    "voda": true
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Slnečný, pripravený na výstavbu, kompletné siete. 10 km od Košíc (most VSS). Cenu zisti.",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/189375338/stavebny-pozemok-v-lokalite-kosice-okolie-vysna-hutka.php"
+    }
+   ],
+   "firstSeen": "2026-10-27",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "nizna-hutka-603"
+  },
+  {
+   "village": "Obišovce",
+   "title": "Slnečný rovinatý pozemok 866 m², oplotený",
+   "direction": "S",
+   "minutes": 22,
+   "lat": 48.852,
+   "lng": 21.196,
+   "area": 866,
+   "price": 55000,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Celý oplotený, tichá časť obce, Košice aj Prešov do 20 min. Cena znížená zo 65 000 €, predaj formou licitácie (Winners Reality).",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/vysledky/komercne-pozemky/obisovce"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-13",
+     "price": 65000
+    },
+    {
+     "date": "2026-10-27",
+     "price": 55000
+    }
+   ],
+   "gone": false,
+   "id": "obisovce-866"
+  },
+  {
+   "village": "Ploské",
+   "title": "Stavebný pozemok 1 032 m²",
+   "direction": "S",
+   "minutes": 20,
+   "lat": 48.787,
+   "lng": 21.392,
+   "area": 1032,
+   "price": 119990,
+   "width": null,
+   "length": null,
+   "terrain": null,
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": false,
+    "voda": true
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Elektrina, dátový kábel a vodovod pri pozemku, odpad riešený žumpou. Výmerou nad rozsahom.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/vysledky/ploske-kosice/pozemky-rodinne-domy"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-13",
+     "price": 119990
+    }
+   ],
+   "gone": false,
+   "id": "ploske-1032"
+  },
+  {
+   "village": "Ploské",
+   "title": "Stavebný pozemok 831 m², intravilán",
+   "direction": "S",
+   "minutes": 20,
+   "lat": 48.787,
+   "lng": 21.392,
+   "area": 831,
+   "price": 99900,
+   "width": 25,
+   "length": 32,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Rovinatý, takmer štvorcový pozemok v zastavanom území. Cena vrátane poplatkov a provízie RK (Reality s VAMI). Siete over u makléra.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JugY7PYpa9B/na-predaj-stavebny-pozemok-831-m2-kosice-ploske"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-13",
+     "price": 99900
+    }
+   ],
+   "gone": false,
+   "id": "ploske-831"
+  },
+  {
+   "village": "Ploské – Ortáše",
+   "title": "Stavebný pozemok 670 m²",
+   "direction": "S",
+   "minutes": 22,
+   "lat": 48.8,
+   "lng": 21.405,
+   "area": 670,
+   "price": 74900,
+   "width": null,
+   "length": null,
+   "terrain": "mierny svah",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Bez tiarch, určený na rodinný dom. Mierne svahovitý. K dispozícii 3D prehliadka a video.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JucCID99u4k/predaj-stavebny-pozemok-670-m2-ploske-ortase"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-13",
+     "price": 74900
+    }
+   ],
+   "gone": false,
+   "id": "ploske-ortase-670"
+  },
+  {
+   "village": "Rozhanovce",
+   "title": "Pripravený pozemok 758 m² so sieťami",
+   "direction": "V",
+   "minutes": 15,
+   "lat": 48.75,
+   "lng": 21.355,
+   "area": 758,
+   "price": null,
+   "width": 27,
+   "length": 28,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": true,
+    "optika": true,
+    "voda": true
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Nová lokalita, nová prístupová cesta, mimo záplavovej a zosuvnej oblasti. Asi 2 km od privádzača na D1. Cenu zisti (v obci okolo 150 €/m²).",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/vysledky/rozhanovce"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "rozhanovce-758"
+  },
+  {
+   "village": "Rozhanovce",
+   "title": "Stavebný pozemok 933 m², Kvetná ul.",
+   "direction": "V",
+   "minutes": 14,
+   "lat": 48.748,
+   "lng": 21.352,
+   "area": 933,
+   "price": null,
+   "width": null,
+   "length": null,
+   "terrain": null,
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Prístup po asfaltovej ceste. Výmerou tesne nad rozsahom.",
+   "links": [
+    {
+     "portal": "Prehľad ponúk",
+     "url": "https://ddadsstornala.sk/aktuality/priestory-na-prenajom-rozhanovce/"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "rozhanovce-kvetna-933"
+  },
+  {
+   "village": "Rozhanovce",
+   "title": "Rovinatý pozemok 876 m², Toryská ul.",
+   "direction": "V",
+   "minutes": 15,
+   "lat": 48.752,
+   "lng": 21.358,
+   "area": 876,
+   "price": null,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Ponuka Reality s VAMI, asi 10 km od Košíc. Cenu a siete over.",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/195423438/stavebny-pozemok-rozhanovce-ke-okolie.php"
+    },
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/vysledky/komercne-pozemky/rozhanovce"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "rozhanovce-toryska-876"
+  },
+  {
+   "village": "Trsťany",
+   "title": "Rovinatý slnečný pozemok 588 m²",
+   "direction": "S",
+   "minutes": 20,
+   "lat": 48.823,
+   "lng": 21.362,
+   "area": 588,
+   "price": 123480,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Súkromná ponuka, rovinatý a slnečný. Výmerou pod rozsahom, cenou nad limitom.",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/192029903/stavebny-pozemok-v-obci-trstany.php"
+    }
+   ],
+   "firstSeen": "2026-10-27",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-27",
+     "price": 123480
+    }
+   ],
+   "gone": false,
+   "id": "trstany-588"
+  },
+  {
+   "village": "Trsťany",
+   "title": "Stavebný pozemok 773 m²",
+   "direction": "S",
+   "minutes": 20,
+   "lat": 48.823,
+   "lng": 21.362,
+   "area": 773,
+   "price": null,
+   "width": null,
+   "length": null,
+   "terrain": null,
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Ponuka Reality s VAMI. Obec pri zjazde z D1 v Budimíre. Over, či je ešte voľný a cenu.",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/190362104/pozemok-kosice-okolie-backovik.php"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "trstany-773"
+  },
+  {
+   "village": "Vajkovce",
+   "title": "Rovinatý pozemok 826 m² v slepej uličke",
+   "direction": "S",
+   "minutes": 15,
+   "lat": 48.796,
+   "lng": 21.333,
+   "area": 826,
+   "price": 140000,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Zastavané územie, tichá slepá ulička, k tomu pozemok 130 m² (MH Real). Cenou nad limitom.",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/196801175/vajkovce-rovinaty-stavebny-pozemok-iba-10-km-od-kosic.php"
+    }
+   ],
+   "firstSeen": "2026-10-27",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-27",
+     "price": 140000
+    }
+   ],
+   "gone": false,
+   "id": "vajkovce-826"
+  },
+  {
+   "village": "Vajkovce",
+   "title": "Pekný stavebný pozemok 898 m²",
+   "direction": "S",
+   "minutes": 15,
+   "lat": 48.796,
+   "lng": 21.333,
+   "area": 898,
+   "price": null,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "10 km od Košíc, 3 km od diaľničného privádzača. Bez tiarch, kúpou voľný (MH Real). Cenu zisti u makléra.",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/196801175/vajkovce-rovinaty-stavebny-pozemok-iba-10-km-od-kosic.php"
+    },
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/vysledky/pozemky/vajkovce/predaj"
+    }
+   ],
+   "firstSeen": "2026-10-13",
+   "lastSeen": "2026-10-30T16:30:00+01:00",
+   "priceHistory": [],
+   "gone": false,
+   "id": "vajkovce-898"
+  }
+ ]
+}
