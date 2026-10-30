@@ -13,3 +13,4 @@ bb="48.620,21.330,48.630,21.345,urn:ogc:def:crs:EPSG::4326"
 g({"service":"WFS","version":"2.0.0","request":"GetFeature","typeNames":"cp:CP.CadastralParcel","bbox":bb,"count":"3","outputFormat":"application/json"},3000)
 g({"service":"WFS","version":"2.0.0","request":"GetFeature","typeNames":"cp:CP.CadastralParcel","bbox":bb,"count":"2"},3000)
 g({"service":"WFS","version":"1.1.0","request":"GetFeature","typeName":"cp:CP.CadastralParcel","count":"2","maxFeatures":"2","CQL_FILTER":"areaValue BETWEEN 697 AND 699","outputFormat":"application/json"},2000)
+# rerun
