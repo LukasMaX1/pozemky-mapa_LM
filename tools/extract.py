@@ -25,6 +25,17 @@ def _strip(t):
     return re.sub(r"\s+", " ", t).strip()
 
 
+def _text(t):
+    """Text inzerátu s odsekmi (pre zobrazenie celého popisu)."""
+    t = re.sub(r"(?i)<br\s*/?>|</p>|</li>", "\n", t or "")
+    t = re.sub(r"<[^>]+>", " ", t)
+    t = t.replace("\r", "")
+    t = re.sub(r"[ \t\xa0]+", " ", t)
+    t = re.sub(r" *\n *", "\n", t)
+    t = re.sub(r"\n{3,}", "\n\n", t)
+    return t.strip()
+
+
 def parse_page(html):
     out = {"images": []}
     for m in re.finditer(r"<script[^>]*application/ld\+json[^>]*>(.*?)</script>", html, re.S):
@@ -46,6 +57,7 @@ def parse_page(html):
             elif ty == "Product":
                 out["title"] = _strip(n.get("name"))
                 out["desc"] = _strip(n.get("description"))
+                out["descText"] = _text(n.get("description"))
                 imgs = []
                 for i in n.get("image") or []:
                     u = i.get("@id") or i.get("contentUrl") or i.get("url") if isinstance(i, dict) else i
@@ -238,6 +250,19 @@ def extract(title, desc):
         r["multi"] = True
     if re.search(r"investicn", _fold(title or "")):
         r["investment"] = True
+    # druh ponuky podľa textu (stavebný / investičný / rekreačný / poľnohospodársky)
+    ft = _fold(title or "")
+    KINDS = [("investičný", r"investicn\w* (pozem|ucel|zamer|vystavb|projekt)|na investiciu|pre investor"),
+             ("poľnohospodársky", r"orn\w* pod|trval\w* travn|\bttp\b|polnohospodar"),
+             ("stavebný", r"stavebn\w* pozem|pozem\w* (na|pre) (vystavbu|rodinn|rd|ibv)|\bibv\b|na vystavbu rodinn|stavebn\w* parcel"),
+             ("rekreačný", r"rekreacn|chatov|\bchat[auy]\b|zahradk")]
+    in_title = [k for k, rx in KINDS if re.search(rx, ft)]
+    in_text = [k for k, rx in KINDS if re.search(rx, t)]
+    if in_title or in_text:
+        r["kind"] = (in_title or in_text)[0]
+        both = [k for k in dict.fromkeys(in_title + in_text)]
+        if len(both) > 1:
+            r["kindNote"] = "v texte: " + ", ".join(both)
     r["titleArea"] = _area_from_title(title or "")
     return r
 

@@ -93,6 +93,11 @@ def main(plots_dir, ver_path, out_dir):
             if d.get("reserved") and not p.get("reserved"):
                 p["reserved"] = True
                 ch.append("rezervovaný")
+            for k in ("kind", "kindNote"):
+                if d.get(k) and p.get(k) != d[k]:
+                    p[k] = d[k]
+            if d.get("description"):
+                p["description"] = d["description"][:6000]
             for k in ("agent", "published", "listingTitle"):
                 if d.get(k):
                     p[k] = d[k]

@@ -87,7 +87,7 @@ def check_link(u, cache):
             res.update(state="ok", title=pg.get("title"), area=merge_area(pg, ex), price=pg.get("price") or None,
                        agent=pg.get("agent"), published=pg.get("published"), modified=pg.get("modified"),
                        canonical=(pg.get("canonical") or r.url).split("?")[0], images=pg.get("images", []),
-                       extract={k: v for k, v in ex.items() if k != "titleArea"}, desc=(pg.get("desc") or "")[:4000])
+                       extract={k: v for k, v in ex.items() if k != "titleArea"}, desc=(pg.get("descText") or pg.get("desc") or "")[:8000])
             if res["price"] is not None and res["price"] < 100:
                 res["price"] = None  # 0 / 1 € = cena dohodou
     cache[u] = res
@@ -132,6 +132,7 @@ def main():
             data["published"] = min((l["published"] for l in ok if l.get("published")), default=None)
             data["modified"] = max((l["modified"] for l in ok if l.get("modified")), default=None)
             data["listingTitle"] = best.get("title")
+            data["description"] = best.get("desc") or ""
             imgs, keys = [], set()
             for l in ok:
                 for i in l.get("images", []):
