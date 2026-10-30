@@ -15,6 +15,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(__file__))
 from extract import GAL_RE, extract, merge_area, parse_page  # noqa: E402
+import geocode  # noqa: E402
 
 UA = "Mozilla/5.0 (Linux; Android 14) pozemky-mapa/1.0 (osobne pouzitie)"
 H = {"User-Agent": UA, "Accept-Language": "sk"}
@@ -85,7 +86,7 @@ def check_link(u, cache):
         else:
             ex = extract(pg.get("title"), pg.get("desc"))
             res.update(state="ok", title=pg.get("title"), area=merge_area(pg, ex), price=pg.get("price") or None,
-                       agent=pg.get("agent"), published=pg.get("publishedAt") or pg.get("published"), modified=pg.get("updatedAt") or pg.get("modified"), createdAt=pg.get("createdAt"),
+                       agent=pg.get("agent"), gps=pg.get("gps"), published=pg.get("publishedAt") or pg.get("published"), modified=pg.get("updatedAt") or pg.get("modified"), createdAt=pg.get("createdAt"),
                        canonical=(pg.get("canonical") or r.url).split("?")[0], images=pg.get("images", []),
                        extract={k: v for k, v in ex.items() if k != "titleArea"}, desc=(pg.get("descText") or pg.get("desc") or "")[:8000])
             if res["price"] is not None and res["price"] < 100:
@@ -133,6 +134,7 @@ def main():
             data["published"] = max((l["published"] for l in ok if l.get("published")), default=None)
             data["modified"] = max((l["modified"] for l in ok if l.get("modified")), default=None)
             data["listingTitle"] = best.get("title")
+            data["pageGps"] = next((l["gps"] for l in ok if l.get("gps")), None)
             data["description"] = best.get("desc") or ""
             imgs, keys = [], set()
             for l in ok:
@@ -173,7 +175,18 @@ def main():
         if bad:
             issues.append(f"odstránené odkazy na vyhľadávanie: {len(bad)}")
         dup = len(p.get("links", [])) - len(links)
+        vg = geocode.village(p.get("village"))
+        loc = {"villageGps": vg}
+        pgps = data.get("pageGps")
+        if pgps and vg:
+            dd = geocode.km(pgps, vg)
+            loc["pageDistKm"] = round(dd, 1)
+            if dd > 4:
+                issues.append(f"poloha z portálu je {dd:.0f} km od obce {p.get('village')} – použitý stred obce")
+        if p.get("lat") is not None and vg:
+            loc["storedDistKm"] = round(geocode.km([p["lat"], p["lng"]], vg), 1)
         out[pid] = {
+            "loc": loc,
             "checked": now,
             "status": status,
             "issues": issues,
@@ -182,6 +195,7 @@ def main():
             "removedLinks": bad,
             "dupLinks": dup,
         }
+    geocode.save()
     json.dump(out, open("out/verify.json", "w"), ensure_ascii=False, indent=1)
     c = {}
     for v in out.values():

@@ -2,7 +2,7 @@ name: Overiť inzeráty a stiahnuť fotky
 on:
   push:
     branches: [main]
-    paths: [data.json, tools/fetch_images.py, tools/verify_listings.py, tools/extract.py]
+    paths: [data.json, tools/fetch_images.py, tools/verify_listings.py, tools/extract.py, tools/geocode.py]
   workflow_dispatch:
 permissions:
   contents: write

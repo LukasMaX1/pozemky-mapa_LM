@@ -111,6 +111,23 @@ def main(plots_dir, ver_path, out_dir):
             if json.dumps(p, sort_keys=True, ensure_ascii=False) != before:
                 json.dump(p, open(os.path.join(out_dir, f), "w"), ensure_ascii=False, indent=1)
             continue
+        # poloha: GPS z inzerátu, ak sedí s obcou; inak stred obce (OpenStreetMap)
+        loc = v.get("loc") or {}
+        vg, pg = loc.get("villageGps"), d.get("pageGps")
+        new = None
+        if pg and vg and (loc.get("pageDistKm") or 0) <= 4:
+            new, prec, src = pg, True, "inzerát (±200 m)"
+        elif vg:
+            new, prec, src = vg, False, "stred obce"
+        if new and not p.get("manualLoc"):
+            old = [p.get("lat"), p.get("lng")]
+            moved = old[0] is None or abs(old[0] - new[0]) > 0.003 or abs(old[1] - new[1]) > 0.004
+            if moved:
+                if old[0] is not None:
+                    ch.append(f"poloha posunutá o {((old[0]-new[0])**2*12365+(old[1]-new[1])**2*5388)**0.5:.1f} km")
+                p["lat"], p["lng"] = new
+            p["precise"] = prec
+            p["locSource"] = src
         p["check"] = {"status": st, "at": v["checked"][:10], "issues": v.get("issues", []), "photos": len(d.get("images") or [])}
         if json.dumps(p, sort_keys=True, ensure_ascii=False) != before:
             json.dump(p, open(os.path.join(out_dir, f), "w"), ensure_ascii=False, indent=1)
