@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T21:28:32.031154+00:00",
+ "generated": "2026-10-31T08:25:14.237118+00:00",
  "settings": {
   "directions": {
    "J": {
@@ -61,12 +61,12 @@
    ],
    "gone": false,
    "check": {
-    "status": "chybný",
     "at": "2026-10-30",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "chybný"
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -102,7 +102,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuCqAzm_uMO/baska-cast-masa-velka-zahrada-v-chatovej-lokalite-kosice-okolie",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -112,10 +112,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 11
+    "photos": 11,
+    "status": "overený"
    },
    "utilDetail": {
     "elektrina": "v dosahu"
@@ -141,7 +141,7 @@
    "area": 564,
    "price": 124900,
    "width": 16.5,
-   "length": 35.0,
+   "length": 35,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -162,10 +162,14 @@
     {
      "portal": "Nehnuteľnosti.sk",
      "url": "https://www.nehnutelnosti.sk/detail/JujniB5zafc/stavebny-pozemok-564-m2-beniakovce"
+    },
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JukrRMSalSm/stavebny-pozemok-564-m2-beniakovce"
     }
    ],
    "firstSeen": "2026-10-27",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-27",
@@ -174,17 +178,17 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 12
+    "photos": 12,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
     "elektrina": "na pozemku",
     "kanalizacia": "žumpa / bez kanalizácie",
+    "optika": "na pozemku",
     "plyn": "na pozemku",
-    "optika": "na pozemku"
+    "voda": "spomenutá"
    },
    "street": "tichá časť",
    "agent": "KOVPLUS, s.r.o.",
@@ -209,8 +213,8 @@
    "precise": true,
    "area": 691,
    "price": 124800,
-   "width": 19.0,
-   "length": 36.0,
+   "width": 19,
+   "length": 36,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -229,7 +233,7 @@
     }
    ],
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-13",
@@ -238,16 +242,16 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 4
+    "photos": 4,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "optika": "na pozemku"
+    "optika": "na pozemku",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "agent": "RECLOUD Reality a.s.",
@@ -294,7 +298,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Jugoo2hP5Ng/stavebny-pozemok-s-projektom-rd-kosice-beniakovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:55:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -340,8 +344,8 @@
    "cadastralArea": null,
    "area": 810,
    "price": null,
-   "width": 13.0,
-   "length": 63.0,
+   "width": 13,
+   "length": 63,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -360,7 +364,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuG4mJ2nZjl/exkluzivne---pozemokl-810-m2l-beniakovce",
    "firstSeen": "2026-10-30T18:00:00+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:55:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -370,10 +374,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 4
+    "photos": 4,
+    "status": "overený"
    },
    "utilDetail": {
     "elektrina": "na pozemku",
@@ -430,14 +434,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 10
+    "photos": 10,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
-    "elektrina": "na pozemku"
+    "elektrina": "na pozemku",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -465,8 +469,8 @@
    "cadastralArea": null,
    "area": 542,
    "price": 75000,
-   "width": 19.0,
-   "length": 25.0,
+   "width": 19,
+   "length": 25,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -481,11 +485,15 @@
     {
      "portal": "Nehnuteľnosti.sk",
      "url": "https://www.nehnutelnosti.sk/detail/Jur9GzNzchD/na-predaj-stavebny-pozemok-542-m2-bidovce-kosice-okolie"
+    },
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuFiZYu0rVF/na-predaj-stavebny-pozemok-542-m2-bidovce-kosice-okolie"
     }
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Jur9GzNzchD/na-predaj-stavebny-pozemok-542-m2-bidovce-kosice-okolie",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -495,15 +503,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 11
+    "photos": 11,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu"
+    "kanalizacia": "v dosahu",
+    "voda": "v dosahu"
    },
    "shape": "pravidelný",
    "access": "nespevnená cesta",
@@ -551,7 +559,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JusSoNT4XIs/na-predaj-pozemok-na-vystavbu-rodinneho-domu-v-bidovciach",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -561,14 +569,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 6
+    "photos": 6,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
-    "elektrina": "na pozemku"
+    "elektrina": "na pozemku",
+    "voda": "na pozemku"
    },
    "agent": "RR reality, s. r. o.",
    "published": "2026-10-30",
@@ -594,8 +602,8 @@
    "cadastralArea": null,
    "area": 726,
    "price": 95000,
-   "width": 19.0,
-   "length": 72.0,
+   "width": 19,
+   "length": 72,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -614,7 +622,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuVhEyMABaG/na-predaj-stavebny-pozemok-726-m2-bidovce-kosice-okolie",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -624,15 +632,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 11
+    "photos": 11,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu"
+    "kanalizacia": "v dosahu",
+    "voda": "v dosahu"
    },
    "shape": "nepravidelný",
    "access": "nespevnená cesta",
@@ -660,8 +668,8 @@
    "precise": true,
    "area": 824,
    "price": 90000,
-   "width": 21.0,
-   "length": 33.0,
+   "width": 21,
+   "length": 33,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -679,7 +687,7 @@
     }
    ],
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-13",
@@ -688,15 +696,15 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 3
+    "photos": 3,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá"
+    "kanalizacia": "spomenutá",
+    "voda": "spomenutá"
    },
    "street": "tichá časť",
    "agent": "ARCHEUS Partners a.s.",
@@ -744,7 +752,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuO3Zh2oEwa/pozemok-na-vystavbu-rd---bohdanovce",
    "firstSeen": "2026-10-30T18:10:00+01:00",
-   "lastSeen": "2026-10-30T18:10:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -754,16 +762,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 6
+    "photos": 6,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku"
+    "plyn": "na pozemku",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -818,7 +826,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuXFtf16SA4/predame-pekny-stavebny-pozemok-820m2-bohdanovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -828,17 +836,17 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 35
+    "photos": 35,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
+    "optika": "spomenutá",
     "plyn": "na pozemku",
-    "optika": "spomenutá"
+    "voda": "spomenutá"
    },
    "shape": "nepravidelný",
    "street": "slepá ulica",
@@ -868,8 +876,8 @@
    "cadastralArea": null,
    "area": 505,
    "price": 75750,
-   "width": 15.0,
-   "length": 34.0,
+   "width": 15,
+   "length": 34,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -887,7 +895,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuWpvnlKztI/stavebny-pozemok-pre-rodinny-dom-bretejovce-intravilan-505-m2",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -897,14 +905,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 6
+    "photos": 6,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
-    "elektrina": "v dosahu"
+    "elektrina": "v dosahu",
+    "voda": "v dosahu"
    },
    "shape": "pravidelný",
    "street": "tichá časť",
@@ -933,8 +941,8 @@
    "cadastralArea": null,
    "area": 549,
    "price": 82350,
-   "width": 17.0,
-   "length": 41.0,
+   "width": 17,
+   "length": 41,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -952,7 +960,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JugTepeSKvf/stavebny-pozemok-pre-rodinny-dom-bretejovce-intravilan-549-m2",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -962,14 +970,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 9
+    "photos": 9,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
-    "elektrina": "v dosahu"
+    "elektrina": "v dosahu",
+    "voda": "v dosahu"
    },
    "upOk": true,
    "agent": "CassaReal s.r.o.",
@@ -996,8 +1004,8 @@
    "cadastralArea": null,
    "area": 603,
    "price": 90450,
-   "width": 14.0,
-   "length": 45.0,
+   "width": 14,
+   "length": 45,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1015,7 +1023,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JutPVWksbtK/stavebny-pozemok-pre-rodinny-dom-bretejovce-intravilan-603-m2",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1025,14 +1033,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 9
+    "photos": 9,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
-    "elektrina": "v dosahu"
+    "elektrina": "v dosahu",
+    "voda": "v dosahu"
    },
    "street": "tichá časť",
    "upOk": true,
@@ -1060,8 +1068,8 @@
    "cadastralArea": null,
    "area": 625,
    "price": 49990,
-   "width": 21.0,
-   "length": 31.0,
+   "width": 21,
+   "length": 31,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1090,15 +1098,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 10
+    "photos": 10,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa"
+    "kanalizacia": "žumpa",
+    "voda": "v dosahu"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -1147,7 +1155,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuH7S9eLGMi/na-predaj-dva-novovzniknute-stavebne-pozemky-cakanovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1157,15 +1165,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 14
+    "photos": 14,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa"
+    "kanalizacia": "žumpa",
+    "voda": "v dosahu"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -1211,7 +1219,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuSRSdikJMk/na-predaj-stavebny-pozemok-cana-kosice-okolie",
    "firstSeen": "2026-10-30T18:00:00+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1221,10 +1229,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 5
+    "photos": 5,
+    "status": "overený"
    },
    "street": "slepá ulica",
    "agent": "Finanzpartner reality",
@@ -1267,7 +1275,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuavMx9eVYm/predam-pozemok-v-obci-chrastne",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1277,14 +1285,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 25
+    "photos": 25,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
-    "elektrina": "v dosahu"
+    "elektrina": "v dosahu",
+    "voda": "v dosahu"
    },
    "landType": "poľnohosp. pôda",
    "upOk": false,
@@ -1328,7 +1336,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JupKrc4heP5/stavebny-pozemok-v-obci-chrastne",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1338,10 +1346,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 8
+    "photos": 8,
+    "status": "overený"
    },
    "agent": "Realitné kancelárie Slovenska",
    "published": "2026-10-30",
@@ -1356,6 +1364,60 @@
    "seenAt": "2026-10-30T19:07:47.376Z"
   },
   {
+   "village": "Chrastné",
+   "title": "Pozemok 826 m² v tichej slepej uličke so SP",
+   "direction": "V",
+   "minutes": 18,
+   "lat": 48.7918769,
+   "lng": 21.3483657,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 826,
+   "price": 130000,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {
+    "voda": true
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Prevažne rovinatý pozemok v intraviláne, tichá slepá ulička pre 3 pozemky, vodomerná šachta na pozemku, elektrina sa dokončuje 11/2026; vydané SP na RD. Cena mierne nad limitom. MH Real.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Ju9NEdXut1J/chrastne---stavebny-pozemok-peknal-ticha-lokalita"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju9NEdXut1J/chrastne---stavebny-pozemok-peknal-ticha-lokalita",
+   "imageUrl": "https://img.nehnutelnosti.sk/foto/Zml0LWluLzE1NjB4NDAwMC9maWx0ZXJzOnF1YWxpdHkoODApOmZvcm1hdCh3ZWJwKS9qdWw=/BKAiTqH5wU_fss?st=mUQfBecFdaa2TPbldaNBZtC2iLSxzru5345cOfYjci8&ts=1793269236&e=0",
+   "firstSeen": "2026-10-30T23:50:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-30",
+     "price": 130000
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "elektrina": "v dosahu",
+    "voda": "na pozemku"
+   },
+   "shape": null,
+   "access": null,
+   "permit": true,
+   "project": true,
+   "upOk": null,
+   "agent": "MH Real (Marianna Hrehorová)",
+   "multi": true,
+   "id": "chrastne-826",
+   "seenAt": "2026-10-30T23:12:25.287Z"
+  },
+  {
    "village": "Ďurďošík",
    "title": "Stavebný pozemok 533 m²",
    "direction": "V",
@@ -1367,8 +1429,8 @@
    "cadastralArea": null,
    "area": 533,
    "price": 105000,
-   "width": 18.0,
-   "length": 30.0,
+   "width": 18,
+   "length": 30,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -1383,11 +1445,15 @@
     {
      "portal": "Nehnuteľnosti.sk",
      "url": "https://www.nehnutelnosti.sk/detail/JusG65i69L5/atraktivny-stavebny-pozemok-533-m2-v-obci-durdosik"
+    },
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/197018017/atraktivny-stavebny-pozemok-533-m-v-obci-durdosik.php"
     }
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JusG65i69L5/atraktivny-stavebny-pozemok-533-m2-v-obci-durdosik",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1397,15 +1463,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 2
+    "photos": 2,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku"
+    "kanalizacia": "na pozemku",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -1454,7 +1520,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuQPOCiiNXd/predaj-stavebneho-pozemku-v-obci-durkov",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1464,16 +1530,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 2
+    "photos": 2,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
-    "plyn": "spomenutá"
+    "plyn": "spomenutá",
+    "voda": "spomenutá"
    },
    "permit": true,
    "upOk": true,
@@ -1517,12 +1583,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "status": "neoverený",
     "at": "2026-10-30",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "neoverený"
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -1552,16 +1618,74 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "status": "chybný",
     "at": "2026-10-30",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "chybný"
    },
    "invalid": true,
    "locSource": "stred obce",
    "id": "durkov-872"
+  },
+  {
+   "village": "Ďurkov",
+   "title": "2 parcely 714 + 194 m² na konci radu domov",
+   "direction": "V",
+   "minutes": 22,
+   "lat": 48.716,
+   "lng": 21.404,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 908,
+   "price": 54480,
+   "width": null,
+   "length": null,
+   "terrain": "mierny svah",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": true,
+    "plyn": true,
+    "voda": true
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Lacný pozemok v intraviláne Ďurkova v tichej časti obce – 714 m² v miernom svahu nad cestou a 194 m² rovina pod cestou (cesta ich delí). Elektrina a plyn na hranici, voda a kanalizácia ~100 m. AA Reality.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Ju4tqzoXJji/2x-stavebny-pozemok-durkovl-kosice-okolie"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju4tqzoXJji/2x-stavebny-pozemok-durkovl-kosice-okolie",
+   "imageUrl": "https://img.nehnutelnosti.sk/foto/Zml0LWluLzE1NjB4NDAwMC9maWx0ZXJzOnF1YWxpdHkoODApOmZvcm1hdCh3ZWJwKTp3YXRlcm1hcmsocHVzL0Jpa3FpVlZTcl9mc3MsY2VudGVyLGNlbnRlciwwLDIwLDIwKS9qdWw=/Qfa5jlIJ8_fss?st=fHdfSxfuD0RVoYbGn7lZGVLkZEblqjfPrcRDLqBol1s&ts=1760539840&e=0",
+   "firstSeen": "2026-10-31T06:03:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-31",
+     "price": 54480
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "elektrina": "na pozemku",
+    "kanalizacia": "v dosahu",
+    "plyn": "na pozemku",
+    "voda": "v dosahu"
+   },
+   "shape": "nepravidelný",
+   "access": null,
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "AA REALITY Košice (Tatiana Abošiová)",
+   "multi": true,
+   "id": "durkov-908"
   },
   {
    "village": "Gyňov",
@@ -1594,7 +1718,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuECe-mq3i8/stavebny-pozemok-gynov",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1604,14 +1728,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 10
+    "photos": 10,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
-    "elektrina": "na pozemku"
+    "elektrina": "na pozemku",
+    "voda": "na pozemku"
    },
    "access": "spevnená cesta",
    "street": "tichá časť",
@@ -1636,8 +1760,8 @@
    "cadastralArea": null,
    "area": 520,
    "price": 94500,
-   "width": 20.0,
-   "length": 28.0,
+   "width": 20,
+   "length": 28,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -1655,7 +1779,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Jul93qcq-Sy/stavebny-pozemok-haniska-pri-kosiciach",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1665,14 +1789,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 4
+    "photos": 4,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
-    "elektrina": "spomenutá"
+    "elektrina": "spomenutá",
+    "voda": "spomenutá"
    },
    "access": "spevnená cesta",
    "project": true,
@@ -1719,7 +1843,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuQ3ResWLF6/stavebny-pozemok-v-haniske-pri-kosiciach-idealne-miesto-pre-novy-dom-aj-investiciu",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1729,10 +1853,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 5
+    "photos": 5,
+    "status": "overený"
    },
    "utilDetail": {
     "voda": "spomenutá"
@@ -1782,16 +1906,78 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "status": "neoverený",
     "at": "2026-10-30",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "neoverený"
    },
    "invalid": true,
    "locSource": "stred obce",
    "id": "haniska-623"
+  },
+  {
+   "village": "Haniska pri Prešove",
+   "title": "Rovinatý pozemok 723 m² v tichej lokalite",
+   "direction": "S",
+   "minutes": 30,
+   "lat": 48.955,
+   "lng": 21.245,
+   "precise": false,
+   "parcel": "168/1",
+   "cadastralArea": null,
+   "area": 723,
+   "price": 99900,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": true,
+    "plyn": true,
+    "voda": true
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Rovinatý slnečný pozemok v intraviláne Hanisky pri Prešove medzi RD, siete pri obecnej asfaltovej ceste, prístup pásom 4×41 m; k využívaniu aj susedná parcela 281 m². Dojazd do Košíc po D1 hraničný (~30 min). MYRA / Finanzpartner.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Jum4HQhMNAo/stavebny-pozemok-v-obci-haniska-pri-presove"
+    },
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuA78NXOHdi/stavebny-pozemok-v-haniske-f568-14-anmi"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/Jum4HQhMNAo/stavebny-pozemok-v-obci-haniska-pri-presove",
+   "imageUrl": "https://img.nehnutelnosti.sk/foto/Zml0LWluLzE1NjB4NDAwMC9maWx0ZXJzOnF1YWxpdHkoODApOmZvcm1hdCh3ZWJwKS9qdWw=/aGvHr78XW_fss?st=6L-fRiEvFULIojJoAfW-2jQMoPPcCWnHuQK0GDLWgAo&ts=1791203323&e=0",
+   "firstSeen": "2026-10-31T06:03:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-31",
+     "price": 99900
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "elektrina": "v dosahu",
+    "kanalizacia": "v dosahu",
+    "plyn": "v dosahu",
+    "voda": "v dosahu"
+   },
+   "shape": null,
+   "access": "asfaltová cesta",
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "MYRA (Mgr. Tomáš Bohunický); ponúka aj Finanzpartner reality",
+   "multi": true,
+   "id": "haniska-pri-presove-723"
   },
   {
    "village": "Hrašovík",
@@ -1824,7 +2010,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuK93Bjqwio/stavebny-pozemok-hrasovik",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1834,14 +2020,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 8
+    "photos": 8,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
-    "elektrina": "v dosahu"
+    "elektrina": "v dosahu",
+    "voda": "v dosahu"
    },
    "agent": "Diamond Reality",
    "published": "2026-10-30",
@@ -1891,15 +2077,18 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "status": "zrušený",
     "at": "2026-10-30",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "zrušený"
    },
    "locSource": "stred obce",
-   "id": "kechnec-664"
+   "id": "kechnec-664",
+   "rating": "hide",
+   "ratingAt": "2026-10-30T21:46:51.823Z",
+   "seenAt": "2026-10-30T21:41:50.607Z"
   },
   {
    "village": "Kechnec",
@@ -1944,16 +2133,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 7
+    "photos": 7,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
+    "elektrina": "na pozemku",
     "kanalizacia": "žumpa / bez kanalizácie",
     "plyn": "spomenutá",
-    "elektrina": "na pozemku"
+    "voda": "spomenutá"
    },
    "access": "asfaltová cesta",
    "agent": "Realitné kancelárie Slovenska",
@@ -1964,7 +2153,10 @@
    "locSource": "inzerát (±200 m)",
    "description": "Ponúkame exkluzívne na predaj slnečný rovinatý pozemok v obci Kechnec v okrese Košice – okolie s celkovou výmerou 910 m2, z toho 94 m2 tvorí príjazdová cesta vedená z obecnej asfaltovej prístupovej cesty. Dostupné sú všetky inžinierske siete – elektrika, plyn, kanalizácia, aj obecná voda. Pozemok sa nachádza v zastavanej časti obce, je súčasťou existujúcej ulice. Na pozemku sú vysadené ovocné stromy.\nObec sa nachádza v južnej časti okresu Košice-okolie, približne 20 kilometrov južne od Košíc, dva kilometre od maďarskej štátnej hranice. V obci žije približne 1200 obyvateľov. V obci je nákupné stredisko, materská škola, športový areál, poliklinika, lekáreň, malé prevádzky služieb, zastávka autobusu, obec sa môže pochváliť rozvinutým športovým a kultúrnym životom. Nárast obyvateľstva si vyžiadal aj zriadenie súkromnej základnej školy, k dispozícii sú dokonca tenisové kurty a wellness.\nPri obci bol v roku 2002 vybudovaný rozsiahly priemyselný park, ktorý má rozlohu 332 hektárov. Park je priamo napojený na rýchlostnú cestu R4.\nVýstavba priemyselného parku a ponuka stoviek pracovných príležitostí naštartovala rozvoj obce a záujem investorov o túto lokalitu. Na pozemku je možné postaviť rodinný dom, ale aj ubytovacie zariadenie, či menší penzión pre prílev zamestnancov. Vzdialenosť od krajského mesta, možnosť rýchleho napojenia na diaľnicu aj blízkosť hraničného prechodu zvyšuje atraktívnosť ponúkanej nehnuteľnosti aj na investičné účely.",
    "listingTitle": "Pozemok na výstavbu, Kechnec, Košice",
-   "id": "kechnec-910"
+   "id": "kechnec-910",
+   "rating": "hide",
+   "ratingAt": "2026-10-30T21:46:51.823Z",
+   "seenAt": "2026-10-30T21:41:50.607Z"
   },
   {
    "village": "Košice – Juh (Malá stanica)",
@@ -1998,7 +2190,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuPR14u0Sfq/pozemokl-kosice-juhl-mala-stanica",
    "firstSeen": "2026-10-30T18:10:00+01:00",
-   "lastSeen": "2026-10-30T18:10:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2008,15 +2200,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 8
+    "photos": 8,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "spomenutá"
+    "kanalizacia": "spomenutá",
+    "voda": "na pozemku"
    },
    "agent": "VRK REAL PLUS, s.r.o.",
    "published": "2026-05-26",
@@ -2038,7 +2230,7 @@
    "cadastralArea": null,
    "area": 1000,
    "price": 64800,
-   "width": 29.0,
+   "width": 29,
    "length": 34.49,
    "terrain": "svah",
    "utilities": {
@@ -2058,11 +2250,15 @@
     {
      "portal": "Nehnuteľnosti.sk",
      "url": "https://www.nehnutelnosti.sk/detail/Ju-7JIh4uo9/na-predaj-stavebny-pozemok-1000m2-kysak-elektrika-pred-pozemkom"
+    },
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/197024857/na-predaj-stavebny-pozemok-1000m2-kysak-elektrika-pred-poze.php"
     }
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Juv1VES3URe/adomis-predam-stavebny-pozemok-1000m2-v-lesekysak-breziena-vystavbu-chalupy-chaty-kosice-okolie",
    "firstSeen": "2026-10-30T18:00:00+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2072,15 +2268,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 28
+    "photos": 28,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa"
+    "kanalizacia": "žumpa",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -2136,15 +2332,15 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 26
+    "photos": 26,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa"
+    "kanalizacia": "žumpa",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "street": "slepá ulica",
@@ -2204,14 +2400,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 8
+    "photos": 8,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
-    "elektrina": "na pozemku"
+    "elektrina": "na pozemku",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -2223,6 +2419,59 @@
    "description": "Ponúkame Vám na predaj slnečný a udržiavaný pozemok v pokojnej časti obce Kysak – Brezie, v okrese Košice – okolie. Lokalita je známa krásnou prírodou a výbornou dostupnosťou, ideálna na oddych aj aktívne trávenie voľného času.\n\nZákladné informácie\n\nvýmera: 550 m²\nrovinatý a upravený terén\nvhodný na výstavbu rekreačnej chaty alebo chalupy\n\nMožnosti výstavby\n\nzastavanosť do 10 % z celkovej plochy\nmožnosť výstavby až 2 nadzemných podlaží\n\nInžinierske siete a prístup\n\nelektrické prípojky pripravené priamo pri pozemku, vybudované verejné osvetlenie\nvoda z centrálneho vodovodu s vodomernou šachtou pri pozemku – nie je potrebné riešiť studňu\nprístup po asfaltovej komunikácii, posledný úsek tvorí spevnená makadamová cesta\nsúčasťou predaja je aj podiel na prístupových cestách, čo zabezpečuje bezproblémový prístup aj v budúcnosti\n\nPozemok predstavuje ideálne miesto pre tých, ktorí hľadajú pokojné prostredie obklopené prírodou, s možnosťou okamžitej realizácie stavby. Lokalita je vhodná na turistiku, hubárčenie, rybolov či víkendový oddych mimo ruchu mesta.\n\nCena nehnuteľnosti je 39.990 Eur a zahŕňa províziu pre RK.\nPre ďalšie informácie o tejto nehnuteľnosti a dohodnutie obhliadky neváhajte kontaktovať Slavomíru Badžovú, na tel. čísle ...\nalebo prostredníctvom e-mailu: ...\n.",
    "listingTitle": "Na predaj rekreačný pozemok , Kysak-Brezie, Košice okolie",
    "id": "kysak-brezie-550"
+  },
+  {
+   "village": "Kysak",
+   "title": "Rekreačný pozemok 600 m² pri lese, Brezie",
+   "direction": "S",
+   "minutes": 25,
+   "lat": 48.8534279,
+   "lng": 21.2209867,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 600,
+   "price": 34999,
+   "width": 18,
+   "length": 34,
+   "terrain": "mierny svah",
+   "utilities": {
+    "kanalizacia": false
+   },
+   "mainRoad": false,
+   "category": "rekreacny",
+   "reserved": false,
+   "summary": "Rekreačný pozemok na okraji lesa v chatovej lokalite Brezie, zastavanosť do 10 % (chata), elektrina pripravená, voda zo studne a žumpa. Nie je potvrdený na RD. Kosmos Reality.",
+   "links": [
+    {
+     "portal": "Kosmos Reality",
+     "url": "https://www.kosmosreality.sk/nehnutelnost/1818-rekreacny-pozemok-600-m-pri-lese-kysak-cast-brezie"
+    }
+   ],
+   "photoUrl": "https://www.kosmosreality.sk/nehnutelnost/1818-rekreacny-pozemok-600-m-pri-lese-kysak-cast-brezie",
+   "imageUrl": "https://www.kosmosreality.sk/imgcache/wt/upperleft/-69f9af0db591aab2ce02b0d9.png",
+   "firstSeen": "2026-10-30T23:50:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-30",
+     "price": 34999
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "elektrina": "v dosahu",
+    "kanalizacia": "žumpa"
+   },
+   "shape": "pravidelný",
+   "access": "spevnená cesta",
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "Kosmos Reality",
+   "multi": true,
+   "id": "kysak-brezie-600"
   },
   {
    "village": "Košice – Myslava",
@@ -2257,7 +2506,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Juz-oAVzohz/v-priprave-exkluzivny-stavebny-pozemok-v-myslave-s-projektom-a-staveb-povolenim",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2267,16 +2516,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 19
+    "photos": 19,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "optika": "na pozemku"
+    "optika": "na pozemku",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "permit": true,
@@ -2325,7 +2574,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JufDNvhXw-1/pozemok-v-obci-nizna-hutka",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2335,15 +2584,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 7
+    "photos": 7,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
+    "kanalizacia": "žumpa",
     "plyn": "na pozemku",
-    "kanalizacia": "žumpa"
+    "voda": "na pozemku"
    },
    "shape": "nepravidelný",
    "access": "asfaltová cesta",
@@ -2393,12 +2642,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "status": "neoverený",
     "at": "2026-10-30",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "neoverený"
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -2441,7 +2690,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju0Zjqv-KXH/predame-pekny-stavebny-pozemok-615m2-nizna-mysla",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2451,15 +2700,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 3
+    "photos": 3,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
     "kanalizacia": "spomenutá",
-    "optika": "spomenutá"
+    "optika": "spomenutá",
+    "voda": "spomenutá"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -2485,8 +2734,8 @@
    "cadastralArea": null,
    "area": 823,
    "price": 87900,
-   "width": 22.0,
-   "length": 38.0,
+   "width": 22,
+   "length": 38,
    "terrain": "rovina",
    "utilities": {},
    "mainRoad": null,
@@ -2505,7 +2754,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuRVLGOPfqG/na-predaj-pozemok-v-obci-nizna-mysla",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:10:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2515,10 +2764,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 2
+    "photos": 2,
+    "status": "overený"
    },
    "agent": "ELI REAL realitná kancelária",
    "published": "2026-10-29",
@@ -2526,7 +2775,8 @@
    "locSource": "stred obce",
    "description": "Lucia Balteszová z realitnej kancelárie ELI REAL Vám ponúka na predaj rovinatý a slnečný pozemok, ktorý je ako stvorený na výstavbu Vášho nového rodinného domu v obľúbenej obci Nižná Myšľa.\nAk hľadáte miesto pre svoj nový domov, kde budete mať dostatok priestoru, pokoja a zároveň skvelú dostupnosť do mesta, tento pozemok Vás určite osloví.\n\nZákladné parametre pozemku:\n• Celková výmera: 823 m²\n• Rozmery pozemku: šírka cca 22 m × dĺžka cca 38 m\n• Terén: rovinatý a slnečný\n• Prístupová cesta: podiel na prístupovej ceste s výmerou 445 m² (šírka komfortných 5,5 m)\n\nÚzemno-plánovacia informácia: Podľa platného územného plánu obce je pozemok určený na rezidenčnú výstavbu rodinného domu.\n\nLokalita a občianska vybavenosť: Obec Nižná Myšľa ponúka príjemné vidiecke bývanie s výbornou dostupnosťou do Košíc (iba 12 km). V obci nájdete všetko potrebné pre pohodlný každodenný život:\n• Potraviny\n• Pošta\n• Posilňovňa\n• Služby (kaderníctvo, pedikúra)\n• Vlaková zastávka, ktorá zabezpečuje rýchle a pohodlné spojenie do Košíc bez ranných zápch\n\nCena a servis: V cene nehnuteľnosti je zahrnutý kompletne zastrešený právny servis, vypracovanie kúpnych zmlúv aj poplatky spojené s prevodom vlastníckych práv na katastri nehnuteľností.\n\nAk Vás táto ponuka zaujala, veľmi rada Vás privítam na osobnej obhliadke a zodpovedám všetky Vaše otázky.\nKontakt: Lucia Balteszová\nTel. číslo: ...\n\nE-mail: ...",
    "listingTitle": "Na predaj pozemok v obci Nižná Myšľa – len 12 km od Košíc",
-   "id": "nizna-mysla-823"
+   "id": "nizna-mysla-823",
+   "seenAt": "2026-10-30T21:41:50.607Z"
   },
   {
    "village": "Nižný Klátov",
@@ -2572,16 +2822,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 1
+    "photos": 1,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
     "elektrina": "v dosahu",
+    "optika": "v dosahu",
     "plyn": "v dosahu",
-    "optika": "v dosahu"
+    "voda": "v dosahu"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -2639,14 +2889,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 13
+    "photos": 13,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
-    "elektrina": "spomenutá"
+    "elektrina": "spomenutá",
+    "voda": "spomenutá"
    },
    "agent": "ADOMIS, realitná spoločnosť",
    "published": "2026-10-30",
@@ -2699,12 +2949,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "rk",
    "check": {
-    "status": "zrušený",
     "at": "2026-10-30",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "zrušený"
    },
    "utilDetail": {
     "elektrina": "na pozemku",
@@ -2754,7 +3004,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuP9ObFcxy1/stavebny-pozemok-nova-polhora",
    "firstSeen": "2026-10-30T18:00:00+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2764,14 +3014,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 5
+    "photos": 5,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
-    "elektrina": "na pozemku"
+    "elektrina": "na pozemku",
+    "voda": "spomenutá"
    },
    "street": "tichá časť",
    "agent": "TOBI Real Košice s.r.o.",
@@ -2814,7 +3064,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JujVbEw26gc/pozemok-1066m2-obisovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2824,10 +3074,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 8
+    "photos": 8,
+    "status": "overený"
    },
    "street": "tichá časť",
    "agent": "JKV REAL",
@@ -2875,12 +3125,12 @@
    ],
    "gone": false,
    "check": {
-    "status": "chybný",
     "at": "2026-10-30",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "chybný"
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -2916,7 +3166,7 @@
     }
    ],
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-13",
@@ -2929,15 +3179,15 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 16
+    "photos": 16,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa"
+    "kanalizacia": "žumpa",
+    "voda": "v dosahu"
    },
    "street": "tichá časť",
    "agent": "RECLOUD Reality a.s.",
@@ -2987,12 +3237,12 @@
    "gone": true,
    "goneReason": "inzerát stiahnutý z portálu",
    "check": {
-    "status": "zrušený",
     "at": "2026-10-30",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "zrušený"
    },
    "locSource": "stred obce",
    "id": "ploske-831",
@@ -3025,7 +3275,7 @@
     }
    ],
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-13",
@@ -3038,10 +3288,10 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 7
+    "photos": 7,
+    "status": "overený"
    },
    "upOk": true,
    "agent": "Realitné kancelárie",
@@ -3057,6 +3307,61 @@
    "seenAt": "2026-10-30T17:23:19.139Z"
   },
   {
+   "village": "Rákoš",
+   "title": "Pozemok so SP a projektom RD, 672 m² stavebnej časti + záhrada",
+   "direction": "V",
+   "minutes": 25,
+   "lat": 48.717,
+   "lng": 21.447,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 2225,
+   "price": 79900,
+   "width": null,
+   "length": null,
+   "terrain": "mierny svah",
+   "utilities": {
+    "kanalizacia": false,
+    "plyn": true,
+    "voda": true
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Spolu 2 225 m², z toho 672 m² rovinatá stavebná časť a 1 553 m² svahovitá záhrada (bývalý sad). Vydané SP a projekt 4-izb. RD (130 m²), žumpa, verejný vodovod na ulici; ~25 min od Košíc. Možný odpočet DPH. Impulz Real.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuIDqjBR0R3/rakos---stavebny-pozemok-s-projektoml-mozny-odpocet-dph"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/JuIDqjBR0R3/rakos---stavebny-pozemok-s-projektoml-mozny-odpocet-dph",
+   "imageUrl": "https://img.nehnutelnosti.sk/foto/Zml0LWluLzE1NjB4NDAwMC9maWx0ZXJzOnF1YWxpdHkoODApOmZvcm1hdCh3ZWJwKS9qdWw=/_c_N4-kST_fss?st=PhjkYA5ycXfYhfTedDLqZdlkgj_XXftlZnnWHgrILbE&ts=1783664636&e=0",
+   "firstSeen": "2026-10-31T06:03:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-31",
+     "price": 79900
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "kanalizacia": "žumpa",
+    "voda": "v dosahu"
+   },
+   "shape": null,
+   "access": null,
+   "permit": true,
+   "project": true,
+   "upOk": null,
+   "agent": "Impulz Real (Mgr. Gabriela Ferenczová)",
+   "multi": false,
+   "id": "rakos-2225"
+  },
+  {
    "village": "Rozhanovce",
    "title": "Pozemok 1006 m² pri Tempus Parku",
    "direction": "V",
@@ -3068,8 +3373,8 @@
    "cadastralArea": null,
    "area": 1006,
    "price": 75450,
-   "width": 25.0,
-   "length": 41.0,
+   "width": 25,
+   "length": 41,
    "terrain": "mierny svah",
    "utilities": {},
    "mainRoad": null,
@@ -3084,7 +3389,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju259kiIq5K/investicny-pozemok-v-blizkosti-tempus-parku--rozhanovce",
    "firstSeen": "2026-10-30T18:00:00+01:00",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -3094,10 +3399,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 6
+    "photos": 6,
+    "status": "overený"
    },
    "upOk": true,
    "agent": "Invest & Real realitná spoločnosť s. r. o.",
@@ -3145,7 +3450,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuQ0vwQ16A-/exkluzivne-na-predaj-stavebny-pozemok-v-obci-rozhanovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-10-30T18:10:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -3155,15 +3460,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 4
+    "photos": 4,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá"
+    "kanalizacia": "spomenutá",
+    "voda": "spomenutá"
    },
    "street": "tichá časť",
    "project": true,
@@ -3208,12 +3513,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "status": "chybný",
     "at": "2026-10-30",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "chybný"
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -3244,12 +3549,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "status": "chybný",
     "at": "2026-10-30",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "chybný"
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -3265,8 +3570,8 @@
    "precise": true,
    "area": 876,
    "price": 179900,
-   "width": 25.0,
-   "length": 35.0,
+   "width": 25,
+   "length": 35,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -3285,7 +3590,7 @@
     }
    ],
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -3294,16 +3599,16 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 18
+    "photos": 18,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku"
+    "plyn": "na pozemku",
+    "voda": "na pozemku"
    },
    "access": "asfaltová cesta",
    "agent": "Reality s VAMI s.r.o.",
@@ -3360,12 +3665,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "rk",
    "check": {
-    "status": "zrušený",
     "at": "2026-10-30",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "zrušený"
    },
    "locSource": "stred obce",
    "id": "sady-nad-torysou-603",
@@ -3416,12 +3721,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "status": "zrušený",
     "at": "2026-10-30",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "zrušený"
    },
    "locSource": "stred obce",
    "id": "sady-nad-torysou-932"
@@ -3460,16 +3765,17 @@
    ],
    "gone": false,
    "check": {
-    "status": "neoverený",
     "at": "2026-10-30",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "neoverený"
    },
    "invalid": true,
    "locSource": "stred obce",
-   "id": "trstany-588"
+   "id": "trstany-588",
+   "seenAt": "2026-10-30T21:41:50.607Z"
   },
   {
    "village": "Trsťany",
@@ -3501,7 +3807,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju7izxX7pla/pozemok-trstany-okr-kosice-okolie",
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-10-30T18:00:00+01:00",
+   "lastSeen": "2026-10-31T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -3510,15 +3816,15 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 3
+    "photos": 3,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá"
+    "kanalizacia": "spomenutá",
+    "voda": "spomenutá"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -3533,6 +3839,61 @@
    "rating": "maybe",
    "ratingAt": "2026-10-30T20:56:31.337Z",
    "seenAt": "2026-10-30T20:38:52.241Z"
+  },
+  {
+   "village": "Vajkovce",
+   "title": "Rovinatý trojuholníkový pozemok 512 m²",
+   "direction": "S",
+   "minutes": 15,
+   "lat": 48.783028,
+   "lng": 21.322383,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 512,
+   "price": 140000,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "voda": true
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Rovinatý oplotený pozemok trojuholníkového tvaru na okraji obce, elektrina a voda na pozemku, zastavanosť do 30 %. Vysoká cena za m² (cena nad limitom, dohodou). MH Real.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Ju60SrX-CPm/vajkovce-rovinaty-stavebny-pozemok-iba-10-km-od-kosic"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju60SrX-CPm/vajkovce-rovinaty-stavebny-pozemok-iba-10-km-od-kosic",
+   "imageUrl": null,
+   "firstSeen": "2026-10-30T23:50:00+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-10-30",
+     "price": 140000
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "elektrina": "na pozemku",
+    "voda": "na pozemku"
+   },
+   "shape": "nepravidelný",
+   "access": null,
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "MH Real (Marianna Hrehorová)",
+   "multi": false,
+   "id": "vajkovce-512",
+   "seenAt": "2026-10-30T23:13:06.722Z"
   },
   {
    "village": "Vajkovce",
@@ -3577,16 +3938,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 5
+    "photos": 5,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "v dosahu",
     "elektrina": "v dosahu",
     "kanalizacia": "v dosahu",
-    "plyn": "v dosahu"
+    "plyn": "v dosahu",
+    "voda": "v dosahu"
    },
    "agent": "Realitné kancelárie SR",
    "published": "2026-10-25",
@@ -3633,16 +3994,17 @@
    ],
    "gone": false,
    "check": {
-    "status": "neoverený",
     "at": "2026-10-30",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0
+    "photos": 0,
+    "status": "neoverený"
    },
    "invalid": true,
    "locSource": "stred obce",
-   "id": "vajkovce-826"
+   "id": "vajkovce-826",
+   "seenAt": "2026-10-30T21:41:50.607Z"
   },
   {
    "village": "Vajkovce",
@@ -3672,7 +4034,7 @@
     }
    ],
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-10-30T17:43:38+01:00",
+   "lastSeen": "2026-10-30T23:50:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -3681,14 +4043,14 @@
    ],
    "gone": false,
    "check": {
-    "status": "overený",
     "at": "2026-10-30",
     "issues": [],
-    "photos": 6
+    "photos": 6,
+    "status": "overený"
    },
    "utilDetail": {
-    "voda": "spomenutá",
-    "elektrina": "spomenutá"
+    "elektrina": "spomenutá",
+    "voda": "spomenutá"
    },
    "access": "asfaltová cesta",
    "upOk": true,
