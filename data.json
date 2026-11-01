@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T10:28:34.657579+00:00",
+ "generated": "2026-11-01T10:50:32.676311+00:00",
  "settings": {
   "directions": {
    "J": {
@@ -75,15 +75,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": null,
    "access": "spevnená cesta",
@@ -91,7 +91,7 @@
    "project": null,
    "upOk": true,
    "agent": "Realitné kancelárie SR",
-   "published": "2026-10-31",
+   "published": "2026-11-01",
    "multi": null,
    "kind": "stavebný",
    "firstPublished": "2026-10-02",
@@ -210,7 +210,7 @@
    "area": 564,
    "price": 124900,
    "width": 16.5,
-   "length": 35,
+   "length": 35.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -247,17 +247,17 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 18,
-    "status": "overený"
+    "photos": 18
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "na pozemku",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "optika": "na pozemku",
     "plyn": "na pozemku",
-    "voda": "spomenutá"
+    "optika": "na pozemku"
    },
    "street": "tichá časť",
    "agent": "KOVPLUS, s.r.o.",
@@ -282,8 +282,8 @@
    "precise": true,
    "area": 691,
    "price": 124800,
-   "width": 19,
-   "length": 36,
+   "width": 19.0,
+   "length": 36.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -319,16 +319,16 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "optika": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "access": "asfaltová cesta",
    "agent": "RECLOUD Reality a.s.",
@@ -421,8 +421,8 @@
    "cadastralArea": null,
    "area": 810,
    "price": null,
-   "width": 13,
-   "length": 63,
+   "width": 13.0,
+   "length": 63.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -451,10 +451,10 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
     "elektrina": "na pozemku",
@@ -546,8 +546,8 @@
    "cadastralArea": null,
    "area": 542,
    "price": 75000,
-   "width": 19,
-   "length": 25,
+   "width": 19.0,
+   "length": 25.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -584,15 +584,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 24,
-    "status": "overený"
+    "photos": 24
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "kanalizacia": "v dosahu"
    },
    "shape": "pravidelný",
    "access": "nespevnená cesta",
@@ -683,8 +683,8 @@
    "cadastralArea": null,
    "area": 726,
    "price": 95000,
-   "width": 19,
-   "length": 72,
+   "width": 19.0,
+   "length": 72.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -717,15 +717,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 22,
-    "status": "overený"
+    "photos": 22
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "kanalizacia": "v dosahu"
    },
    "shape": "nepravidelný",
    "access": "nespevnená cesta",
@@ -753,8 +753,8 @@
    "precise": true,
    "area": 824,
    "price": 90000,
-   "width": 21,
-   "length": 33,
+   "width": 21.0,
+   "length": 33.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -782,15 +782,15 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá",
-    "voda": "spomenutá"
+    "kanalizacia": "spomenutá"
    },
    "street": "tichá časť",
    "agent": "ARCHEUS Partners a.s.",
@@ -970,8 +970,8 @@
    "cadastralArea": null,
    "area": 505,
    "price": 75750,
-   "width": 15,
-   "length": 34,
+   "width": 15.0,
+   "length": 34.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -999,14 +999,14 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "shape": "pravidelný",
    "street": "tichá časť",
@@ -1035,8 +1035,8 @@
    "cadastralArea": null,
    "area": 549,
    "price": 82350,
-   "width": 17,
-   "length": 41,
+   "width": 17.0,
+   "length": 41.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1064,14 +1064,14 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "upOk": true,
    "agent": "CassaReal s.r.o.",
@@ -1098,8 +1098,8 @@
    "cadastralArea": null,
    "area": 603,
    "price": 90450,
-   "width": 14,
-   "length": 45,
+   "width": 14.0,
+   "length": 45.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1127,14 +1127,14 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "street": "tichá časť",
    "upOk": true,
@@ -1162,8 +1162,8 @@
    "cadastralArea": null,
    "area": 625,
    "price": 49990,
-   "width": 21,
-   "length": 31,
+   "width": 21.0,
+   "length": 31.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1192,15 +1192,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa",
-    "voda": "v dosahu"
+    "kanalizacia": "žumpa"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -1259,21 +1259,21 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 14,
-    "status": "overený"
+    "photos": 14
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa",
-    "voda": "v dosahu"
+    "kanalizacia": "žumpa"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
    "upOk": true,
    "agent": "Realitné kancelárie Slovenska",
-   "published": "2026-10-25",
+   "published": "2026-11-01",
    "multi": true,
    "kind": "stavebný",
    "firstPublished": "2026-08-22",
@@ -1449,15 +1449,15 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": null,
    "access": null,
@@ -1466,7 +1466,7 @@
    "project": null,
    "upOk": null,
    "agent": "Realitné kancelárie SR",
-   "published": "2026-10-25",
+   "published": "2026-11-01",
    "multi": true,
    "kind": "stavebný",
    "firstPublished": "2026-01-27",
@@ -1516,13 +1516,13 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "agent": "Realitné kancelárie Slovenska",
-   "published": "2026-10-30",
+   "published": "2026-11-01",
    "kind": "stavebný",
    "firstPublished": "2025-12-02",
    "locSource": "inzerát (±200 m)",
@@ -1575,14 +1575,14 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -1591,7 +1591,7 @@
    "project": true,
    "upOk": null,
    "agent": "Realitné kancelárie SR",
-   "published": "2026-10-25",
+   "published": "2026-11-01",
    "multi": true,
    "kind": "stavebný",
    "firstPublished": "2026-10-20",
@@ -1615,8 +1615,8 @@
    "cadastralArea": null,
    "area": 533,
    "price": 105000,
-   "width": 18,
-   "length": 30,
+   "width": 18.0,
+   "length": 30.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -1649,15 +1649,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -1962,8 +1962,8 @@
    "cadastralArea": null,
    "area": 520,
    "price": 94500,
-   "width": 20,
-   "length": 28,
+   "width": 20.0,
+   "length": 28.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -1999,14 +1999,14 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "access": "spevnená cesta",
    "project": true,
@@ -2139,8 +2139,8 @@
    "cadastralArea": null,
    "area": 723,
    "price": 99900,
-   "width": 12,
-   "length": 36,
+   "width": 12.0,
+   "length": 36.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -2175,16 +2175,16 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 14,
-    "status": "overený"
+    "photos": 14
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
-    "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "plyn": "spomenutá"
    },
    "shape": "nepravidelný",
    "access": "asfaltová cesta",
@@ -2658,7 +2658,7 @@
    "cadastralArea": null,
    "area": 1000,
    "price": 64800,
-   "width": 29,
+   "width": 29.0,
    "length": 34.49,
    "terrain": "svah",
    "utilities": {
@@ -2712,15 +2712,15 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 28,
-    "status": "overený"
+    "photos": 28
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -2876,8 +2876,8 @@
    "cadastralArea": null,
    "area": 600,
    "price": 34999,
-   "width": 18,
-   "length": 34,
+   "width": 18.0,
+   "length": 34.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -2907,15 +2907,15 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "spomenutá"
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -2935,15 +2935,15 @@
    "title": "Pozemok IBV 717 m² – Lemešany",
    "direction": "S",
    "minutes": 22,
-   "lat": 48.8508,
-   "lng": 21.274,
-   "precise": false,
+   "lat": 48.853089134582,
+   "lng": 21.263940903866,
+   "precise": true,
    "parcel": null,
    "cadastralArea": "Lemešany",
    "area": 717,
    "price": 53000,
-   "width": 26,
-   "length": 29,
+   "width": 26.0,
+   "length": 29.0,
    "terrain": null,
    "utilities": {
     "elektrina": false,
@@ -2951,7 +2951,7 @@
     "plyn": false,
     "voda": false
    },
-   "mainRoad": null,
+   "mainRoad": false,
    "category": "stavebny",
    "reserved": false,
    "summary": "Lacný pozemok 26×29 m v novej IBV lokalite pri D1, ~74 €/m². Nevýhody: zatiaľ bez sietí a cez pozemok vedie VN vedenie (plánovaná kabelizácia). RK Simone Property.",
@@ -2973,13 +2973,27 @@
    ],
    "gone": false,
    "source": "web",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-01",
+    "issues": [],
+    "photos": 6
+   },
    "shape": "pravidelný",
    "access": null,
+   "street": "tichá časť",
    "permit": null,
    "project": null,
    "upOk": true,
-   "agent": "Simone Property s.r.o. (Ing. Simona Sokolová)",
+   "agent": "Simone Property s.r.o.",
+   "published": "2026-10-26",
    "multi": false,
+   "kind": "stavebný",
+   "kindNote": "v texte: stavebný, investičný",
+   "firstPublished": "2025-06-26",
+   "locSource": "inzerát (±200 m)",
+   "description": "Exkluzívne Vám ponúkame NA PREDAJ pozemok určený na IBV v obci Lemešany.\n\nPozemok je súčasťou novej lokality. Lokalita v ktorej sa pozemok nachádza ponúka vynikajúce možnosti pre jednotlivcov ale aj pre investorov. Kúpou pozemku získate skvelý investičný pozemok, ktorý bude rásť na hodnote akonáhle sa v lokalite zrealizuje výstavba sietí a prístupovej cesty.\n\nIde o pozemok, v územnom pláne určený na individuálnu bytovú výstavbu – povolená výstavba rodinného domu, bytového domu alebo občianskej vybavenosti.\n\nCelková výmera pozemku: 717 m2\nŠírka: 26 m\nDĺžka: 29 m\n\nPožadované regulatívy:\n- koeficient max. zastavanosti pozemku:\n\nRodinný dom – 30 %\nBytový dom – 40 %\nv prípade Občianskej vybavenosti – 50 %\n\nCez pozemok prechádza vysoké napätie, avšak je plánovaná prekládka do zeme vrámci lokality. Ideálna lokalita pre pokojné bývanie obklopená množstvom zelene.\n\nPozemok má priamy prístup z verejnej cesty, ktorá je vo vlastníctve obce, čo zvyšuje jeho atraktivitu a dostupnosť. Pozemok je aktuálne bez inžinierskych sietí.\n\nAk si nedokážete vybrať rodinný dom z aktuálnej ponuky nehnuteľnosti na kúpu a rozhodli ste sa postaviť si dom podľa Vašich predstáv, tento pozemok je ideálny na realizáciu Vášho nového bývania.\n\nLOKALITA:\nObec Lemešany sa nachádza presne na polovici cesty medzi mestami Košice a Prešov.\nObec je vzdialená len 18 km od Košíc a 19 km od Prešova. Priama dostupnosť diaľnice D1 a množstvo zelene robí z tejto obce ideálne miesto pre pokojný život mimo rušného mesta. Obec ponúka kompletnú občiansku vybavenosť, v obci sa nachádzajú potraviny, pošta, lekáreň, všeobecný lekár, pediater i stomatológ či materská a základná škola.\n\nCENA: 53.000,-€\n\nCena za m2: 73,-€/m2",
+   "listingTitle": "Pozemok určený na IBV v obci Lemešany - 717 m2",
    "id": "lemesany-717",
    "seenAt": "2026-11-01T10:12:20.883Z"
   },
@@ -2988,8 +3002,8 @@
    "title": "Pozemok IBV 838 m² – Lemešany",
    "direction": "S",
    "minutes": 22,
-   "lat": 48.8508,
-   "lng": 21.274,
+   "lat": 48.859017,
+   "lng": 21.266116,
    "precise": false,
    "parcel": null,
    "cadastralArea": "Lemešany",
@@ -3026,6 +3040,14 @@
    ],
    "gone": false,
    "source": "bazos-email",
+   "check": {
+    "status": "neoverený",
+    "at": "2026-11-01",
+    "issues": [
+     "len Bazoš – údaje neoverené z detailu"
+    ],
+    "photos": 0
+   },
    "shape": null,
    "access": null,
    "permit": null,
@@ -3033,6 +3055,7 @@
    "upOk": true,
    "agent": "Simone Property s.r.o. (Ing. Simona Sokolová)",
    "multi": true,
+   "locSource": "stred obce",
    "id": "lemesany-838",
    "seenAt": "2026-11-01T10:20:43.023Z"
   },
@@ -3041,9 +3064,9 @@
    "title": "Pozemok IBV 839 m² – Lemešany",
    "direction": "S",
    "minutes": 22,
-   "lat": 48.8508,
-   "lng": 21.274,
-   "precise": false,
+   "lat": 48.851053137004,
+   "lng": 21.263661932744,
+   "precise": true,
    "parcel": null,
    "cadastralArea": "Lemešany",
    "area": 839,
@@ -3055,7 +3078,7 @@
     "elektrina": false,
     "kanalizacia": false,
     "plyn": false,
-    "voda": false
+    "voda": true
    },
    "mainRoad": null,
    "category": "stavebny",
@@ -3083,13 +3106,29 @@
    ],
    "gone": false,
    "source": "bazos-email",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-01",
+    "issues": [],
+    "photos": 9
+   },
+   "utilDetail": {
+    "voda": "spomenutá",
+    "kanalizacia": "žumpa"
+   },
    "shape": null,
    "access": null,
    "permit": null,
    "project": null,
    "upOk": true,
-   "agent": "Simone Property s.r.o. (Ing. Simona Sokolová)",
+   "agent": "Simone Property s.r.o.",
+   "published": "2026-10-26",
    "multi": true,
+   "kind": "stavebný",
+   "firstPublished": "2026-07-01",
+   "locSource": "inzerát (±200 m)",
+   "description": "Exkluzívne Vám ponúkame NA PREDAJ stavebný pozemok o výmere 839 m² určený na IBV v obci Lemešany, ktorý sa nachádza v novovznikajúcej štvrti. Ideálna lokalita obklopená množstvom zelene a priamou dostupnosťou diaľnice D1.\n\nTento pozemok predstavuje vynikajúcu investičnú príležitosť s garantovaným nárastom hodnoty v momente, keď sa v lokalite zrealizuje výstavba inžinierskych sietí a prístupovej cesty. Je ideálnou voľbou pre jednotlivcov hľadajúcich priestor pre vlastné bývanie, ako aj pre developerov a investorov.\n\nZákladné informácie a regulatívy:\n\nPodľa platného územného plánu obce je pozemok určený na individuálnu bytovú výstavbu (IBV) s flexibilnými možnosťami využitia:\n\nCelková výmera: 839 m²\n\nKoeficient maximálnej zastavanosti:\n\nRodinný dom: 30 %\n\nBytový dom: 40 %\n\nObčianska vybavenosť: 50 %\n\nPrístup a inžinierske siete:\n\nPrístup: Pozemok má priamy prístup z parcely vo vlastníctve obce, ktorá je v územnom pláne určená na vybudovanie prístupovej cesty.\nInžinierske siete: Pozemok je momentálne bez sietí.\n\nVoda: možnosť riešiť studňou, resp. do budúcna plánované napojenie tejto lokality na verejný vodovod, po rozšírení rozvodov verejného vodovodu\n\nOdpad: potrebné riešiť žumpou alebo čističkou odpadových vôd\n\nSkvelá lokalita s kompletnou vybavenosťou:\n\nObec Lemešany má strategickú polohu presne na polceste medzi Košicami (18 km) a Prešovom (19 km). Vďaka priamemu napojeniu na diaľnicu D1 ste v oboch krajských mestách za pár minút, no zároveň si užívate pokojný život v prostredí obklopenom prírodou.\n\nObec disponuje kompletnou občianskou vybavenosťou:\n\nZákladná škola a materská škola\nZdravotné stredisko (všeobecný lekár, pediater, stomatológ) a lekáreň\nPotraviny, pošta a ďalšie služby\n\nCena a podmienky predaja:\n\nCelková cena: 67.120,-€\nCena za m²: 80 €/m²\n\nBonus: V prípade záujmu je možné odkúpiť aj vedľajší pozemok (838 m²). Dokopy môžete mať pozemok o výmere 1677 m².\n\nAk túžite po bývaní presne podľa Vašich predstáv, alebo hľadáte bezpečné uloženie financií do nehnuteľnosti, tento pozemok je pre Vás ideálnou voľbou.\n\nV prípade záujmu o obhliadku alebo bližšie informácie nás neváhajte kontaktovať. Tešíme sa na Vás!",
+   "listingTitle": "NA PREDAJ Pozemok určený pre IBV v obci Lemešany (839 m²)",
    "id": "lemesany-839",
    "seenAt": "2026-11-01T10:12:19.925Z"
   },
@@ -3362,8 +3401,8 @@
    "cadastralArea": null,
    "area": 823,
    "price": 87900,
-   "width": 22,
-   "length": 38,
+   "width": 22.0,
+   "length": 38.0,
    "terrain": "rovina",
    "utilities": {},
    "mainRoad": null,
@@ -3392,10 +3431,10 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "agent": "ELI REAL realitná kancelária",
    "published": "2026-10-29",
@@ -3450,21 +3489,21 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 1,
-    "status": "overený"
+    "photos": 1
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "optika": "v dosahu",
     "plyn": "v dosahu",
-    "voda": "v dosahu"
+    "optika": "v dosahu"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
    "agent": "Realitné kancelárie SR",
-   "published": "2026-10-25",
+   "published": "2026-11-01",
    "kind": "rekreačný",
    "firstPublished": "2025-11-18",
    "locSource": "inzerát (±200 m)",
@@ -3547,8 +3586,8 @@
    "cadastralArea": null,
    "area": 695,
    "price": 29990,
-   "width": 7,
-   "length": 97,
+   "width": 7.0,
+   "length": 97.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -3576,14 +3615,14 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "access": "nespevnená cesta",
    "street": "tichá časť",
@@ -4025,8 +4064,8 @@
    "cadastralArea": null,
    "area": 1006,
    "price": 75450,
-   "width": 25,
-   "length": 41,
+   "width": 25.0,
+   "length": 41.0,
    "terrain": "mierny svah",
    "utilities": {},
    "mainRoad": null,
@@ -4051,10 +4090,10 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "upOk": true,
    "agent": "Invest & Real realitná spoločnosť s. r. o.",
@@ -4222,8 +4261,8 @@
    "precise": true,
    "area": 876,
    "price": 179900,
-   "width": 25,
-   "length": 35,
+   "width": 25.0,
+   "length": 35.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -4251,16 +4290,16 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 18,
-    "status": "overený"
+    "photos": 18
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "access": "asfaltová cesta",
    "agent": "Reality s VAMI s.r.o.",
@@ -4287,8 +4326,8 @@
    "cadastralArea": null,
    "area": 603,
    "price": 93000,
-   "width": 20,
-   "length": 29,
+   "width": 20.0,
+   "length": 29.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -4317,14 +4356,14 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "access": "spevnená cesta",
    "street": "tichá časť",
@@ -4546,15 +4585,15 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "shape": "nepravidelný",
    "access": null,
@@ -4563,7 +4602,7 @@
    "landType": "zastavaná plocha",
    "upOk": null,
    "agent": "Realitné kancelárie SR",
-   "published": "2026-10-25",
+   "published": "2026-11-01",
    "multi": false,
    "kind": "stavebný",
    "firstPublished": "2026-09-01",
@@ -4618,19 +4657,19 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
     "kanalizacia": "v dosahu",
-    "plyn": "v dosahu",
-    "voda": "v dosahu"
+    "plyn": "v dosahu"
    },
    "agent": "Realitné kancelárie SR",
-   "published": "2026-10-25",
+   "published": "2026-11-01",
    "firstPublished": "2026-01-23",
    "locSource": "inzerát (±200 m)",
    "description": "MH Real Vám ponúka na predaj pekné, rovinaté pozemky v obci Vajkovce, iba 10 km od Košíc a 3 km od diaľničného privádzača.\n\nPozemky registra „C\" sa predávajú ako INVESTIČNÉ, výstavba prístupovej cesty (spoluvlastnícky podiel vlastníkov pozemkov) a inžinierskych sietí je v réžii vlastníkov pozemkov.\nPredmetná lokalita, bola v novom územnom pláne obce schválená na výstavby rodinných domov. Nachádza sa v tesnej blízkosti zástavby rodinných domov.\nInžinierske siete v obci: obecný vodovod, elektrina, plyn, kanalizácia.\n\nVýmera: Podiel na ceste: Cena:\n569 m² (27,04 x 21,05) 133 m² 57.660 EUR - PREDANÝ\n533 m² (18,82 x 28,32) 124 m² 54.060 EUR\n532 m² (18,82 x 28,30) 124 m² 53.980 EUR\nV cene parciel je zahrnutý podiel na ceste. V prípade kúpy parciel ako celok, ponúkame zvýhodnenú cenu.\nV obci sa nachádza materská škôlka, potraviny, multifunkčné ihrisko, kostol. Základná škola roč. 1-9 v susednej obci Budimír (školský spoj SAD).\n\nCena nami sprostredkovaných nehnuteľností je vrátane sprostredkovateľskej provízie, právneho servisu a poplatkov spojených s prevodom nehnuteľností.\n\nBližšie informácie na tel. čísle ...\nM. Hrehorová.",
@@ -4723,19 +4762,19 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-01",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "access": "asfaltová cesta",
    "upOk": true,
    "agent": "Realitné kancelárie SR",
-   "published": "2026-10-25",
+   "published": "2026-11-01",
    "kind": "stavebný",
    "firstPublished": "2026-01-29",
    "locSource": "inzerát (±200 m)",
