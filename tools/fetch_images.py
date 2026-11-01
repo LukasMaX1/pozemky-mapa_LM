@@ -94,7 +94,7 @@ for p in d.get("plots", []):
         if kept:
             man[p["id"]] = {"sha": kept[0]["sha"], "photos": kept}
         continue
-    if not urls and p.get("imageUrl", "").startswith("https://") and "unitedclassifieds" not in p["imageUrl"]:
+    if not urls and (p.get("imageUrl") or "").startswith("https://") and "unitedclassifieds" not in p["imageUrl"]:
         urls = [p["imageUrl"]]
     photos = []
     for i, u in enumerate(urls):
