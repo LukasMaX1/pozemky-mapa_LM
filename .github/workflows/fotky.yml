@@ -2,7 +2,7 @@ name: Overiť inzeráty a stiahnuť fotky
 on:
   push:
     branches: [main]
-    paths: [data.json, tools/fetch_images.py, tools/verify_listings.py, tools/extract.py, tools/geocode.py]
+    paths: [data.json, tools/fetch_images.py, tools/verify_listings.py, tools/extract.py, tools/geocode.py, tools/basemap.py]
   workflow_dispatch:
 permissions:
   contents: write
@@ -24,6 +24,7 @@ jobs:
           git fetch -q origin img-cache && git archive FETCH_HEAD | tar -x -C prev || true
       - run: python3 tools/verify_listings.py
       - run: python3 tools/fetch_images.py
+      - run: python3 tools/basemap.py
       - name: Uložiť do vetvy img-cache
         run: |
           cd out
