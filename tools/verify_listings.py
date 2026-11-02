@@ -88,7 +88,8 @@ def check_link(u, cache):
             res.update(state="ok", title=pg.get("title"), area=merge_area(pg, ex), price=pg.get("price") or None,
                        agent=pg.get("agent"), gps=pg.get("gps"), published=pg.get("publishedAt") or pg.get("published"), modified=pg.get("updatedAt") or pg.get("modified"), createdAt=pg.get("createdAt"),
                        canonical=(pg.get("canonical") or r.url).split("?")[0], images=pg.get("images", []),
-                       extract={k: v for k, v in ex.items() if k != "titleArea"}, desc=(pg.get("descText") or pg.get("desc") or "")[:8000])
+                       extract={k: v for k, v in ex.items() if k != "titleArea"}, desc=(pg.get("descText") or pg.get("desc") or "")[:8000],
+                       adKeys=pg.get("adKeys"), adStats=pg.get("adStats"), htmlStats=pg.get("htmlStats"))
             if res["price"] is not None and res["price"] < 100:
                 res["price"] = None  # 0 / 1 € = cena dohodou
     cache[u] = res
@@ -191,7 +192,7 @@ def main():
             "status": status,
             "issues": issues,
             "data": data,
-            "links": [{k: l.get(k) for k in ("url", "portal", "state", "final", "canonical", "area", "price", "title", "agent", "createdAt", "published", "modified", "error")} for l in links if l["state"] not in ("vyhľadávanie", "chybný")],
+            "links": [{k: l.get(k) for k in ("url", "portal", "state", "final", "canonical", "area", "price", "title", "agent", "createdAt", "published", "modified", "error", "adKeys", "adStats", "htmlStats")} for l in links if l["state"] not in ("vyhľadávanie", "chybný")],
             "removedLinks": bad,
             "dupLinks": dup,
         }

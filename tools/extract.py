@@ -105,6 +105,15 @@ def parse_page(html):
         out["updatedAt"] = (ad.get("updatedAt") or "")[:10] or None
         if ad.get("descText"):
             out["descText"] = ad["descText"]
+        out["adKeys"] = sorted(k for k in ad.keys() if k != "descText")[:80]
+        st = {k: v for k, v in ad.items() if re.search(r"view|visit|zobraz|stat|count|popular|impress|seen|click", k, re.I) and isinstance(v, (int, float, str, dict, list))}
+        if st:
+            out["adStats"] = json.loads(json.dumps(st)[:2000]) if len(json.dumps(st)) < 2000 else {"raw": json.dumps(st)[:2000]}
+    hv = {}
+    for m in re.finditer(r'\\?"(\w*(?:[vV]iew|[vV]isit|[zZ]obraz|[iI]mpression)\w*)\\?":\s*(\d+)', html):
+        hv.setdefault(m.group(1), int(m.group(2)))
+    if hv:
+        out["htmlStats"] = dict(list(hv.items())[:20])
     m = re.search(r'\\"point\\":\{\\"latitude\\":\\"([\d.]+)\\",\\"longitude\\":\\"([\d.]+)\\"', html)
     if m:
         out["gps"] = [float(m.group(1)), float(m.group(2))]
