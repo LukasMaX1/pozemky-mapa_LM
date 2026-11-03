@@ -29,7 +29,7 @@ def tile_xy(lat, lng, z=Z):
     return x, y
 
 
-MW, MH, PADX, PADY, ZMIN = 360, 120, 42, 18, 11  # rozmer mini-mapy v aplikácii (CSS px) a okraje
+MW, MH, PADX, PADY, ZMIN = 240, 240, 30, 30, 11  # rozmer mini-mapy v aplikácii (CSS px) a okraje
 
 
 class Tiles:
@@ -83,7 +83,7 @@ def minimaps(d, o, man, T):
         cx = min(max(cx, ax - (MW / 2 - PADX)), ax + (MW / 2 - PADX))
         cy = min(max(cy, ay - (MH / 2 - PADY)), ay + (MH / 2 - PADY))
         cx, cy = round(cx), round(cy)
-        name = f"mm-{p['id']}-z{z}-x{cx}-y{cy}.jpg"
+        name = f"mm2-{p['id']}-z{z}-x{cx}-y{cy}.jpg"
         dst = os.path.join("out/img", name)
         prev = os.path.join("prev/img", name)
         if os.path.exists(prev):
