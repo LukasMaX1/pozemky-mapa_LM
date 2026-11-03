@@ -1,0 +1,6 @@
+1 200 https://www.topreality.sk/topfoto/t/944/9445116-2-18.jpg
+2 200 https://www.topreality.sk/topfoto/t/944/9445116-2-1.jpg
+3 200 https://www.topreality.sk/topfoto/t/944/9445116-2-0.jpg
+4 200 https://www.topreality.sk/topfoto/t/944/9445116-2-7.jpg
+5 200 https://www.topreality.sk/topfoto/t/944/9445116-2-20.jpg
+6 200 https://www.topreality.sk/topfoto/t/944/9445116-2-10.jpg
