@@ -137,7 +137,8 @@ def main():
             data["pageGps"] = next((l["gps"] for l in ok if l.get("gps")), None)
             data["description"] = best.get("desc") or ""
             imgs, keys = [], set()
-            for l in ok:
+            # fotky z prvého odkazu, ktorý ich má (rovnaký inzerát na viacerých portáloch = duplicitné fotky)
+            for l in [next((x for x in ok if x.get("images")), {})]:
                 for i in l.get("images", []):
                     m = GAL_RE.match(i)
                     key = m.group(1) if m else i.split("?")[0]

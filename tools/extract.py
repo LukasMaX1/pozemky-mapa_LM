@@ -66,7 +66,7 @@ def parse_page(html):
     out = {"images": []}
     for m in re.finditer(r"<script[^>]*application/ld\+json[^>]*>(.*?)</script>", html, re.S):
         try:
-            d = json.loads(m.group(1))
+            d = json.loads(m.group(1), strict=False)
         except Exception:
             continue
         nodes = d.get("@graph", [d]) if isinstance(d, dict) else []
@@ -90,6 +90,11 @@ def parse_page(html):
                     if isinstance(u, str) and u.startswith("https://") and u not in imgs:
                         imgs.append(u)
                 out["images"] = imgs
+            elif ty == "RealEstateListing":  # TopReality.sk
+                out["title"] = _strip(n.get("name"))
+                out["desc"] = _strip(n.get("description"))
+                out["descText"] = _text(n.get("description"))
+                out["canonical"] = n.get("url")
             elif ty == "RealEstateAgent":
                 out["agent"] = _strip(n.get("name"))
             elif ty == "ItemPage":
@@ -105,6 +110,8 @@ def parse_page(html):
         out["updatedAt"] = (ad.get("updatedAt") or "")[:10] or None
         if ad.get("descText"):
             out["descText"] = ad["descText"]
+    if "topreality.sk" in html[:200000] and out.get("canonical", "") and "topreality.sk" in out["canonical"]:
+        _topreality(html, out)
     m = re.search(r'\\"point\\":\{\\"latitude\\":\\"([\d.]+)\\",\\"longitude\\":\\"([\d.]+)\\"', html)
     if m:
         out["gps"] = [float(m.group(1)), float(m.group(2))]
@@ -301,6 +308,38 @@ def extract(title, desc):
             r["kindNote"] = "v texte: " + ", ".join(both)
     r["titleArea"] = _area_from_title(title or "")
     return r
+
+
+def _topreality(html, out):
+    """Detail inzerátu na TopReality.sk: parametre z tabuľky, GPS z mapy, vlastná galéria."""
+    rows = {}
+    for m in re.finditer(r'<li class="list-group-item[^"]*"[^>]*>\s*<span>([^<]*)</span>(.*?)</li>', html, re.S):
+        rows[_strip(m.group(1)).rstrip(":").lower()] = _strip(m.group(2))
+    if rows.get("cena"):
+        out["price"] = _num(rows["cena"].split("€")[0]) if "€" in rows["cena"] else None
+    for k in ("pozemok", "plocha pozemku", "úžitková plocha"):
+        if rows.get(k):
+            a = _num(rows[k].replace("m 2", "").replace("m2", "").replace("m²", ""))
+            if a and a > 50:
+                out["ldArea"] = a
+                break
+    if rows.get("aktualizácia"):
+        mm = re.match(r"(\d{1,2})\.(\d{1,2})\.(\d{4})", rows["aktualizácia"])
+        if mm:
+            out["updatedAt"] = f"{mm.group(3)}-{int(mm.group(2)):02d}-{int(mm.group(1)):02d}"
+    g = re.search(r'data-gpsx="([\d.]+)"\s+data-gpsy="([\d.]+)"', html)
+    if g:
+        out["gps"] = [float(g.group(1)), float(g.group(2))]
+    a = re.search(r"'dimension1',\s*'([^']+?)(?:_\d+)?'", html)
+    if a:
+        out["agent"] = a.group(1)
+    rid = re.search(r"-r(\d+)\.html", out.get("canonical") or "")
+    if rid:
+        rid = rid.group(1)
+        nums = sorted({int(x) for x in re.findall(r"/topfoto/t/\d+/" + rid + r"-(\d+)-\d+\.jpg", html)})
+        sub = re.search(r"/topfoto/t/(\d+)/" + rid + "-", html)
+        if nums and sub:
+            out["images"] = [f"https://www.topreality.sk/topfoto/t/{sub.group(1)}/{rid}-{n}-18.jpg" for n in nums]
 
 
 def merge_area(page, ex):
