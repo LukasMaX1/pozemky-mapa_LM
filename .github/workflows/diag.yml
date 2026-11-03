@@ -1,0 +1,21 @@
+name: Diagnostika stránok
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: URL oddelené medzerou
+        required: true
+permissions:
+  contents: write
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stiahnuť stránky
+        env:
+          URLS: ${{ github.event.inputs.urls }}
+        run: |
+          mkdir out && cd out && i=0
+          for u in $URLS; do i=$((i+1)); curl -sSL -m 30 -A "Mozilla/5.0 (Linux; Android 14) pozemky-mapa/1.0 (osobne pouzitie)" -H "Accept-Language: sk" -o "p$i.html" -w "$i %{http_code} %{url_effective}\n" "$u" >> status.txt || echo "$i fail $u" >> status.txt; sleep 1; done
+          git init -q -b diag && git config user.name gha && git config user.email gha@users.noreply.github.com
+          git add -A && git commit -qm diag && git push -q --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" diag
