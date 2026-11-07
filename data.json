@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T17:13:56.465176+00:00",
+ "generated": "2026-11-07T17:26:41.911355+00:00",
  "settings": {
   "directions": {
    "J": {
@@ -8,12 +8,12 @@
     "priority": false
    },
    "S": {
-    "maxMin": 30,
+    "maxMin": 35,
     "on": true,
     "priority": true
    },
    "V": {
-    "maxMin": 30,
+    "maxMin": 25,
     "on": true,
     "priority": true
    },
@@ -24,9 +24,9 @@
    }
   },
   "villages": "",
-  "areaMin": 600,
-  "areaMax": 900,
-  "priceMax": 120000,
+  "areaMin": 550,
+  "areaMax": 1050,
+  "priceMax": 135000,
   "terrain": "svah_ok",
   "maxRatio": 2.5,
   "showReserved": true
@@ -727,7 +727,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Jugoo2hP5Ng/stavebny-pozemok-s-projektom-rd-kosice-beniakovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-06T05:50:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -763,6 +763,60 @@
   },
   {
    "village": "Beniakovce",
+   "title": "Pozemok 801 m² v novej slepej ulici",
+   "direction": "S",
+   "minutes": 13,
+   "lat": 48.7693,
+   "lng": 21.3168,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 801,
+   "price": 152190,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": false,
+    "voda": false
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Rovinatý pozemok v tichej novej slepej ulici s asfaltkou, v ÚP na RD, k nemu podiel 221 m² na ceste (ponuka aj 1145 a 1087 m²). Elektrina áno, voda zo studne, odpad čistička/žumpa; 190 €/m² nad limitom.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Ju7ILuWR7Oc/stavebny-pozemok-beniakovce"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju7ILuWR7Oc/stavebny-pozemok-beniakovce",
+   "imageUrl": null,
+   "firstSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-07",
+     "price": 152190
+    }
+   ],
+   "gone": false,
+   "source": "web",
+   "utilDetail": {
+    "kanalizacia": "žumpa"
+   },
+   "shape": null,
+   "access": "asfaltová cesta",
+   "permit": null,
+   "project": null,
+   "upOk": true,
+   "agent": "Top Real Košice",
+   "multi": true,
+   "id": "beniakovce-801"
+  },
+  {
+   "village": "Beniakovce",
    "title": "Pozemok 810 m², 13 × 63 m",
    "direction": "S",
    "minutes": 13,
@@ -793,7 +847,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuG4mJ2nZjl/exkluzivne---pozemokl-810-m2l-beniakovce",
    "firstSeen": "2026-10-30T18:00:00+01:00",
-   "lastSeen": "2026-11-06T05:50:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1349,7 +1403,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuXFtf16SA4/predame-pekny-stavebny-pozemok-820m2-bohdanovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-01T05:50:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2080,6 +2134,64 @@
    "rating": "maybe",
    "ratingAt": "2026-10-31T17:00:17.113Z",
    "seenAt": "2026-10-30T23:12:25.287Z"
+  },
+  {
+   "village": "Družstevná pri Hornáde – Malá Vieska",
+   "title": "Pozemok 1149 m², všetky IS",
+   "direction": "S",
+   "minutes": 15,
+   "lat": 48.8,
+   "lng": 21.25,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 1149,
+   "price": 150000,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": true,
+    "plyn": true,
+    "voda": true
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Rovinatý slnečný pozemok v novej ulici v Malej Vieske s novou asfaltkou, elektrina a voda na pozemku, plyn a kanalizácia pri pozemku. Oplotený z 3 strán, starý kamenný sýpka a ovocné stromy; cena 150 tis. € je nad limitom.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuArCfoVSsl/druzstevna-pri-hornade-mala-vieska-stavebny-pozemok-vsetky-is1149-m2"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/JuArCfoVSsl/druzstevna-pri-hornade-mala-vieska-stavebny-pozemok-vsetky-is1149-m2",
+   "imageUrl": "https://img.unitedclassifieds.sk/foto/ZmlsdGVyczpmb3JtYXQod2VicCkvanVs/MsNA61L6q_fss?st=Gvp0fpNwZTFx0dRrjFcRuqhgcj3B3vXuJTrokLy9exs&ts=1750297218&e=0",
+   "firstSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-07",
+     "price": 150000
+    }
+   ],
+   "gone": false,
+   "source": "web",
+   "utilDetail": {
+    "elektrina": "na pozemku",
+    "kanalizacia": "v dosahu",
+    "plyn": "v dosahu",
+    "voda": "na pozemku"
+   },
+   "shape": null,
+   "access": "asfaltová cesta",
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "ZARA REALITY",
+   "multi": null,
+   "id": "druzstevna-pri-hornade-1149"
   },
   {
    "village": "Ďurďošík",
@@ -6198,6 +6310,214 @@
    },
    "locSource": "stred obce",
    "id": "sady-nad-torysou-932"
+  },
+  {
+   "village": "Šarišské Bohdanovce",
+   "title": "Rohový pozemok 468 m², všetky IS",
+   "direction": "S",
+   "minutes": 25,
+   "lat": 48.867,
+   "lng": 21.317,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 468,
+   "price": 95000,
+   "width": 19,
+   "length": 26,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "plyn": false,
+    "voda": true
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Rovinatý rohový pozemok 19×26 m v novej IBV, elektrina a voda na pozemku, ČOV, optika, asfaltová cesta z 2 strán; plyn nie je. Menšia výmera (zastavanosť 40 %), cena s DPH 203 €/m².",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuxJOQ6ePLd/adomis-predame-pozemok-na-rodinny-dom-468m2-sarisske-bohdanovce-vsetky-is-blizko-poe-aj-ke"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/JuxJOQ6ePLd/adomis-predame-pozemok-na-rodinny-dom-468m2-sarisske-bohdanovce-vsetky-is-blizko-poe-aj-ke",
+   "imageUrl": "https://img.unitedclassifieds.sk/foto/ZmlsdGVyczpmb3JtYXQod2VicCk6d2F0ZXJtYXJrKHB1cy9rSnZjdjRONmpfZnNzLGNlbnRlcixjZW50ZXIsMCwyMCwyMCkvanVs/e61_LrGTJ_fss?st=SNEpYC7KlkmvWKyaOR9-7gr4PgRq6VApExozsa_Pp0w&ts=1780609872&e=0",
+   "firstSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-07",
+     "price": 95000
+    }
+   ],
+   "gone": false,
+   "source": "web",
+   "utilDetail": {
+    "elektrina": "na pozemku",
+    "voda": "na pozemku"
+   },
+   "shape": "pravidelný",
+   "access": "asfaltová cesta",
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "ADOMIS",
+   "multi": null,
+   "id": "sarisske-bohdanovce-468"
+  },
+  {
+   "village": "Šarišské Bohdanovce",
+   "title": "Pozemok 666 m² v novej IBV lokalite",
+   "direction": "S",
+   "minutes": 25,
+   "lat": 48.867,
+   "lng": 21.317,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 666,
+   "price": 66600,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": false,
+    "plyn": false,
+    "voda": true
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Rovinatý pozemok v novej lokalite určenej ÚP na RD, 100 €/m² (ponuka aj 781 a 606 m²). Elektrina a voda v dosahu, kanalizácia len plánovaná, plyn nie; prístupová cesta v spoluvlastníctve 11 vlastníkov.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuVPxJhgFiy/pozemky-pre-rd-sarisske-bohdanovce-nova-lokalita-buducich-novostavieb"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/JuVPxJhgFiy/pozemky-pre-rd-sarisske-bohdanovce-nova-lokalita-buducich-novostavieb",
+   "imageUrl": "https://img.unitedclassifieds.sk/foto/ZmlsdGVyczpmb3JtYXQod2VicCkvanVs/eJVAYWUO3_fss?st=7ao-LIELhXtCk_BazoKadRqpOQCGlVCdNYTzvGIDMsg&ts=1773411982&e=0",
+   "firstSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-07",
+     "price": 66600
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "elektrina": "v dosahu",
+    "voda": "v dosahu"
+   },
+   "shape": null,
+   "access": null,
+   "permit": null,
+   "project": null,
+   "upOk": true,
+   "agent": "SAXAREAL (JUDr. Adriana Saxová)",
+   "multi": true,
+   "id": "sarisske-bohdanovce-666"
+  },
+  {
+   "village": "Šarišské Bohdanovce",
+   "title": "Pozemok 752 m² v intraviláne",
+   "direction": "S",
+   "minutes": 25,
+   "lat": 48.867,
+   "lng": 21.317,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 752,
+   "price": 125000,
+   "width": null,
+   "length": null,
+   "terrain": "mierny svah",
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Mierne svahovitý pozemok v tichej časti obce, zatiaľ bez sietí (vydané len povolenie na elektrinu), neupravená prístupová cesta. Cena 166 €/m² je na takéto vybavenie vysoká.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuCI1Q_5tXQ/pozemok-na-vystavbu-rodinnych-domov-sarisske-bohdanovce"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/JuCI1Q_5tXQ/pozemok-na-vystavbu-rodinnych-domov-sarisske-bohdanovce",
+   "imageUrl": "https://img.unitedclassifieds.sk/foto/ZmlsdGVyczpmb3JtYXQod2VicCk6d2F0ZXJtYXJrKGp1bC94WkE3MGJhaVFfZnNzLC0yNSwtMjUsMCwyMCwyMCkvanVs/_FSYLjYi3_fss?st=gxSjZ7kQh2LCdi7RnfOzCBBFO-Vhx9zPUAE5zXw-i1E&ts=1790153227&e=0",
+   "firstSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-07",
+     "price": 125000
+    }
+   ],
+   "gone": false,
+   "source": "web",
+   "shape": "nepravidelný",
+   "access": "nespevnená cesta",
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "TOBI Real Košice",
+   "multi": null,
+   "id": "sarisske-bohdanovce-752"
+  },
+  {
+   "village": "Šarišské Bohdanovce",
+   "title": "Dva pozemky spolu 980 m² s výhľadom",
+   "direction": "S",
+   "minutes": 25,
+   "lat": 48.867,
+   "lng": 21.317,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 980,
+   "price": 148990,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": false,
+    "voda": false
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Dva susedné, prevažne rovinaté pozemky na začiatku obce od Novej Polhory s výhľadom na dolinu. Elektrina a voda zatiaľ nie sú (plánované na február–marec 2027), cena 152 €/m² nad limitom.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuVx2zZ6SgD/pozemky-s-krasnym-vyhladom-na-dolinu-sarisske-bohdanovce"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/JuVx2zZ6SgD/pozemky-s-krasnym-vyhladom-na-dolinu-sarisske-bohdanovce",
+   "imageUrl": "https://img.unitedclassifieds.sk/foto/ZmlsdGVyczpmb3JtYXQod2VicCk6d2F0ZXJtYXJrKHB1cy9QTUZRQnpkb19fZnNzLGNlbnRlcixjZW50ZXIsMCwyMCwyMCkvanVs/q4NmRUZhW_fss?st=k0lsLUUGeJ-1nRc63pT2Q-V8fQHG5pX3v7B-2dAFQYU&ts=1791477600&e=0",
+   "firstSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-07",
+     "price": 148990
+    }
+   ],
+   "gone": false,
+   "source": "web",
+   "shape": null,
+   "access": null,
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "JKV REAL",
+   "multi": true,
+   "id": "sarisske-bohdanovce-980"
   },
   {
    "village": "Trebejov",
