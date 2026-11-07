@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T17:26:41.911355+00:00",
+ "generated": "2026-11-07T17:46:44.334672+00:00",
  "settings": {
   "directions": {
    "J": {
@@ -8,12 +8,12 @@
     "priority": false
    },
    "S": {
-    "maxMin": 35,
+    "maxMin": 30,
     "on": true,
     "priority": true
    },
    "V": {
-    "maxMin": 25,
+    "maxMin": 30,
     "on": true,
     "priority": true
    },
@@ -24,9 +24,9 @@
    }
   },
   "villages": "",
-  "areaMin": 550,
-  "areaMax": 1050,
-  "priceMax": 135000,
+  "areaMin": 600,
+  "areaMax": 900,
+  "priceMax": 120000,
   "terrain": "svah_ok",
   "maxRatio": 2.5,
   "showReserved": true
@@ -237,8 +237,8 @@
    "cadastralArea": null,
    "area": 983,
    "price": 35000,
-   "width": 19,
-   "length": 51,
+   "width": 19.0,
+   "length": 51.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -268,14 +268,14 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 12,
-    "status": "overený"
+    "photos": 12
    },
    "utilDetail": {
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "kanalizacia": "v dosahu"
    },
    "shape": null,
    "access": null,
@@ -355,9 +355,9 @@
    "title": "Rovinatý pozemok 844 m² v intraviláne",
    "direction": "Z",
    "minutes": 16,
-   "lat": 48.713,
-   "lng": 21.1625,
-   "precise": false,
+   "lat": 48.7073781,
+   "lng": 21.1806444,
+   "precise": true,
    "parcel": null,
    "cadastralArea": null,
    "area": 844,
@@ -393,20 +393,31 @@
    ],
    "gone": false,
    "source": "web",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 6
+   },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
     "kanalizacia": "v dosahu",
-    "plyn": "v dosahu",
-    "voda": "v dosahu"
+    "plyn": "v dosahu"
    },
    "shape": "úzky pás",
    "access": null,
    "permit": null,
    "project": null,
    "upOk": null,
-   "agent": "Diamond Reality (Lukáš Sopko)",
+   "agent": "Diamond Reality",
+   "published": "2026-11-05",
    "multi": false,
-   "locSource": "stred obce",
+   "kind": "stavebný",
+   "firstPublished": "2026-11-05",
+   "locSource": "inzerát (±200 m)",
+   "description": "NA PREDAJ STAVEBNÝ POZEMOK – KOŠICE, BAŠKA, 844 m²\n\nSpoločnosť Diamond Reality Vám ponúka na predaj slnečný, stavebný pozemok nachádzajúci sa vo vyhľadávanej lokalite - Baška. Ak hľadáte príjemné miesto pre výstavbu rodinného domu v pokojnom prostredí s dobrou dostupnosťou do centra Košíc, táto ponuka môže byť pre Vás ideálnou voľbou.\n\nPozemok má celkovú výmeru 844 m² a nachádza sa v intraviláne obce. Jeho rozmery sú približne 10 metrov na šírku a 85 metrov na dĺžku. Terén pozemku vytvára vhodné podmienky na budúcu výstavbu.\n\nVeľkou výhodou nehnuteľnosti je dostupnosť inžinierskych sietí priamo pred pozemkom. K dispozícii je elektrina, voda, plyn a kanalizácia. Na samotnom pozemku sa zároveň nachádza studňa. Pozemok je z troch strán oplotený a svojím charakterom ponúka budúcemu vlastníkovi možnosť vytvoriť si príjemné rodinné bývanie v pokojnom prostredí neďaleko mesta.\n\nMestská časť Baška patrí medzi obľúbené lokality najmä vďaka spojeniu pokojného bývania, prírody a zároveň dobrej dostupnosti do Košíc. Nehnuteľnosť je preto zaujímavá pre klienta, ktorý nechce robiť kompromis medzi bývaním mimo ruchu mesta a rýchlou dostupnosťou k občianskej vybavenosti.\n\nCena nehnuteľnosti je 144.000 € vrátane provízie realitnej kancelárie a kompletného právneho servisu.\n\nPre viac informácií alebo dohodnutie osobnej obhliadky kontaktujte Mgr. Lukáša Sopka, MBA, LL.M. na telefónnom čísle ...\nalebo e-mailom na ...\n.\n\nDiamond Reality – Iní ponúkajú nehnuteľnosť. Ja predávam domov.",
+   "listingTitle": "Na preda pekný stavebný pozemok v obci Baška",
    "id": "baska-844"
   },
   {
@@ -420,7 +431,7 @@
    "area": 564,
    "price": 124900,
    "width": 16.5,
-   "length": 35,
+   "length": 35.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -484,18 +495,6 @@
     },
     {
      "portal": "Nehnuteľnosti.sk",
-     "url": "https://www.nehnutelnosti.sk/detail/Ju3rxg-SJSC/stavebny-pozemok-564-m2-beniakovce"
-    },
-    {
-     "portal": "Nehnuteľnosti.sk",
-     "url": "https://www.nehnutelnosti.sk/detail/JuhhMKIMloG/stavebny-pozemok-564-m2-beniakovce"
-    },
-    {
-     "portal": "Nehnuteľnosti.sk",
-     "url": "https://www.nehnutelnosti.sk/detail/JuMjrFt2Tbj/stavebny-pozemok-564-m2-beniakovce"
-    },
-    {
-     "portal": "Nehnuteľnosti.sk",
      "url": "https://www.nehnutelnosti.sk/detail/JuCj3wvUHBM/stavebny-pozemok-564-m2-beniakovce"
     },
     {
@@ -505,14 +504,6 @@
     {
      "portal": "Nehnuteľnosti.sk",
      "url": "https://www.nehnutelnosti.sk/detail/JuD-kM3sXd3/stavebny-pozemok-564-m2-beniakovce"
-    },
-    {
-     "portal": "Nehnuteľnosti.sk",
-     "url": "https://www.nehnutelnosti.sk/detail/Jua-8STFIBH/stavebny-pozemok-564-m2-beniakovce"
-    },
-    {
-     "portal": "Nehnuteľnosti.sk",
-     "url": "https://www.nehnutelnosti.sk/detail/JuRc50D4Ect/stavebny-pozemok-564-m2-beniakovce"
     }
    ],
    "firstSeen": "2026-10-27",
@@ -525,21 +516,21 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "na pozemku",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "optika": "na pozemku",
     "plyn": "na pozemku",
-    "voda": "spomenutá"
+    "optika": "na pozemku"
    },
    "street": "tichá časť",
    "agent": "KOVPLUS, s.r.o.",
-   "published": "2026-10-30",
+   "published": "2026-11-04",
    "kind": "stavebný",
    "firstPublished": "2026-10-02",
    "locSource": "stred obce",
@@ -562,8 +553,8 @@
    "cadastralArea": null,
    "area": 657,
    "price": 135000,
-   "width": 25,
-   "length": 26,
+   "width": 25.0,
+   "length": 26.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -594,16 +585,16 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 7,
-    "status": "overený"
+    "photos": 7
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "optika": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "shape": "pravidelný",
    "access": null,
@@ -634,8 +625,8 @@
    "precise": true,
    "area": 691,
    "price": 124800,
-   "width": 19,
-   "length": 36,
+   "width": 19.0,
+   "length": 36.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -671,16 +662,16 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "optika": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "access": "asfaltová cesta",
    "agent": "RECLOUD Reality a.s.",
@@ -779,7 +770,7 @@
    "utilities": {
     "elektrina": true,
     "kanalizacia": false,
-    "voda": false
+    "voda": true
    },
    "mainRoad": false,
    "category": "stavebny",
@@ -803,16 +794,31 @@
    ],
    "gone": false,
    "source": "web",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 3
+   },
    "utilDetail": {
+    "voda": "spomenutá",
+    "elektrina": "spomenutá",
     "kanalizacia": "žumpa"
    },
    "shape": null,
    "access": "asfaltová cesta",
+   "street": "slepá ulica",
    "permit": null,
    "project": null,
    "upOk": true,
-   "agent": "Top Real Košice",
+   "agent": "Top Real Košice s.r.o.",
+   "published": "2026-11-03",
    "multi": true,
+   "kind": "stavebný",
+   "firstPublished": "2026-11-03",
+   "locSource": "stred obce",
+   "description": "- pozemky na predaj\n- výmera : 801m2, 1145 m2, 1087 m2\n- každý pozemok má podiel na príjazdovej ceste\n- typ pozemku : stavebný\n- terén: rovinatý\n- lokalita: Beniakovce\n- vzdialenosť od Košíc 10 minút\n- IS: elektrina\n- cena: € 190,- /m2\n\nTOP Real Košice ponúka na predaj tri pekné stavebné pozemky v obci Beniakovce. Pozemky sú pekné rovinaté a nachádzajú sa v novovzniknutej tichej slepej ulici. K pozemkom vedie nová asfaltová cesta, na ktorej má každý majiteľ podiel 221 m2.\n\nPozemok č.1. - 801 m2 +221 m2 ( podiel na ceste )\nPozemok č.2. - 1 145 m2 +221 m2 ( podiel na ceste )\nPozemok č.3. - 1 087 m2 +221 m2 ( podiel na ceste )\n\nUlica je z veľkej časti zastavaná novými domami s dobrými susedmi.\n\nIS:\n- elektrina - áno\n- voda - možnosť studne\n- odpad - možnosť ČOV/žumpa\n\nBeniakovce sú obec vzdialená od Košíc do 10 minút. Vhodná pre ľudí , ktorí hľadajú pokojnejšie bývanie v rodinnom dome a zároveň chcú mať mesto na dosah. V obci nájdete potraviny, pohostinstvo, futbalové ihrisko, základná škola, pravidelné autobusové spoje.\n\nCENA: € 190,- /m2\n\nJanka Lengyelová - ...\n\nV cene je zahrnutý právny servis a poradenstvo realitnej kancelárie.\nS financovaním Vám radi bezplatne pomôžu naši overení finanční špecialisti.\n\nAk Vás pozemok zaujal, neváhajte ma kontaktovať na uvedenom čísle a rada Vám ho ukážem osobne.",
+   "listingTitle": "Stavebný pozemok - Beniakovce",
    "id": "beniakovce-801"
   },
   {
@@ -827,8 +833,8 @@
    "cadastralArea": null,
    "area": 810,
    "price": null,
-   "width": 13,
-   "length": 63,
+   "width": 13.0,
+   "length": 63.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -857,10 +863,10 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
     "elektrina": "na pozemku",
@@ -952,8 +958,8 @@
    "cadastralArea": null,
    "area": 542,
    "price": 75000,
-   "width": 19,
-   "length": 25,
+   "width": 19.0,
+   "length": 25.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -990,15 +996,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 11,
-    "status": "overený"
+    "photos": 11
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "kanalizacia": "v dosahu"
    },
    "shape": "pravidelný",
    "access": "nespevnená cesta",
@@ -1027,8 +1033,8 @@
    "cadastralArea": null,
    "area": 543,
    "price": 65900,
-   "width": 15,
-   "length": 37,
+   "width": 15.0,
+   "length": 37.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1064,16 +1070,16 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "optika": "na pozemku",
     "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -1166,8 +1172,8 @@
    "cadastralArea": null,
    "area": 726,
    "price": 95000,
-   "width": 19,
-   "length": 72,
+   "width": 19.0,
+   "length": 72.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -1200,15 +1206,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 11,
-    "status": "overený"
+    "photos": 11
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "kanalizacia": "v dosahu"
    },
    "shape": "nepravidelný",
    "access": "nespevnená cesta",
@@ -1236,8 +1242,8 @@
    "precise": true,
    "area": 824,
    "price": 90000,
-   "width": 21,
-   "length": 33,
+   "width": 21.0,
+   "length": 33.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -1265,15 +1271,15 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá",
-    "voda": "spomenutá"
+    "kanalizacia": "spomenutá"
    },
    "street": "tichá časť",
    "agent": "ARCHEUS Partners a.s.",
@@ -1453,8 +1459,8 @@
    "cadastralArea": null,
    "area": 505,
    "price": 75750,
-   "width": 15,
-   "length": 34,
+   "width": 15.0,
+   "length": 34.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1482,14 +1488,14 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "shape": "pravidelný",
    "street": "tichá časť",
@@ -1518,8 +1524,8 @@
    "cadastralArea": null,
    "area": 549,
    "price": 82350,
-   "width": 17,
-   "length": 41,
+   "width": 17.0,
+   "length": 41.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1547,14 +1553,14 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "upOk": true,
    "agent": "CassaReal s.r.o.",
@@ -1581,8 +1587,8 @@
    "cadastralArea": null,
    "area": 603,
    "price": 90450,
-   "width": 14,
-   "length": 45,
+   "width": 14.0,
+   "length": 45.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1610,14 +1616,14 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "street": "tichá časť",
    "upOk": true,
@@ -1645,8 +1651,8 @@
    "cadastralArea": null,
    "area": 625,
    "price": 49990,
-   "width": 21,
-   "length": 31,
+   "width": 21.0,
+   "length": 31.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1675,15 +1681,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa",
-    "voda": "v dosahu"
+    "kanalizacia": "žumpa"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -1775,7 +1781,7 @@
    "minutes": 22,
    "lat": 48.6046,
    "lng": 21.3262,
-   "precise": false,
+   "precise": true,
    "parcel": null,
    "cadastralArea": null,
    "area": 610,
@@ -1806,15 +1812,26 @@
    ],
    "gone": false,
    "source": "web",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 3
+   },
    "utilDetail": {},
    "shape": null,
    "access": null,
    "permit": null,
    "project": null,
    "upOk": null,
-   "agent": "Diamond Reality (Tatiana Hakiová)",
+   "agent": "Diamond Reality",
+   "published": "2026-10-20",
    "multi": false,
-   "locSource": "stred obce",
+   "kind": "stavebný",
+   "firstPublished": "2026-05-04",
+   "locSource": "inzerát (±200 m)",
+   "description": "Hľadáte miesto, kde si postavíte dom presne podľa svojich predstáv, no zároveň chcete zostať na skok od mesta? Tento slnečný pozemok v pokojnom prostredí pri Čani ponúka ideálnu kombináciu súkromia, priestoru a výbornej dostupnosti do Košíc. Vytvorte si domov tam, kde sa spája pohodlie s prírodou.\n\nIdeálne miesto pre výstavbu rodinného domu – pokojné prostredie, dobrá dostupnosť do mesta a kompletná občianska vybavenosť v blízkosti. Pozemok má výborný prístup a inžinierske siete sú dostupné. Perfektná príležitosť pre bývanie aj investíciu.\n\n📐 Výmera pozemku: 610 m² + podiel na prístupovej ceste, spolu približne 700 m².\n\n179 € / m².\n💰 Cena: 124 999€",
+   "listingTitle": "Slnečný stavebný pozemok v atraktívnej lokalite v okolí Čane pri Košiciach.",
    "id": "cana-610"
   },
   {
@@ -2142,7 +2159,7 @@
    "minutes": 15,
    "lat": 48.8,
    "lng": 21.25,
-   "precise": false,
+   "precise": true,
    "parcel": null,
    "cadastralArea": null,
    "area": 1149,
@@ -2156,7 +2173,7 @@
     "plyn": true,
     "voda": true
    },
-   "mainRoad": null,
+   "mainRoad": false,
    "category": "stavebny",
    "reserved": false,
    "summary": "Rovinatý slnečný pozemok v novej ulici v Malej Vieske s novou asfaltkou, elektrina a voda na pozemku, plyn a kanalizácia pri pozemku. Oplotený z 3 strán, starý kamenný sýpka a ovocné stromy; cena 150 tis. € je nad limitom.",
@@ -2178,19 +2195,32 @@
    ],
    "gone": false,
    "source": "web",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 8
+   },
    "utilDetail": {
-    "elektrina": "na pozemku",
+    "voda": "v dosahu",
+    "elektrina": "v dosahu",
     "kanalizacia": "v dosahu",
-    "plyn": "v dosahu",
-    "voda": "na pozemku"
+    "plyn": "v dosahu"
    },
    "shape": null,
    "access": "asfaltová cesta",
+   "street": "tichá časť",
    "permit": null,
    "project": null,
    "upOk": null,
-   "agent": "ZARA REALITY",
+   "agent": "ZARA REALITY s.r.o.",
+   "published": "2026-11-02",
    "multi": null,
+   "kind": "stavebný",
+   "firstPublished": "2025-06-19",
+   "locSource": "inzerát (±200 m)",
+   "description": "Slnečný pozemok v centre obce Družstvevná pri Hornáde časť Malá Vieska\n\n•\nStavebný pozemok\n\n•\nVýmera pozemku: 1149 m2\n•\nPrístup z novej asfaltovej cesty v novootvorej časti\n• Rovinatý, slnečný pozemok vhodný na výstavbu rodinného domu, situovaný v zastavanej časti novovytvorenej ulice\n• Všetky inžinierske siete: voda, elektrina, kanalizácia, plyn. Dostupné pri pozemku.\n\n•\nNa pozemlu sa nachádza kamenná stavba( bývalá sýpka)\n\n•\nOplotený z 3 strán. Na pozemku sú rodiace ovocné stromy: slivky, jabloň, orech\n\n•\nAutobusová zastávka cca 2 minúty napešo, 5 minút od obchodu\n\n•\nDobré susedské vzťahy\n• Obec sa nachádza len 10 minút od Košíc, s výbornou dostupnosťou autom aj vlakom.\n• Tichá a pokojná lokalita, ideálna pre rodinné bývanie, s príjemnou vidieckou atmosférou.\n\nPríroda na dosah\n• Blízkosť lesa, cyklotrás a turistických chodníkov – ideálne na prechádzky, beh, cyklistiku či hubárčenie.\n• Neďaleko tečie rieka Hornád, ktorá dotvára príjemnú prírodnú scenériu.\n\nKompletná občianska vybavenosť\n• V obci sa nachádzajú potraviny, pošta, základná škola, škôlka, kostol aj reštaurácia.\n• Výhodou je pešia dostupnosť služieb – všetko potrebné máte po ruke.\n\nVýborná dopravná dostupnosť\n• Vlaková stanica a autobusové spojenie umožňujú pohodlné dochádzanie do Košíc aj bez auta.\n• Rýchle napojenie na hlavné cestné ťahy smerom do mesta aj do prírody.\n\nSlnečný pozemok v centre obce\n• Rovinatý/slnečný pozemok (doplniť konkrétne info) vhodný na výstavbu rodinného domu.\n• Všetky inžinierske siete (voda, elektrina, kanalizácia, plyn) dostupné pri pozemku alebo v dosahu.\n\nV prípade záujmu o obhliadku, alebo podrobnejších informácií, kontaktujte realitného makléra ZDENKA HORVÁTHOVÁ ...\n.\n\nZARA REALITY spolupracuje s finančnými špecialistami. Kvalifikovaní odborníci, ktorí majú potrebné znalosti.\nSpolu Vám šetríme Váš čas, aj peniaze...\nZARA REALITY: keď sa sny stávajú realitami...",
+   "listingTitle": "Družstevná pri Hornáde-Malá Vieska. Stavebný pozemok všetky IS,1149 m2",
    "id": "druzstevna-pri-hornade-1149"
   },
   {
@@ -2205,8 +2235,8 @@
    "cadastralArea": null,
    "area": 533,
    "price": 105000,
-   "width": 18,
-   "length": 30,
+   "width": 18.0,
+   "length": 30.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -2247,15 +2277,15 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -2283,8 +2313,8 @@
    "cadastralArea": null,
    "area": 511,
    "price": 60000,
-   "width": 22,
-   "length": 24,
+   "width": 22.0,
+   "length": 24.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -2316,17 +2346,17 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 22,
-    "status": "overený"
+    "photos": 22
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "v dosahu",
-    "optika": "v dosahu",
     "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "optika": "v dosahu"
    },
    "shape": null,
    "access": null,
@@ -2860,8 +2890,8 @@
    "cadastralArea": null,
    "area": 520,
    "price": 94500,
-   "width": 20,
-   "length": 28,
+   "width": 20.0,
+   "length": 28.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -2897,20 +2927,20 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "access": "spevnená cesta",
    "project": true,
    "upOk": true,
    "agent": "RECLOUD Reality a.s.",
-   "published": "2026-10-31",
+   "published": "2026-11-07",
    "kind": "stavebný",
    "firstPublished": "2026-10-14",
    "locSource": "inzerát (±200 m)",
@@ -3037,8 +3067,8 @@
    "cadastralArea": null,
    "area": 723,
    "price": 99900,
-   "width": 12,
-   "length": 36,
+   "width": 12.0,
+   "length": 36.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -3073,16 +3103,16 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 12,
-    "status": "overený"
+    "photos": 12
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
-    "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "plyn": "spomenutá"
    },
    "shape": "nepravidelný",
    "access": "asfaltová cesta",
@@ -3431,7 +3461,8 @@
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
-    "kanalizacia": true
+    "kanalizacia": true,
+    "voda": true
    },
    "mainRoad": null,
    "category": "rekreacny",
@@ -3455,7 +3486,14 @@
    ],
    "gone": false,
    "source": "rk",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 4
+   },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku"
    },
@@ -3464,9 +3502,13 @@
    "permit": null,
    "project": null,
    "upOk": null,
-   "agent": "VRK REAL PLUS (Jana Novakovská)",
+   "agent": "VRK REAL PLUS, s.r.o.",
+   "published": "2026-05-26",
    "multi": false,
+   "firstPublished": "2024-10-18",
    "locSource": "stred obce",
+   "description": "Máte radi zeleň a chýba vám kúsok prírody na relax či pestovanie vlastných plodín? Ponúkame vám skvelú príležitosť v podobe záhrady na predaj v pokojnej mestskej časti Košice-Juh, za Malou stanicou.\n\nTento rovinatý a slnečný pozemok je ideálny na útek pred ruchom mesta, kde môžete relaxovať alebo sa venovať záhradníčeniu. Prístup k nemu je možný z dvoch strán, čo ponúka potenciál na rozdelenie na dva samostatné pozemky.\n\nNa pozemku je elektrina, studňa a kanalizácia. Susedstvo pozostáva z celoročne obývaných nehnuteľností, čo dodáva miestu príjemný a bezpečný charakter.\n\nNeváhajte a splňte si sen o vlastnej záhrade!",
+   "listingTitle": "POZEMOK, KOŠICE-JUH, MALÁ STANICA",
    "id": "kosice-juh-763"
   },
   {
@@ -4071,7 +4113,7 @@
    "cadastralArea": null,
    "area": 1000,
    "price": 64800,
-   "width": 29,
+   "width": 29.0,
    "length": 34.49,
    "terrain": "svah",
    "utilities": {
@@ -4181,15 +4223,15 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 17,
-    "status": "overený"
+    "photos": 17
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -4345,8 +4387,8 @@
    "cadastralArea": null,
    "area": 600,
    "price": 34999,
-   "width": 18,
-   "length": 34,
+   "width": 18.0,
+   "length": 34.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -4376,15 +4418,15 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "spomenutá"
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -4411,8 +4453,8 @@
    "cadastralArea": "Lemešany",
    "area": 717,
    "price": 53000,
-   "width": 26,
-   "length": 29,
+   "width": 26.0,
+   "length": 29.0,
    "terrain": null,
    "utilities": {
     "elektrina": false,
@@ -4443,10 +4485,10 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "shape": "pravidelný",
    "access": null,
@@ -4635,8 +4677,8 @@
    "cadastralArea": null,
    "area": 674,
    "price": 40440,
-   "width": 11,
-   "length": 60,
+   "width": 11.0,
+   "length": 60.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -4669,14 +4711,14 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": "úzky pás",
    "access": "asfaltová cesta",
@@ -4964,8 +5006,8 @@
    "cadastralArea": null,
    "area": 905,
    "price": 89595,
-   "width": 22,
-   "length": 41,
+   "width": 22.0,
+   "length": 41.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -5003,16 +5045,16 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [
      "odkazy uvádzajú rôzne výmery: 1 m², 905 m²"
     ],
-    "photos": 7,
-    "status": "overený"
+    "photos": 7
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -5121,8 +5163,8 @@
    "cadastralArea": null,
    "area": 823,
    "price": 87900,
-   "width": 22,
-   "length": 38,
+   "width": 22.0,
+   "length": 38.0,
    "terrain": "rovina",
    "utilities": {},
    "mainRoad": null,
@@ -5155,10 +5197,10 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "agent": "ELI REAL realitná kancelária",
    "published": "2026-10-29",
@@ -5314,8 +5356,8 @@
    "cadastralArea": null,
    "area": 695,
    "price": 29990,
-   "width": 7,
-   "length": 97,
+   "width": 7.0,
+   "length": 97.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -5343,14 +5385,14 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "access": "nespevnená cesta",
    "street": "tichá časť",
@@ -5528,16 +5570,16 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
+    "voda": "nie je",
     "elektrina": "na pozemku",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "plyn": "na pozemku",
-    "voda": "nie je"
+    "plyn": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -5546,7 +5588,7 @@
    "project": false,
    "upOk": null,
    "agent": "súkromná osoba",
-   "published": "2026-10-24",
+   "published": "2026-11-07",
    "multi": false,
    "kind": "stavebný",
    "firstPublished": "2026-09-12",
@@ -5692,7 +5734,7 @@
    "cadastralArea": null,
    "area": 502,
    "price": 124490,
-   "width": 17,
+   "width": 17.0,
    "length": 29.5,
    "terrain": "rovina",
    "utilities": {
@@ -5722,14 +5764,14 @@
    "gone": false,
    "source": "web",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 27,
-    "status": "overený"
+    "photos": 27
    },
    "utilDetail": {
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -5942,8 +5984,8 @@
    "cadastralArea": null,
    "area": 1006,
    "price": 75450,
-   "width": 25,
-   "length": 41,
+   "width": 25.0,
+   "length": 41.0,
    "terrain": "mierny svah",
    "utilities": {},
    "mainRoad": null,
@@ -5968,10 +6010,10 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "upOk": true,
    "agent": "Invest & Real realitná spoločnosť s. r. o.",
@@ -6139,8 +6181,8 @@
    "precise": true,
    "area": 876,
    "price": 179900,
-   "width": 25,
-   "length": 35,
+   "width": 25.0,
+   "length": 35.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -6168,16 +6210,16 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 18,
-    "status": "overený"
+    "photos": 18
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "access": "asfaltová cesta",
    "agent": "Reality s VAMI s.r.o.",
@@ -6204,8 +6246,8 @@
    "cadastralArea": null,
    "area": 603,
    "price": 93000,
-   "width": 20,
-   "length": 29,
+   "width": 20.0,
+   "length": 29.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -6234,14 +6276,14 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "access": "spevnená cesta",
    "street": "tichá časť",
@@ -6316,8 +6358,8 @@
    "title": "Rohový pozemok 468 m², všetky IS",
    "direction": "S",
    "minutes": 25,
-   "lat": 48.867,
-   "lng": 21.317,
+   "lat": 48.846,
+   "lng": 21.317169,
    "precise": false,
    "parcel": null,
    "cadastralArea": null,
@@ -6329,7 +6371,8 @@
    "utilities": {
     "elektrina": true,
     "plyn": false,
-    "voda": true
+    "voda": true,
+    "optika": true
    },
    "mainRoad": null,
    "category": "stavebny",
@@ -6353,17 +6396,29 @@
    ],
    "gone": false,
    "source": "web",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 19
+   },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "spomenutá",
+    "optika": "spomenutá"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
-   "permit": null,
+   "permit": true,
    "project": null,
-   "upOk": null,
-   "agent": "ADOMIS",
+   "upOk": true,
+   "agent": "ADOMIS, realitná spoločnosť",
+   "published": "2026-11-06",
    "multi": null,
+   "kind": "stavebný",
+   "firstPublished": "2026-06-04",
+   "locSource": "stred obce",
+   "description": "Predáme v exkluzívnom zastúpení pekný posledný rovinatý a slnečný stavebný pozemok s rýchlym napojením sa na diaľnicu smer Košice aj Prešov, obecná voda, ČOV, optika a asfaltový prístup, nové IBV\n- obce Šarišské Bohdanovce.\n\nVýmera parcely : 468m2\nTvar : pravidelný obdĺžnik s malým výrezom v zadnej časti\nMiery : 19m šírka x 26m dĺžka\nVlastnosti : rovinatý, slnečný a bezkonkurenčný\n\nNáš pozemok je posledný v kategórii rovinatých pozemkov v tejto novej lokalite, kde sa začína realizovať nová vystavba rodinných domov, preto neváhajte a príďte sa pozrieť, či práve náš pozemok by vám nevyhovoval.\nVďaka svojim parametrom môžte na neho umiestniť 4, alebo aj 5izbový bungalov, pričom zastavanosť je 40%, bohato vám teda vystačí aj na výstavbu domu so zastavanou plochou 187m2.\nPozemok je slnečný a rovinaty, zo žiadnej strany nebudete mať tieň, nakoľko je rohový a z 2 strán je asfaltová cesta, suseda teda máte len z boku a v zadnej časti.\nJe teda ideálny na domček akéhokoľvek štýlu a tvaru.\nV predajnej cene domu máte zahrnutú aj realizáciu stavebného povolenia na základe vášho budúceho projektu, čo vám ušetrí váš čas a peniaze.\n\nIS : obecná voda, ČOV, elektrika, optika, asfaltová cesta s ovetlením a chodníkom.\n\nCena : 95.000,-EUR vrátane DPH (možný odpočet pre firmy)\n\nV pípade vašej zaneprázdnenosti vám dom vašich snov postavíme radi aj my, pričom ukážku našej práce si môžte pozrieť aj teraz na vedľajšom pozemku, kde ako prví realizujeme už v tomto reálnom čase výstavbu rodinného domu typu bungalov.\n\nInfo a obhliadky : Mgr.Soták Libor ...",
+   "listingTitle": "ADOMIS - predáme pozemok na rodinný dom 468m2 Šarišské Bohdanovce, všetky IS, blízko POE aj KE",
    "id": "sarisske-bohdanovce-468"
   },
   {
@@ -6371,8 +6426,8 @@
    "title": "Pozemok 666 m² v novej IBV lokalite",
    "direction": "S",
    "minutes": 25,
-   "lat": 48.867,
-   "lng": 21.317,
+   "lat": 48.846,
+   "lng": 21.317169,
    "precise": false,
    "parcel": null,
    "cadastralArea": null,
@@ -6409,17 +6464,30 @@
    ],
    "gone": false,
    "source": "rk",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 13
+   },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá",
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": null,
    "access": null,
    "permit": null,
    "project": null,
    "upOk": true,
-   "agent": "SAXAREAL (JUDr. Adriana Saxová)",
+   "agent": "JUDr. Adriana Saxová - SAXAREAL",
+   "published": "2026-10-23",
    "multi": true,
+   "kind": "stavebný",
+   "firstPublished": "2026-03-13",
+   "locSource": "stred obce",
+   "description": "EXKLUZÍVNE ponúkame na predaj 3 pozemky (č. 1, 2 a 3) v obci Šarišské Bohdanovce, v novej lokalite určenej na výstavbu rodinných domov. Obec je od KE vzdialená približne 15 km (12 min jazdy autom), je do nej rýchla dostupnosť z diaľnice tak z Košíc, ako aj z Prešova (navádzač na Novú Polhoru). Obec je bez neprispôsobivých občanov.\n\nVÝMERA pozemkov:\n\n1. 781 m2\n\n2.\n606 m2\n\n3. 666 m2\n\nLOKALITA je v územnom pláne určená na výstavbu rodinných domov. V niektorých častiach sa už začalo s výstavbou domov.\n\nIS:\n\nNa výstavbe IS (obecná voda, elektrina a predpríprava na kanalizáciu) a ceste, ktorá je v podielovom spoluvlastníctve 11 vlastníkov, ktorí majú pri nej parcely, títo vlastníci už začínajú pripravovať projektové dokumentácie. Elektrina a obecná voda – v dosahu.\n\nSpolu s pozemkom bude prevedený na budúceho majiteľa aj podiel na ceste – bezodplatne.\n\nZastavanosť pozemkov je max 40 %. Koeficient zelene je 60 %.\n\nCENA pozemku je 100 Eur/m2.\n\nPredávané pozemky v lokalite si viete pozrieť na našom videu.\n\nOBČIANSKA VYBAVENOSŤ:\n\nV obci je materská škôlka, základná škola, pošta, dvoje potravín, pizzéria, zmrzlina, multifunkčné ihrisko, futbalové ihrisko, betónové ihrisko (klzisko), kvetinárstvo, autoservis, penzión, stavebniny, jednota dôchodcov, všeobecný lekár. Možnosť výhodného prenájmu rekonštruovanej telocvične ZŠ. V úplnej blízkosti priemyselný park P3. Vzdialenosť z obce do KE aj PO je približne rovnaká, a vďaka diaľnici z nej oceníte aj rýchlu dostupnosť na výlety do Tatier, aquaparkov Delňa, Poprad a pod. Z navádzača diaľnice na Novú Polhoru idete priamo do Šarišských Bohdanoviec bez prechodu inou obcou.\n\nCena zahŕňa kompletný právny servis spojený s vypracovaním zmlúv, poplatky na katastri spojené s prevodom vlastníctva. Celý prevod zabezpečíme.\n\nV prípade záujmu o obhliadku prípadne viac info kontaktujte ...\n– JUDr. Adriana Saxová",
+   "listingTitle": "Pozemky pre RD Šarišské Bohdanovce, nová lokalita budúcich novostavieb",
    "id": "sarisske-bohdanovce-666"
   },
   {
@@ -6427,9 +6495,9 @@
    "title": "Pozemok 752 m² v intraviláne",
    "direction": "S",
    "minutes": 25,
-   "lat": 48.867,
-   "lng": 21.317,
-   "precise": false,
+   "lat": 48.8476859,
+   "lng": 21.3170739,
+   "precise": true,
    "parcel": null,
    "cadastralArea": null,
    "area": 752,
@@ -6437,8 +6505,11 @@
    "width": null,
    "length": null,
    "terrain": "mierny svah",
-   "utilities": {},
-   "mainRoad": null,
+   "utilities": {
+    "voda": true,
+    "elektrina": true
+   },
+   "mainRoad": false,
    "category": "stavebny",
    "reserved": false,
    "summary": "Mierne svahovitý pozemok v tichej časti obce, zatiaľ bez sietí (vydané len povolenie na elektrinu), neupravená prístupová cesta. Cena 166 €/m² je na takéto vybavenie vysoká.",
@@ -6460,13 +6531,30 @@
    ],
    "gone": false,
    "source": "web",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 9
+   },
+   "utilDetail": {
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
+   },
    "shape": "nepravidelný",
    "access": "nespevnená cesta",
-   "permit": null,
+   "street": "tichá časť",
+   "permit": true,
    "project": null,
-   "upOk": null,
-   "agent": "TOBI Real Košice",
+   "upOk": true,
+   "agent": "TOBI Real Košice s.r.o.",
+   "published": "2026-10-25",
    "multi": null,
+   "kind": "stavebný",
+   "firstPublished": "2026-09-23",
+   "locSource": "inzerát (±200 m)",
+   "description": "Realitná kancelária TOBI Real Vám ponúka na predaj pozemok v obci Šarišské Bohdanovce, vhodný na výstavbu rodinného domu.\n\nPozemok má celkovú výmeru 752 m² a nachádza sa v intraviláne obce. Je mierne svahovitý a jeho jednotlivé strany majú približné rozmery 30,33 m, 23,63 m, 25,66 m a 21,52 m. Svojou výmerou a rozmermi ponúka dostatok priestoru na realizáciu rodinného domu so záhradou. Orientácia plánovaného domu smerom od cesty je juh – sever.\n\nPozemok je určený na výstavbu rodinného domu. Momentálne je bez inžinierskych sietí, pričom v rámci pripravenosti k výstavbe je uvedené vydané stavebné povolenie pre elektrinu. Prístup k pozemku vedie po neupravenej prístupovej ceste.\n\nOkolie a občianska vybavenosť\n\nŠarišské Bohdanovce ponúkajú pokojné bývanie v tichej lokalite so základnou občianskou vybavenosťou. V obci sa nachádzajú dvoje potraviny, materská a základná škola. Výhodou lokality je zároveň dobré dopravné napojenie na Prešov aj Košice, vďaka čomu je pozemok vhodný pre záujemcov, ktorí hľadajú pokojnejšie bývanie mimo mesta s dobrou dostupnosťou.\n\nCena tejto nehnuteľnosti je 125 000 € vrátane kompletného zabezpečenia prevodu vlastníckych práv, právneho servisu, vypracovania všetkých zmlúv. Právna istota je zabezpečená advokátskou kanceláriou. Taktiež Vám radi pomôžeme s hypotekárnym úverom prostredníctvom nášho interného hypotekárneho centra, ktoré Vám sprostredkuje poskytnutie najvýhodnejšieho úveru na trhu.\n\nV prípade viacerých záujemcov o kúpu nehnuteľnosti si majiteľ vyhradzuje právo prijať najvýhodnejšiu ponuku. Sme certifikovaná realitná kancelária a členmi NARKS a Realitnej únie SR.",
+   "listingTitle": "Pozemok na výstavbu rodinných domov, Šarišské Bohdanovce",
    "id": "sarisske-bohdanovce-752"
   },
   {
@@ -6474,9 +6562,9 @@
    "title": "Dva pozemky spolu 980 m² s výhľadom",
    "direction": "S",
    "minutes": 25,
-   "lat": 48.867,
-   "lng": 21.317,
-   "precise": false,
+   "lat": 48.840130862421,
+   "lng": 21.312868196265,
+   "precise": true,
    "parcel": null,
    "cadastralArea": null,
    "area": 980,
@@ -6485,10 +6573,10 @@
    "length": null,
    "terrain": "rovina",
    "utilities": {
-    "elektrina": false,
-    "voda": false
+    "elektrina": true,
+    "voda": true
    },
-   "mainRoad": null,
+   "mainRoad": false,
    "category": "stavebny",
    "reserved": false,
    "summary": "Dva susedné, prevažne rovinaté pozemky na začiatku obce od Novej Polhory s výhľadom na dolinu. Elektrina a voda zatiaľ nie sú (plánované na február–marec 2027), cena 152 €/m² nad limitom.",
@@ -6510,13 +6598,29 @@
    ],
    "gone": false,
    "source": "web",
+   "check": {
+    "status": "overený",
+    "at": "2026-11-07",
+    "issues": [],
+    "photos": 2
+   },
+   "utilDetail": {
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
+   },
    "shape": null,
    "access": null,
+   "street": "tichá časť",
    "permit": null,
    "project": null,
    "upOk": null,
    "agent": "JKV REAL",
+   "published": "2026-11-02",
    "multi": true,
+   "firstPublished": "2026-10-08",
+   "locSource": "inzerát (±200 m)",
+   "description": "Ponúkam na predaj dva pozemky – jeden väčší a druhý menší, s celkovou výmerou 980 m², situované na začiatku obce Šarišské Bohdanovce, v smere od Novej Polhory.\n\nPozemky zaujmú predovšetkým krásnym výhľadom na okolitú dolinu a výbornou dostupnosťou do Košíc aj Prešova.\n\n📍 Lokalita: Šarišské Bohdanovce – začiatok obce od Novej Polhory\n📐 Celková výmera: 980 m²\n🌄 Krásny výhľad na dolinu\n💧⚡ Elektrina a voda sú v pláne distribúcie, s predpokladanou realizáciou vo februári – marci 2027\n🚗 rýchle napojenie na diaľnicu\n🏙️ Košice približne 10 minút\n🏙️ Prešov približne 15 minút\n🍔 nový McDonald’s v blízkom okolí\n\nIde o zaujímavú príležitosť pre tých, ktorí hľadajú pozemok v pokojnej lokalite s krásnym výhľadom a zároveň chcú zostať v rýchlej dostupnosti Košíc a Prešova.\n\n💰 Cena: 148 990 €\n\nPre viac informácií alebo dohodnutie obhliadky ma neváhajte kontaktovať: ...\n\nKlaudia Tomková",
+   "listingTitle": "POZEMKY S KRÁSNYM VÝHĽADOM NA DOLINU – ŠARIŠSKÉ BOHDANOVCE",
    "id": "sarisske-bohdanovce-980"
   },
   {
@@ -6658,10 +6762,6 @@
     {
      "portal": "Nehnuteľnosti.sk",
      "url": "https://www.nehnutelnosti.sk/detail/Ju7izxX7pla/pozemok-trstany-okr-kosice-okolie"
-    },
-    {
-     "portal": "Nehnuteľnosti.sk",
-     "url": "https://www.nehnutelnosti.sk/detail/JuTOgxFb8AD/na-predaj-stavebny-pozemok-773-m2-trstany-kosice-okolie"
     }
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju7izxX7pla/pozemok-trstany-okr-kosice-okolie",
@@ -6675,15 +6775,15 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá",
-    "voda": "spomenutá"
+    "kanalizacia": "spomenutá"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -6969,7 +7069,8 @@
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
-    "voda": true
+    "voda": true,
+    "kanalizacia": true
    },
    "mainRoad": null,
    "category": "stavebny",
@@ -6995,19 +7096,20 @@
    ],
    "gone": false,
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "kanalizacia": "na pozemku"
    },
    "access": "asfaltová cesta",
    "upOk": true,
    "agent": "Realitné kancelárie SR",
-   "published": "2026-11-01",
+   "published": "2026-11-06",
    "kind": "stavebný",
    "firstPublished": "2026-01-29",
    "locSource": "inzerát (±200 m)",
@@ -7105,7 +7207,7 @@
    "area": 725,
    "price": 99900,
    "width": 14.5,
-   "length": 50,
+   "length": 50.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -7136,16 +7238,16 @@
    "gone": false,
    "source": "rk",
    "check": {
+    "status": "overený",
     "at": "2026-11-07",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
     "plyn": "spomenutá",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": "pravidelný",
    "access": null,
