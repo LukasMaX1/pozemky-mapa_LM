@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T17:48:44.336701+00:00",
+ "generated": "2026-11-08T05:26:13.213698+00:00",
  "settings": {
   "directions": {
    "J": {
@@ -653,7 +653,7 @@
     }
    ],
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-13",
@@ -785,7 +785,7 @@
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju7ILuWR7Oc/stavebny-pozemok-beniakovce",
    "imageUrl": null,
    "firstSeen": "2026-11-07T18:35:00+01:00",
-   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-11-07",
@@ -819,7 +819,10 @@
    "locSource": "stred obce",
    "description": "- pozemky na predaj\n- výmera : 801m2, 1145 m2, 1087 m2\n- každý pozemok má podiel na príjazdovej ceste\n- typ pozemku : stavebný\n- terén: rovinatý\n- lokalita: Beniakovce\n- vzdialenosť od Košíc 10 minút\n- IS: elektrina\n- cena: € 190,- /m2\n\nTOP Real Košice ponúka na predaj tri pekné stavebné pozemky v obci Beniakovce. Pozemky sú pekné rovinaté a nachádzajú sa v novovzniknutej tichej slepej ulici. K pozemkom vedie nová asfaltová cesta, na ktorej má každý majiteľ podiel 221 m2.\n\nPozemok č.1. - 801 m2 +221 m2 ( podiel na ceste )\nPozemok č.2. - 1 145 m2 +221 m2 ( podiel na ceste )\nPozemok č.3. - 1 087 m2 +221 m2 ( podiel na ceste )\n\nUlica je z veľkej časti zastavaná novými domami s dobrými susedmi.\n\nIS:\n- elektrina - áno\n- voda - možnosť studne\n- odpad - možnosť ČOV/žumpa\n\nBeniakovce sú obec vzdialená od Košíc do 10 minút. Vhodná pre ľudí , ktorí hľadajú pokojnejšie bývanie v rodinnom dome a zároveň chcú mať mesto na dosah. V obci nájdete potraviny, pohostinstvo, futbalové ihrisko, základná škola, pravidelné autobusové spoje.\n\nCENA: € 190,- /m2\n\nJanka Lengyelová - ...\n\nV cene je zahrnutý právny servis a poradenstvo realitnej kancelárie.\nS financovaním Vám radi bezplatne pomôžu naši overení finanční špecialisti.\n\nAk Vás pozemok zaujal, neváhajte ma kontaktovať na uvedenom čísle a rada Vám ho ukážem osobne.",
    "listingTitle": "Stavebný pozemok - Beniakovce",
-   "id": "beniakovce-801"
+   "id": "beniakovce-801",
+   "rating": "no",
+   "ratingAt": "2026-11-07T18:12:39.804Z",
+   "seenAt": "2026-11-07T17:30:21.867Z"
   },
   {
    "village": "Beniakovce",
@@ -1129,7 +1132,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JusSoNT4XIs/na-predaj-pozemok-na-vystavbu-rodinneho-domu-v-bidovciach",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-07T05:50:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1327,7 +1330,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuO3Zh2oEwa/pozemok-na-vystavbu-rd---bohdanovce",
    "firstSeen": "2026-10-30T18:10:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1405,11 +1408,15 @@
     {
      "portal": "Reality.sk",
      "url": "https://www.reality.sk/pozemky/adomis-predam-pozemok-projekt-820m2-bohdanovce-vsetky-is-kanalizacia-voda-plyn-optika-elektrika/JuV7uVJkIcl/"
+    },
+    {
+     "portal": "TopReality.sk",
+     "url": "https://www.topreality.sk/adomis-predam-stavebny-pozemok-projekt-bohdanovce-vsetky-is-kanalizacia-voda-plyn-optika-elektrika-r9087038.html"
     }
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuXFtf16SA4/predame-pekny-stavebny-pozemok-820m2-bohdanovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1478,7 +1485,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuWpvnlKztI/stavebny-pozemok-pre-rodinny-dom-bretejovce-intravilan-505-m2",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1543,7 +1550,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JugTepeSKvf/stavebny-pozemok-pre-rodinny-dom-bretejovce-intravilan-549-m2",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -1606,7 +1613,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JutPVWksbtK/stavebny-pozemok-pre-rodinny-dom-bretejovce-intravilan-603-m2",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2153,6 +2160,62 @@
    "seenAt": "2026-10-30T23:12:25.287Z"
   },
   {
+   "village": "Drienovská Nová Ves",
+   "title": "Stavebný pozemok 920 m² v tichej časti obce",
+   "direction": "S",
+   "minutes": 30,
+   "lat": 48.9086,
+   "lng": 21.2789,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 920,
+   "price": 95000,
+   "width": null,
+   "length": null,
+   "terrain": "mierny svah",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": false,
+    "plyn": false,
+    "voda": false
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Mierne svahovitý pozemok v tichej časti obce s predbežným súhlasom, elektrina na pozemku; bez verejného vodovodu a plynu (studňa, ČOV/žumpa), podielová makadamová cesta. ~25 km od Košíc, RK Top Real Košice.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/JuPCMJIAKN5/stavebny-pozemok---drienovska-nova-vesl-presovsky-kraj-"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/JuPCMJIAKN5/stavebny-pozemok---drienovska-nova-vesl-presovsky-kraj-",
+   "imageUrl": null,
+   "firstSeen": "2026-11-08T06:03:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-08",
+     "price": 95000
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "elektrina": "na pozemku",
+    "kanalizacia": "žumpa"
+   },
+   "shape": null,
+   "access": "spevnená cesta",
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "Top Real Košice",
+   "multi": null,
+   "id": "drienovska-nova-ves-920"
+  },
+  {
    "village": "Družstevná pri Hornáde – Malá Vieska",
    "title": "Pozemok 1149 m², všetky IS",
    "direction": "S",
@@ -2221,7 +2284,10 @@
    "locSource": "inzerát (±200 m)",
    "description": "Slnečný pozemok v centre obce Družstvevná pri Hornáde časť Malá Vieska\n\n•\nStavebný pozemok\n\n•\nVýmera pozemku: 1149 m2\n•\nPrístup z novej asfaltovej cesty v novootvorej časti\n• Rovinatý, slnečný pozemok vhodný na výstavbu rodinného domu, situovaný v zastavanej časti novovytvorenej ulice\n• Všetky inžinierske siete: voda, elektrina, kanalizácia, plyn. Dostupné pri pozemku.\n\n•\nNa pozemlu sa nachádza kamenná stavba( bývalá sýpka)\n\n•\nOplotený z 3 strán. Na pozemku sú rodiace ovocné stromy: slivky, jabloň, orech\n\n•\nAutobusová zastávka cca 2 minúty napešo, 5 minút od obchodu\n\n•\nDobré susedské vzťahy\n• Obec sa nachádza len 10 minút od Košíc, s výbornou dostupnosťou autom aj vlakom.\n• Tichá a pokojná lokalita, ideálna pre rodinné bývanie, s príjemnou vidieckou atmosférou.\n\nPríroda na dosah\n• Blízkosť lesa, cyklotrás a turistických chodníkov – ideálne na prechádzky, beh, cyklistiku či hubárčenie.\n• Neďaleko tečie rieka Hornád, ktorá dotvára príjemnú prírodnú scenériu.\n\nKompletná občianska vybavenosť\n• V obci sa nachádzajú potraviny, pošta, základná škola, škôlka, kostol aj reštaurácia.\n• Výhodou je pešia dostupnosť služieb – všetko potrebné máte po ruke.\n\nVýborná dopravná dostupnosť\n• Vlaková stanica a autobusové spojenie umožňujú pohodlné dochádzanie do Košíc aj bez auta.\n• Rýchle napojenie na hlavné cestné ťahy smerom do mesta aj do prírody.\n\nSlnečný pozemok v centre obce\n• Rovinatý/slnečný pozemok (doplniť konkrétne info) vhodný na výstavbu rodinného domu.\n• Všetky inžinierske siete (voda, elektrina, kanalizácia, plyn) dostupné pri pozemku alebo v dosahu.\n\nV prípade záujmu o obhliadku, alebo podrobnejších informácií, kontaktujte realitného makléra ZDENKA HORVÁTHOVÁ ...\n.\n\nZARA REALITY spolupracuje s finančnými špecialistami. Kvalifikovaní odborníci, ktorí majú potrebné znalosti.\nSpolu Vám šetríme Váš čas, aj peniaze...\nZARA REALITY: keď sa sny stávajú realitami...",
    "listingTitle": "Družstevná pri Hornáde-Malá Vieska. Stavebný pozemok všetky IS,1149 m2",
-   "id": "druzstevna-pri-hornade-1149"
+   "id": "druzstevna-pri-hornade-1149",
+   "rating": "no",
+   "ratingAt": "2026-11-07T18:12:56.286Z",
+   "seenAt": "2026-11-07T17:30:41.450Z"
   },
   {
    "village": "Ďurďošík",
@@ -2559,7 +2625,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuQPOCiiNXd/predaj-stavebneho-pozemku-v-obci-durkov",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -2627,7 +2693,7 @@
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju9YcJEceUF/pozemok-pre-rodinny-doml-durkovl-kosice-okolie",
    "imageUrl": "https://img.nehnutelnosti.sk/foto/Zml0LWluLzE1NjB4NDAwMC9maWx0ZXJzOnF1YWxpdHkoODApOmZvcm1hdCh3ZWJwKTp3YXRlcm1hcmsocHVzL0Jpa3FpVlZTcl9mc3MsY2VudGVyLGNlbnRlciwwLDIwLDIwKS9qdWw=/HmI2wVgp1_fss?st=FlzLRUTe5zUX3uZWZsVAsusYPtOXVkAgczqAg2fN7WM&ts=1751641946&e=0",
    "firstSeen": "2026-11-02T05:50:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-11-02",
@@ -2917,7 +2983,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Jul93qcq-Sy/stavebny-pozemok-haniska-pri-kosiciach",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-03T05:50:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -3093,7 +3159,7 @@
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Jum4HQhMNAo/stavebny-pozemok-v-obci-haniska-pri-presove",
    "imageUrl": "https://img.nehnutelnosti.sk/foto/Zml0LWluLzE1NjB4NDAwMC9maWx0ZXJzOnF1YWxpdHkoODApOmZvcm1hdCh3ZWJwKS9qdWw=/aGvHr78XW_fss?st=6L-fRiEvFULIojJoAfW-2jQMoPPcCWnHuQK0GDLWgAo&ts=1791203323&e=0",
    "firstSeen": "2026-10-31T06:03:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-31",
@@ -3172,7 +3238,7 @@
    "photoUrl": "https://www.reality.sk/pozemky/slnecny-pozemok-pripraveny-na-vystavbu-rd-hodkovce/JuHgr_zkdVW/",
    "imageUrl": "https://img.unitedclassifieds.sk/foto/MTgwMHgxMzUwL2ZpbHRlcnM6cXVhbGl0eSg4NSkvanVs/yKYTaHaAr_fss?st=6YpvPb76ZYgpv6om2hdyKWVDfB2cjAcmQYfRHuo4-Rg&ts=1762282065&e=0",
    "firstSeen": "2026-10-31T09:55:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-31",
@@ -3477,7 +3543,7 @@
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JukalQi1TAA/pozemokl-kosice-juhl-mala-stanica",
    "imageUrl": "https://img.unitedclassifieds.sk/foto/ZmlsdGVyczpmb3JtYXQod2VicCk6d2F0ZXJtYXJrKHB1cy8xQUhNQnhkT3BfZnNzLGNlbnRlcixjZW50ZXIsMCwyMCwyMCkvcnNm/ljICNj8r3_fss?st=Z3Br5lBKussHaPXm-IcsRlRrhQJJg_-LLOSi-CBny4k&ts=1729251004&e=0",
    "firstSeen": "2026-11-07T18:20:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-11-07",
@@ -3543,7 +3609,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuPR14u0Sfq/pozemokl-kosice-juhl-mala-stanica",
    "firstSeen": "2026-10-30T18:10:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -4209,11 +4275,15 @@
     {
      "portal": "Bazoš",
      "url": "https://reality.bazos.sk/inzerat/197268842/na-predaj-stavebny-pozemok-1000m2-kysak-elektrika-pred-poze.php"
+    },
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/197288559/na-predaj-stavebny-pozemok-1000m2-kysak-elektrika-pred-poze.php"
     }
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Juv1VES3URe/adomis-predam-stavebny-pozemok-1000m2-v-lesekysak-breziena-vystavbu-chalupy-chaty-kosice-okolie",
    "firstSeen": "2026-10-30T18:00:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -5187,7 +5257,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuRVLGOPfqG/na-predaj-pozemok-v-obci-nizna-mysla",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -5560,7 +5630,7 @@
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju1Xby3PVfk/stavebny-pozemok-515-m2-s-krasnym-vyhladom-obisovce-koniec-ulice",
    "imageUrl": "https://img.unitedclassifieds.sk/foto/ZmlsdGVyczpmb3JtYXQod2VicCkvanVs/oKGuvnOeH_fss?st=hkcM-whXN8AOC_fIYjTPcLb5ChDQ7XvDX_clzqjFEBk&ts=1789204061&e=0",
    "firstSeen": "2026-11-03T05:50:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-11-03",
@@ -5686,7 +5756,7 @@
     }
    ],
    "firstSeen": "2026-10-13",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-13",
@@ -5932,7 +6002,7 @@
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuIDqjBR0R3/rakos---stavebny-pozemok-s-projektoml-mozny-odpocet-dph",
    "imageUrl": "https://img.nehnutelnosti.sk/foto/Zml0LWluLzE1NjB4NDAwMC9maWx0ZXJzOnF1YWxpdHkoODApOmZvcm1hdCh3ZWJwKS9qdWw=/_c_N4-kST_fss?st=PhjkYA5ycXfYhfTedDLqZdlkgj_XXftlZnnWHgrILbE&ts=1783664636&e=0",
    "firstSeen": "2026-10-31T06:03:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-31",
@@ -6000,7 +6070,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju259kiIq5K/investicny-pozemok-v-blizkosti-tempus-parku--rozhanovce",
    "firstSeen": "2026-10-30T18:00:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -6061,7 +6131,7 @@
    ],
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuQ0vwQ16A-/exkluzivne-na-predaj-stavebny-pozemok-v-obci-rozhanovce",
    "firstSeen": "2026-10-30T17:43:38+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -6266,7 +6336,7 @@
    "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju8o54Wt8Tx/stavebny-pozemok-ibv-konopiska-byster",
    "imageUrl": "https://img.nehnutelnosti.sk/foto/Zml0LWluLzE1NjB4NDAwMC9maWx0ZXJzOnF1YWxpdHkoODApOmZvcm1hdCh3ZWJwKS9qdWw=/YPorxxXSe_fss?st=xEI8gfTYuY6pZWGlitBTqyhPmFK_P3qamE5FNoLMoJQ&ts=1781808188&e=0",
    "firstSeen": "2026-10-30T18:10:00+01:00",
-   "lastSeen": "2026-11-07T18:20:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-10-30",
@@ -6355,6 +6425,47 @@
   },
   {
    "village": "Šarišské Bohdanovce",
+   "title": "Pozemok na výstavbu domu za skvelú cenu",
+   "direction": "S",
+   "minutes": 30,
+   "lat": 48.912,
+   "lng": 21.336,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": null,
+   "price": 98340,
+   "width": null,
+   "length": null,
+   "terrain": null,
+   "utilities": {},
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Inzerát z Bazoša, ktorý si poslal. E-mail z Bazoša neuvádza výmeru ani siete – over ich v inzeráte. Ten istý predajca ponúka v obci viac pozemkov (aj od 328 a 567 m²).",
+   "links": [
+    {
+     "portal": "Bazoš",
+     "url": "https://reality.bazos.sk/inzerat/197216051/pozemok-na-vystavbu-domu-za-skvelu-cenu-sarisske-bohdanovce.php"
+    }
+   ],
+   "photoUrl": "https://reality.bazos.sk/inzerat/197216051/pozemok-na-vystavbu-domu-za-skvelu-cenu-sarisske-bohdanovce.php",
+   "imageUrl": null,
+   "firstSeen": "2026-11-07T18:55:00+01:00",
+   "lastSeen": "2026-11-07T18:55:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-05",
+     "price": 98340
+    }
+   ],
+   "gone": false,
+   "source": "ručne",
+   "id": "sarisske-bohdanovce-197216051",
+   "seenAt": "2026-11-07T17:54:05.801Z"
+  },
+  {
+   "village": "Šarišské Bohdanovce",
    "title": "Rohový pozemok 468 m², všetky IS",
    "direction": "S",
    "minutes": 25,
@@ -6387,7 +6498,7 @@
    "photoUrl": "https://www.nehnutelnosti.sk/detail/JuxJOQ6ePLd/adomis-predame-pozemok-na-rodinny-dom-468m2-sarisske-bohdanovce-vsetky-is-blizko-poe-aj-ke",
    "imageUrl": "https://img.unitedclassifieds.sk/foto/ZmlsdGVyczpmb3JtYXQod2VicCk6d2F0ZXJtYXJrKHB1cy9rSnZjdjRONmpfZnNzLGNlbnRlcixjZW50ZXIsMCwyMCwyMCkvanVs/e61_LrGTJ_fss?st=SNEpYC7KlkmvWKyaOR9-7gr4PgRq6VApExozsa_Pp0w&ts=1780609872&e=0",
    "firstSeen": "2026-11-07T18:35:00+01:00",
-   "lastSeen": "2026-11-07T18:35:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
    "priceHistory": [
     {
      "date": "2026-11-07",
@@ -6419,7 +6530,60 @@
    "locSource": "stred obce",
    "description": "Predáme v exkluzívnom zastúpení pekný posledný rovinatý a slnečný stavebný pozemok s rýchlym napojením sa na diaľnicu smer Košice aj Prešov, obecná voda, ČOV, optika a asfaltový prístup, nové IBV\n- obce Šarišské Bohdanovce.\n\nVýmera parcely : 468m2\nTvar : pravidelný obdĺžnik s malým výrezom v zadnej časti\nMiery : 19m šírka x 26m dĺžka\nVlastnosti : rovinatý, slnečný a bezkonkurenčný\n\nNáš pozemok je posledný v kategórii rovinatých pozemkov v tejto novej lokalite, kde sa začína realizovať nová vystavba rodinných domov, preto neváhajte a príďte sa pozrieť, či práve náš pozemok by vám nevyhovoval.\nVďaka svojim parametrom môžte na neho umiestniť 4, alebo aj 5izbový bungalov, pričom zastavanosť je 40%, bohato vám teda vystačí aj na výstavbu domu so zastavanou plochou 187m2.\nPozemok je slnečný a rovinaty, zo žiadnej strany nebudete mať tieň, nakoľko je rohový a z 2 strán je asfaltová cesta, suseda teda máte len z boku a v zadnej časti.\nJe teda ideálny na domček akéhokoľvek štýlu a tvaru.\nV predajnej cene domu máte zahrnutú aj realizáciu stavebného povolenia na základe vášho budúceho projektu, čo vám ušetrí váš čas a peniaze.\n\nIS : obecná voda, ČOV, elektrika, optika, asfaltová cesta s ovetlením a chodníkom.\n\nCena : 95.000,-EUR vrátane DPH (možný odpočet pre firmy)\n\nV pípade vašej zaneprázdnenosti vám dom vašich snov postavíme radi aj my, pričom ukážku našej práce si môžte pozrieť aj teraz na vedľajšom pozemku, kde ako prví realizujeme už v tomto reálnom čase výstavbu rodinného domu typu bungalov.\n\nInfo a obhliadky : Mgr.Soták Libor ...",
    "listingTitle": "ADOMIS - predáme pozemok na rodinný dom 468m2 Šarišské Bohdanovce, všetky IS, blízko POE aj KE",
-   "id": "sarisske-bohdanovce-468"
+   "id": "sarisske-bohdanovce-468",
+   "seenAt": "2026-11-07T17:30:14.191Z"
+  },
+  {
+   "village": "Šarišské Bohdanovce",
+   "title": "Pozemok 567 m² s PD a SP – IBV Pod Hájom",
+   "direction": "S",
+   "minutes": 25,
+   "lat": 48.846,
+   "lng": 21.317169,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 567,
+   "price": 106390,
+   "width": 20,
+   "length": 28,
+   "terrain": "mierny svah",
+   "utilities": {
+    "elektrina": true,
+    "optika": true,
+    "voda": true
+   },
+   "mainRoad": null,
+   "category": "stavebny",
+   "reserved": false,
+   "summary": "Jeden zo šiestich pozemkov (567–708 m²) v lokalite IBV Pod Hájom s právoplatným SP a projektom dvojpodlažného RD, asfaltová cesta s chodníkmi, ČOV v cene. Vyššia cena za m² (cca 188 €/m²) vrátane poplatkov a provízie; RK Reality s VAMI.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Ju_42Gm2Rez/na-predaj-stavebny-pozemok-od-567m2-s-pd-sp-sarisske-bohdanovce-kosice"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju_42Gm2Rez/na-predaj-stavebny-pozemok-od-567m2-s-pd-sp-sarisske-bohdanovce-kosice",
+   "imageUrl": null,
+   "firstSeen": "2026-11-08T06:03:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-08",
+     "price": 106390
+    }
+   ],
+   "gone": false,
+   "source": "web",
+   "utilDetail": null,
+   "shape": null,
+   "access": "asfaltová cesta",
+   "permit": true,
+   "project": true,
+   "upOk": null,
+   "agent": "Reality s VAMI",
+   "multi": true,
+   "id": "sarisske-bohdanovce-567"
   },
   {
    "village": "Šarišské Bohdanovce",
@@ -6488,7 +6652,8 @@
    "locSource": "stred obce",
    "description": "EXKLUZÍVNE ponúkame na predaj 3 pozemky (č. 1, 2 a 3) v obci Šarišské Bohdanovce, v novej lokalite určenej na výstavbu rodinných domov. Obec je od KE vzdialená približne 15 km (12 min jazdy autom), je do nej rýchla dostupnosť z diaľnice tak z Košíc, ako aj z Prešova (navádzač na Novú Polhoru). Obec je bez neprispôsobivých občanov.\n\nVÝMERA pozemkov:\n\n1. 781 m2\n\n2.\n606 m2\n\n3. 666 m2\n\nLOKALITA je v územnom pláne určená na výstavbu rodinných domov. V niektorých častiach sa už začalo s výstavbou domov.\n\nIS:\n\nNa výstavbe IS (obecná voda, elektrina a predpríprava na kanalizáciu) a ceste, ktorá je v podielovom spoluvlastníctve 11 vlastníkov, ktorí majú pri nej parcely, títo vlastníci už začínajú pripravovať projektové dokumentácie. Elektrina a obecná voda – v dosahu.\n\nSpolu s pozemkom bude prevedený na budúceho majiteľa aj podiel na ceste – bezodplatne.\n\nZastavanosť pozemkov je max 40 %. Koeficient zelene je 60 %.\n\nCENA pozemku je 100 Eur/m2.\n\nPredávané pozemky v lokalite si viete pozrieť na našom videu.\n\nOBČIANSKA VYBAVENOSŤ:\n\nV obci je materská škôlka, základná škola, pošta, dvoje potravín, pizzéria, zmrzlina, multifunkčné ihrisko, futbalové ihrisko, betónové ihrisko (klzisko), kvetinárstvo, autoservis, penzión, stavebniny, jednota dôchodcov, všeobecný lekár. Možnosť výhodného prenájmu rekonštruovanej telocvične ZŠ. V úplnej blízkosti priemyselný park P3. Vzdialenosť z obce do KE aj PO je približne rovnaká, a vďaka diaľnici z nej oceníte aj rýchlu dostupnosť na výlety do Tatier, aquaparkov Delňa, Poprad a pod. Z navádzača diaľnice na Novú Polhoru idete priamo do Šarišských Bohdanoviec bez prechodu inou obcou.\n\nCena zahŕňa kompletný právny servis spojený s vypracovaním zmlúv, poplatky na katastri spojené s prevodom vlastníctva. Celý prevod zabezpečíme.\n\nV prípade záujmu o obhliadku prípadne viac info kontaktujte ...\n– JUDr. Adriana Saxová",
    "listingTitle": "Pozemky pre RD Šarišské Bohdanovce, nová lokalita budúcich novostavieb",
-   "id": "sarisske-bohdanovce-666"
+   "id": "sarisske-bohdanovce-666",
+   "seenAt": "2026-11-07T17:29:57.099Z"
   },
   {
    "village": "Šarišské Bohdanovce",
@@ -6555,7 +6720,8 @@
    "locSource": "inzerát (±200 m)",
    "description": "Realitná kancelária TOBI Real Vám ponúka na predaj pozemok v obci Šarišské Bohdanovce, vhodný na výstavbu rodinného domu.\n\nPozemok má celkovú výmeru 752 m² a nachádza sa v intraviláne obce. Je mierne svahovitý a jeho jednotlivé strany majú približné rozmery 30,33 m, 23,63 m, 25,66 m a 21,52 m. Svojou výmerou a rozmermi ponúka dostatok priestoru na realizáciu rodinného domu so záhradou. Orientácia plánovaného domu smerom od cesty je juh – sever.\n\nPozemok je určený na výstavbu rodinného domu. Momentálne je bez inžinierskych sietí, pričom v rámci pripravenosti k výstavbe je uvedené vydané stavebné povolenie pre elektrinu. Prístup k pozemku vedie po neupravenej prístupovej ceste.\n\nOkolie a občianska vybavenosť\n\nŠarišské Bohdanovce ponúkajú pokojné bývanie v tichej lokalite so základnou občianskou vybavenosťou. V obci sa nachádzajú dvoje potraviny, materská a základná škola. Výhodou lokality je zároveň dobré dopravné napojenie na Prešov aj Košice, vďaka čomu je pozemok vhodný pre záujemcov, ktorí hľadajú pokojnejšie bývanie mimo mesta s dobrou dostupnosťou.\n\nCena tejto nehnuteľnosti je 125 000 € vrátane kompletného zabezpečenia prevodu vlastníckych práv, právneho servisu, vypracovania všetkých zmlúv. Právna istota je zabezpečená advokátskou kanceláriou. Taktiež Vám radi pomôžeme s hypotekárnym úverom prostredníctvom nášho interného hypotekárneho centra, ktoré Vám sprostredkuje poskytnutie najvýhodnejšieho úveru na trhu.\n\nV prípade viacerých záujemcov o kúpu nehnuteľnosti si majiteľ vyhradzuje právo prijať najvýhodnejšiu ponuku. Sme certifikovaná realitná kancelária a členmi NARKS a Realitnej únie SR.",
    "listingTitle": "Pozemok na výstavbu rodinných domov, Šarišské Bohdanovce",
-   "id": "sarisske-bohdanovce-752"
+   "id": "sarisske-bohdanovce-752",
+   "seenAt": "2026-11-07T17:30:48.668Z"
   },
   {
    "village": "Šarišské Bohdanovce",
@@ -6621,7 +6787,68 @@
    "locSource": "inzerát (±200 m)",
    "description": "Ponúkam na predaj dva pozemky – jeden väčší a druhý menší, s celkovou výmerou 980 m², situované na začiatku obce Šarišské Bohdanovce, v smere od Novej Polhory.\n\nPozemky zaujmú predovšetkým krásnym výhľadom na okolitú dolinu a výbornou dostupnosťou do Košíc aj Prešova.\n\n📍 Lokalita: Šarišské Bohdanovce – začiatok obce od Novej Polhory\n📐 Celková výmera: 980 m²\n🌄 Krásny výhľad na dolinu\n💧⚡ Elektrina a voda sú v pláne distribúcie, s predpokladanou realizáciou vo februári – marci 2027\n🚗 rýchle napojenie na diaľnicu\n🏙️ Košice približne 10 minút\n🏙️ Prešov približne 15 minút\n🍔 nový McDonald’s v blízkom okolí\n\nIde o zaujímavú príležitosť pre tých, ktorí hľadajú pozemok v pokojnej lokalite s krásnym výhľadom a zároveň chcú zostať v rýchlej dostupnosti Košíc a Prešova.\n\n💰 Cena: 148 990 €\n\nPre viac informácií alebo dohodnutie obhliadky ma neváhajte kontaktovať: ...\n\nKlaudia Tomková",
    "listingTitle": "POZEMKY S KRÁSNYM VÝHĽADOM NA DOLINU – ŠARIŠSKÉ BOHDANOVCE",
-   "id": "sarisske-bohdanovce-980"
+   "id": "sarisske-bohdanovce-980",
+   "rating": "maybe",
+   "ratingAt": "2026-11-07T17:30:36.974Z",
+   "seenAt": "2026-11-07T17:30:28.720Z"
+  },
+  {
+   "village": "Svinica",
+   "title": "Rovinatý pozemok 1106 m² (rezervovaný)",
+   "direction": "V",
+   "minutes": 20,
+   "lat": 48.7303,
+   "lng": 21.4497,
+   "precise": false,
+   "parcel": null,
+   "cadastralArea": null,
+   "area": 1106,
+   "price": 77500,
+   "width": null,
+   "length": null,
+   "terrain": "rovina",
+   "utilities": {
+    "elektrina": true,
+    "kanalizacia": true,
+    "plyn": true,
+    "voda": true
+   },
+   "mainRoad": false,
+   "category": "stavebny",
+   "reserved": true,
+   "summary": "Rovinatý pozemok mimo hlavnej cesty, všetky siete pred pozemkom, nízka cena (70 €/m²). Na pozemku je stavba bez súpisného čísla, ktorú majiteľ odstráni; momentálne REZERVOVANÝ, RK MYRA.",
+   "links": [
+    {
+     "portal": "Nehnuteľnosti.sk",
+     "url": "https://www.nehnutelnosti.sk/detail/Ju70uSdtTap/stavebny-pozemok-v-obci-svinica"
+    }
+   ],
+   "photoUrl": "https://www.nehnutelnosti.sk/detail/Ju70uSdtTap/stavebny-pozemok-v-obci-svinica",
+   "imageUrl": null,
+   "firstSeen": "2026-11-08T06:03:00+01:00",
+   "lastSeen": "2026-11-08T06:03:00+01:00",
+   "priceHistory": [
+    {
+     "date": "2026-11-08",
+     "price": 77500
+    }
+   ],
+   "gone": false,
+   "source": "rk",
+   "utilDetail": {
+    "elektrina": "v dosahu",
+    "kanalizacia": "v dosahu",
+    "plyn": "v dosahu",
+    "voda": "v dosahu"
+   },
+   "shape": null,
+   "access": null,
+   "permit": null,
+   "project": null,
+   "upOk": null,
+   "agent": "MYRA. Košice",
+   "multi": null,
+   "id": "svinica-1106"
   },
   {
    "village": "Trebejov",
