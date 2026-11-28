@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T05:26:22.076949+00:00",
+ "generated": "2026-11-28T05:51:59.608612+00:00",
  "settings": {
   "directions": {
    "J": {
@@ -111,15 +111,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": null,
    "access": "spevnená cesta",
@@ -127,7 +127,7 @@
    "project": null,
    "upOk": true,
    "agent": "Realitné kancelárie SR",
-   "published": "2026-11-23",
+   "published": "2026-11-27",
    "multi": null,
    "kind": "stavebný",
    "firstPublished": "2026-10-02",
@@ -182,15 +182,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 13,
-    "status": "overený"
+    "photos": 13
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -238,12 +238,12 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "chybný",
+    "at": "2026-11-28",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0,
-    "status": "chybný"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -261,8 +261,8 @@
    "cadastralArea": null,
    "area": 983,
    "price": 35000,
-   "width": 19,
-   "length": 51,
+   "width": 19.0,
+   "length": 51.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -296,14 +296,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 12,
-    "status": "overený"
+    "photos": 12
    },
    "utilDetail": {
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "kanalizacia": "v dosahu"
    },
    "shape": null,
    "access": null,
@@ -364,10 +364,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 11,
-    "status": "overený"
+    "photos": 11
    },
    "utilDetail": {
     "elektrina": "v dosahu"
@@ -430,16 +430,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
     "kanalizacia": "v dosahu",
-    "plyn": "v dosahu",
-    "voda": "v dosahu"
+    "plyn": "v dosahu"
    },
    "shape": "úzky pás",
    "access": null,
@@ -495,12 +495,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -526,7 +526,7 @@
    "area": 564,
    "price": 124900,
    "width": 16.5,
-   "length": 35,
+   "length": 35.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -655,17 +655,17 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "na pozemku",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "optika": "na pozemku",
     "plyn": "na pozemku",
-    "voda": "spomenutá"
+    "optika": "na pozemku"
    },
    "street": "tichá časť",
    "agent": "KOVPLUS, s.r.o.",
@@ -692,8 +692,8 @@
    "cadastralArea": null,
    "area": 657,
    "price": 135000,
-   "width": 25,
-   "length": 26,
+   "width": 25.0,
+   "length": 26.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -724,16 +724,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 7,
-    "status": "overený"
+    "photos": 7
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "optika": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "shape": "pravidelný",
    "access": null,
@@ -764,8 +764,8 @@
    "precise": true,
    "area": 691,
    "price": 124800,
-   "width": 19,
-   "length": 36,
+   "width": 19.0,
+   "length": 36.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -801,16 +801,16 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "optika": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "access": "asfaltová cesta",
    "agent": "RECLOUD Reality a.s.",
@@ -867,15 +867,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 15,
-    "status": "overený"
+    "photos": 15
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -938,15 +938,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "žumpa",
-    "voda": "spomenutá"
+    "kanalizacia": "žumpa"
    },
    "shape": null,
    "access": "asfaltová cesta",
@@ -979,8 +979,8 @@
    "cadastralArea": null,
    "area": 810,
    "price": null,
-   "width": 13,
-   "length": 63,
+   "width": 13.0,
+   "length": 63.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1009,10 +1009,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
     "elektrina": "na pozemku",
@@ -1069,14 +1069,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -1104,8 +1104,8 @@
    "cadastralArea": null,
    "area": 542,
    "price": 75000,
-   "width": 19,
-   "length": 25,
+   "width": 19.0,
+   "length": 25.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -1142,15 +1142,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 11,
-    "status": "overený"
+    "photos": 11
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "kanalizacia": "v dosahu"
    },
    "shape": "pravidelný",
    "access": "nespevnená cesta",
@@ -1179,8 +1179,8 @@
    "cadastralArea": null,
    "area": 543,
    "price": 65900,
-   "width": 15,
-   "length": 37,
+   "width": 15.0,
+   "length": 37.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1224,16 +1224,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "optika": "na pozemku",
     "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -1293,14 +1293,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "agent": "RR reality, s. r. o.",
    "published": "2026-11-22",
@@ -1326,8 +1326,8 @@
    "cadastralArea": null,
    "area": 726,
    "price": 95000,
-   "width": 19,
-   "length": 72,
+   "width": 19.0,
+   "length": 72.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -1360,15 +1360,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 11,
-    "status": "overený"
+    "photos": 11
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "kanalizacia": "v dosahu"
    },
    "shape": "nepravidelný",
    "access": "nespevnená cesta",
@@ -1396,8 +1396,8 @@
    "precise": true,
    "area": 824,
    "price": 90000,
-   "width": 21,
-   "length": 33,
+   "width": 21.0,
+   "length": 33.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -1429,19 +1429,19 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá",
-    "voda": "spomenutá"
+    "kanalizacia": "spomenutá"
    },
    "street": "tichá časť",
    "agent": "ARCHEUS Partners a.s.",
-   "published": "2026-11-20",
+   "published": "2026-11-27",
    "kind": "stavebný",
    "firstPublished": "2022-09-26",
    "locSource": "inzerát (±200 m)",
@@ -1495,16 +1495,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 1,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -1581,24 +1581,24 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 19,
-    "status": "overený"
+    "photos": 19
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
-    "optika": "spomenutá",
     "plyn": "na pozemku",
-    "voda": "spomenutá"
+    "optika": "spomenutá"
    },
    "shape": "nepravidelný",
    "street": "slepá ulica",
    "permit": true,
    "project": true,
    "agent": "ADOMIS, realitná spoločnosť",
-   "published": "2026-11-20",
+   "published": "2026-11-27",
    "kind": "stavebný",
    "firstPublished": "2026-07-28",
    "locSource": "stred obce",
@@ -1621,8 +1621,8 @@
    "cadastralArea": null,
    "area": 505,
    "price": 75750,
-   "width": 15,
-   "length": 34,
+   "width": 15.0,
+   "length": 34.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1650,14 +1650,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "shape": "pravidelný",
    "street": "tichá časť",
@@ -1686,8 +1686,8 @@
    "cadastralArea": null,
    "area": 549,
    "price": 82350,
-   "width": 17,
-   "length": 41,
+   "width": 17.0,
+   "length": 41.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1715,14 +1715,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "upOk": true,
    "agent": "CassaReal s.r.o.",
@@ -1749,8 +1749,8 @@
    "cadastralArea": null,
    "area": 603,
    "price": 90450,
-   "width": 14,
-   "length": 45,
+   "width": 14.0,
+   "length": 45.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -1778,14 +1778,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "street": "tichá časť",
    "upOk": true,
@@ -1844,12 +1844,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "zrušený",
+    "at": "2026-11-28",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0,
-    "status": "zrušený"
+    "photos": 0
    },
    "utilDetail": {
     "elektrina": "v dosahu",
@@ -1913,15 +1913,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 14,
-    "status": "overený"
+    "photos": 14
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa",
-    "voda": "v dosahu"
+    "kanalizacia": "žumpa"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -1986,12 +1986,12 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [
      "odkazy uvádzajú rôzne výmery: 610 m², 700 m²"
     ],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {},
    "shape": null,
@@ -2048,10 +2048,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "street": "slepá ulica",
    "agent": "Finanzpartner reality",
@@ -2104,19 +2104,19 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 25,
-    "status": "overený"
+    "photos": 25
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "landType": "poľnohosp. pôda",
    "upOk": false,
    "agent": "Realitná kancelária",
-   "published": "2026-11-18",
+   "published": "2026-11-28",
    "kind": "poľnohospodársky",
    "kindNote": "v texte: poľnohospodársky, rekreačný",
    "firstPublished": "2026-10-16",
@@ -2170,15 +2170,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": null,
    "access": null,
@@ -2237,13 +2237,13 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "agent": "Realitné kancelárie Slovenska",
-   "published": "2026-11-25",
+   "published": "2026-11-27",
    "kind": "stavebný",
    "firstPublished": "2025-12-02",
    "locSource": "inzerát (±200 m)",
@@ -2296,14 +2296,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 7,
-    "status": "overený"
+    "photos": 7
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -2336,8 +2336,8 @@
    "cadastralArea": null,
    "area": 969,
    "price": 125000,
-   "width": 23,
-   "length": 42,
+   "width": 23.0,
+   "length": 42.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -2371,15 +2371,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "plyn": "spomenutá"
    },
    "shape": "pravidelný",
    "access": null,
@@ -2439,12 +2439,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -2500,15 +2500,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": null,
    "access": "spevnená cesta",
@@ -2573,16 +2573,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
     "kanalizacia": "v dosahu",
-    "plyn": "v dosahu",
-    "voda": "v dosahu"
+    "plyn": "v dosahu"
    },
    "shape": null,
    "access": "asfaltová cesta",
@@ -2642,12 +2642,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -2674,8 +2674,8 @@
    "cadastralArea": null,
    "area": 533,
    "price": 105000,
-   "width": 18,
-   "length": 30,
+   "width": 18.0,
+   "length": 30.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -2732,15 +2732,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -2768,8 +2768,8 @@
    "cadastralArea": null,
    "area": 511,
    "price": 60000,
-   "width": 22,
-   "length": 24,
+   "width": 22.0,
+   "length": 24.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -2805,17 +2805,17 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 22,
-    "status": "overený"
+    "photos": 22
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "v dosahu",
-    "optika": "v dosahu",
     "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "optika": "v dosahu"
    },
    "shape": null,
    "access": null,
@@ -2881,14 +2881,14 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 14,
-    "status": "overený"
+    "photos": 14
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -2954,17 +2954,17 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 11,
-    "status": "overený"
+    "photos": 11
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
+    "voda": "spomenutá",
     "kanalizacia": "spomenutá",
-    "optika": "spomenutá",
     "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "optika": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "shape": null,
    "access": "asfaltová cesta",
@@ -3028,20 +3028,20 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
-    "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "plyn": "spomenutá"
    },
    "permit": true,
    "upOk": true,
-   "published": "2026-11-06",
+   "published": "2026-11-27",
    "kind": "stavebný",
    "firstPublished": "2026-01-21",
    "locSource": "stred obce",
@@ -3096,10 +3096,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 1,
-    "status": "overený"
+    "photos": 1
    },
    "utilDetail": {
     "voda": "spomenutá"
@@ -3152,12 +3152,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -3187,12 +3187,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "chybný",
+    "at": "2026-11-28",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0,
-    "status": "chybný"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -3242,16 +3242,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "shape": "nepravidelný",
    "access": null,
@@ -3317,14 +3317,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "access": "spevnená cesta",
    "street": "tichá časť",
@@ -3349,8 +3349,8 @@
    "cadastralArea": null,
    "area": 520,
    "price": 94500,
-   "width": 20,
-   "length": 28,
+   "width": 20.0,
+   "length": 28.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -3382,14 +3382,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "access": "spevnená cesta",
    "project": true,
@@ -3418,8 +3418,8 @@
    "cadastralArea": null,
    "area": 521,
    "price": 96500,
-   "width": 18,
-   "length": 28,
+   "width": 18.0,
+   "length": 28.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -3448,14 +3448,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "shape": "pravidelný",
    "access": "spevnená cesta",
@@ -3515,10 +3515,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
     "voda": "spomenutá"
@@ -3568,12 +3568,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -3591,8 +3591,8 @@
    "cadastralArea": null,
    "area": 723,
    "price": 99900,
-   "width": 12,
-   "length": 36,
+   "width": 12.0,
+   "length": 36.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -3627,16 +3627,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 12,
-    "status": "overený"
+    "photos": 12
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
-    "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "plyn": "spomenutá"
    },
    "shape": "nepravidelný",
    "access": "asfaltová cesta",
@@ -3706,16 +3706,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 14,
-    "status": "overený"
+    "photos": 14
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
-    "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "plyn": "spomenutá"
    },
    "shape": null,
    "access": null,
@@ -3773,14 +3773,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "agent": "Diamond Reality",
    "published": "2026-11-25",
@@ -3830,12 +3830,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -3887,12 +3887,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "zrušený",
+    "at": "2026-11-28",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0,
-    "status": "zrušený"
+    "photos": 0
    },
    "locSource": "stred obce",
    "id": "kechnec-664",
@@ -3944,12 +3944,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "zrušený",
+    "at": "2026-11-28",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0,
-    "status": "zrušený"
+    "photos": 0
    },
    "utilDetail": {
     "elektrina": "na pozemku",
@@ -3983,8 +3983,8 @@
    "cadastralArea": null,
    "area": 664,
    "price": 166000,
-   "width": 21,
-   "length": 33,
+   "width": 21.0,
+   "length": 33.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -4013,14 +4013,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": "pravidelný",
    "access": null,
@@ -4081,10 +4081,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
     "voda": "nie je"
@@ -4151,15 +4151,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 1,
-    "status": "overený"
+    "photos": 1
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -4220,12 +4220,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -4284,16 +4284,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 12,
-    "status": "overený"
+    "photos": 12
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -4357,15 +4357,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 1,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -4423,15 +4423,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 1,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "spomenutá",
-    "voda": "na pozemku"
+    "kanalizacia": "spomenutá"
    },
    "agent": "VRK REAL PLUS, s.r.o.",
    "published": "2026-05-26",
@@ -4485,14 +4485,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -4557,14 +4557,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 16,
-    "status": "overený"
+    "photos": 16
    },
    "utilDetail": {
-    "elektrina": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "elektrina": "v dosahu"
    },
    "shape": "pravidelný",
    "access": null,
@@ -4629,12 +4629,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -4696,14 +4696,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "voda": "v dosahu",
+    "kanalizacia": "v dosahu"
    },
    "shape": null,
    "access": null,
@@ -4732,8 +4732,8 @@
    "cadastralArea": null,
    "area": 816,
    "price": 81600,
-   "width": 21,
-   "length": 46,
+   "width": 21.0,
+   "length": 46.0,
    "terrain": "rovina",
    "utilities": {},
    "mainRoad": null,
@@ -4759,10 +4759,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {},
    "shape": null,
@@ -4827,14 +4827,14 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
-    "kanalizacia": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "kanalizacia": "spomenutá"
    },
    "shape": "nepravidelný",
    "access": "nespevnená cesta",
@@ -4900,16 +4900,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "v dosahu",
-    "plyn": "v dosahu",
-    "voda": "na pozemku"
+    "plyn": "v dosahu"
    },
    "shape": "úzky pás",
    "access": null,
@@ -4966,12 +4966,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -4995,8 +4995,8 @@
    "cadastralArea": null,
    "area": 960,
    "price": 19500,
-   "width": 20,
-   "length": 48,
+   "width": 20.0,
+   "length": 48.0,
    "terrain": "rovina",
    "utilities": {},
    "mainRoad": false,
@@ -5030,10 +5030,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "shape": null,
    "access": "nespevnená cesta",
@@ -5102,15 +5102,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 12,
-    "status": "overený"
+    "photos": 12
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -5118,7 +5118,7 @@
    "project": null,
    "upOk": null,
    "agent": "Realitné kancelárie SR",
-   "published": "2026-11-22",
+   "published": "2026-11-27",
    "multi": false,
    "kind": "stavebný",
    "kindNote": "v texte: stavebný, rekreačný",
@@ -5175,14 +5175,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "shape": null,
    "access": null,
@@ -5242,12 +5242,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "utilDetail": null,
    "shape": null,
@@ -5303,12 +5303,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -5371,15 +5371,15 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "shape": "úzky pás",
    "access": null,
@@ -5408,7 +5408,7 @@
    "cadastralArea": null,
    "area": 1000,
    "price": 64800,
-   "width": 29,
+   "width": 29.0,
    "length": 34.49,
    "terrain": "svah",
    "utilities": {
@@ -5726,20 +5726,20 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 17,
-    "status": "overený"
+    "photos": 17
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "access": "asfaltová cesta",
    "upOk": true,
    "agent": "ADOMIS, realitná spoločnosť",
-   "published": "2026-11-20",
+   "published": "2026-11-27",
    "kind": "stavebný",
    "kindNote": "v texte: stavebný, rekreačný",
    "firstPublished": "2026-07-02",
@@ -5794,21 +5794,21 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 12,
-    "status": "overený"
+    "photos": 12
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "access": "asfaltová cesta",
    "street": "slepá ulica",
    "upOk": true,
    "agent": "ADOMIS, realitná spoločnosť",
-   "published": "2026-11-20",
+   "published": "2026-11-27",
    "kind": "stavebný",
    "kindNote": "v texte: stavebný, rekreačný",
    "firstPublished": "2026-07-28",
@@ -5863,12 +5863,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "zrušený",
+    "at": "2026-11-28",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0,
-    "status": "zrušený"
+    "photos": 0
    },
    "utilDetail": {
     "elektrina": "na pozemku",
@@ -5897,8 +5897,8 @@
    "cadastralArea": null,
    "area": 600,
    "price": 34999,
-   "width": 18,
-   "length": 34,
+   "width": 18.0,
+   "length": 34.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -5932,15 +5932,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "spomenutá"
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -5969,8 +5969,8 @@
    "cadastralArea": "Lemešany",
    "area": 717,
    "price": 53000,
-   "width": 26,
-   "length": 29,
+   "width": 26.0,
+   "length": 29.0,
    "terrain": null,
    "utilities": {
     "elektrina": false,
@@ -6001,10 +6001,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "shape": "pravidelný",
    "access": null,
@@ -6079,12 +6079,12 @@
    "goneReason": "nevidený 21+ dní",
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -6147,14 +6147,14 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
-    "kanalizacia": "žumpa",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "kanalizacia": "žumpa"
    },
    "shape": null,
    "access": null,
@@ -6225,12 +6225,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "shape": null,
    "access": null,
@@ -6287,16 +6287,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -6304,7 +6304,7 @@
    "project": null,
    "upOk": null,
    "agent": "Euro Real - SK, s.r.o.",
-   "published": "2026-11-19",
+   "published": "2026-11-27",
    "multi": false,
    "kind": "stavebný",
    "firstPublished": "2026-04-15",
@@ -6328,8 +6328,8 @@
    "cadastralArea": null,
    "area": 1191,
    "price": 78600,
-   "width": 20,
-   "length": 60,
+   "width": 20.0,
+   "length": 60.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -6371,15 +6371,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
     "plyn": "spomenutá",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": "úzky pás",
    "access": "asfaltová cesta",
@@ -6410,8 +6410,8 @@
    "cadastralArea": null,
    "area": 674,
    "price": 40440,
-   "width": 11,
-   "length": 60,
+   "width": 11.0,
+   "length": 60.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -6456,14 +6456,14 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": "úzky pás",
    "access": "asfaltová cesta",
@@ -6525,16 +6525,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 19,
-    "status": "overený"
+    "photos": 19
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "optika": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "access": "asfaltová cesta",
    "permit": true,
@@ -6598,15 +6598,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "plyn": "spomenutá"
    },
    "shape": null,
    "access": null,
@@ -6668,15 +6668,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 7,
-    "status": "overený"
+    "photos": 7
    },
    "utilDetail": {
-    "kanalizacia": "žumpa",
+    "voda": "na pozemku",
     "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": "nepravidelný",
    "access": "asfaltová cesta",
@@ -6726,12 +6726,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -6783,15 +6783,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa",
-    "voda": "v dosahu"
+    "kanalizacia": "žumpa"
    },
    "shape": "pravidelný",
    "access": null,
@@ -6860,17 +6860,17 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 7,
-    "status": "overený"
+    "photos": 7
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "optika": "na pozemku",
     "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -6936,12 +6936,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "utilDetail": {},
    "shape": null,
@@ -6969,8 +6969,8 @@
    "cadastralArea": null,
    "area": 905,
    "price": 89595,
-   "width": 22,
-   "length": 41,
+   "width": 22.0,
+   "length": 41.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -7012,16 +7012,16 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [
      "odkazy uvádzajú rôzne výmery: 1 m², 905 m²"
     ],
-    "photos": 7,
-    "status": "overený"
+    "photos": 7
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "na pozemku"
+    "voda": "na pozemku",
+    "elektrina": "na pozemku"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -7030,7 +7030,7 @@
    "project": false,
    "upOk": true,
    "agent": "bezmaklérov, s.r.o.",
-   "published": "2026-11-21",
+   "published": "2026-11-27",
    "multi": false,
    "kind": "stavebný",
    "firstPublished": "2026-05-22",
@@ -7100,21 +7100,21 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 1,
-    "status": "overený"
+    "photos": 1
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "kanalizacia": "spomenutá",
-    "optika": "spomenutá",
-    "voda": "spomenutá"
+    "optika": "spomenutá"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
    "street": "tichá časť",
    "agent": "ADOMIS, realitná spoločnosť",
-   "published": "2026-11-20",
+   "published": "2026-11-27",
    "kind": "stavebný",
    "firstPublished": "2026-07-27",
    "locSource": "stred obce",
@@ -7134,8 +7134,8 @@
    "cadastralArea": null,
    "area": 823,
    "price": 87900,
-   "width": 22,
-   "length": 38,
+   "width": 22.0,
+   "length": 38.0,
    "terrain": "rovina",
    "utilities": {},
    "mainRoad": null,
@@ -7168,10 +7168,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "agent": "ELI REAL realitná kancelária",
    "published": "2026-11-26",
@@ -7254,16 +7254,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 1,
-    "status": "overený"
+    "photos": 1
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "optika": "v dosahu",
     "plyn": "v dosahu",
-    "voda": "v dosahu"
+    "optika": "v dosahu"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -7321,17 +7321,17 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 13,
-    "status": "overený"
+    "photos": 13
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "agent": "ADOMIS, realitná spoločnosť",
-   "published": "2026-11-20",
+   "published": "2026-11-27",
    "kind": "rekreačný",
    "firstPublished": "2026-06-24",
    "locSource": "stred obce",
@@ -7351,8 +7351,8 @@
    "cadastralArea": null,
    "area": 695,
    "price": 29990,
-   "width": 7,
-   "length": 97,
+   "width": 7.0,
+   "length": 97.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -7384,14 +7384,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "access": "nespevnená cesta",
    "street": "tichá časť",
@@ -7449,15 +7449,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": "štvorcový",
    "access": null,
@@ -7516,12 +7516,12 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "utilDetail": {},
    "shape": null,
@@ -7579,16 +7579,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 14,
-    "status": "overený"
+    "photos": 14
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "plyn": "v dosahu",
-    "voda": "v dosahu"
+    "plyn": "v dosahu"
    },
    "shape": null,
    "access": "asfaltová cesta",
@@ -7649,14 +7649,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "street": "tichá časť",
    "agent": "TOBI Real s.r.o.",
@@ -7676,8 +7676,8 @@
    "title": "Stavebný pozemok pri lese, Nováčany 621 m²",
    "direction": "Z",
    "minutes": 20,
-   "lat": 48.662,
-   "lng": 21.093,
+   "lat": 48.689579,
+   "lng": 21.072076,
    "precise": false,
    "parcel": null,
    "cadastralArea": null,
@@ -7709,6 +7709,14 @@
    ],
    "gone": false,
    "source": "bazos-email",
+   "check": {
+    "status": "neoverený",
+    "at": "2026-11-28",
+    "issues": [
+     "len Bazoš – údaje neoverené z detailu"
+    ],
+    "photos": 0
+   },
    "utilDetail": {},
    "shape": null,
    "access": null,
@@ -7717,6 +7725,7 @@
    "upOk": null,
    "agent": null,
    "multi": null,
+   "locSource": "stred obce",
    "id": "novacany-621"
   },
   {
@@ -7757,10 +7766,10 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "street": "tichá časť",
    "agent": "JKV REAL",
@@ -7820,12 +7829,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "zrušený",
+    "at": "2026-11-28",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0,
-    "status": "zrušený"
+    "photos": 0
    },
    "utilDetail": {
     "elektrina": "na pozemku",
@@ -7885,12 +7894,12 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "chybný",
+    "at": "2026-11-28",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0,
-    "status": "chybný"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -7951,15 +7960,15 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 16,
-    "status": "overený"
+    "photos": 16
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "žumpa",
-    "voda": "v dosahu"
+    "kanalizacia": "žumpa"
    },
    "street": "tichá časť",
    "agent": "RECLOUD Reality a.s.",
@@ -7986,7 +7995,7 @@
    "cadastralArea": null,
    "area": 502,
    "price": 104990,
-   "width": 17,
+   "width": 17.0,
    "length": 29.5,
    "terrain": "rovina",
    "utilities": {
@@ -8020,14 +8029,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 27,
-    "status": "overený"
+    "photos": 27
    },
    "utilDetail": {
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -8092,10 +8101,10 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 11,
-    "status": "overený"
+    "photos": 11
    },
    "street": "tichá časť",
    "agent": "Reality s VAMI s.r.o.",
@@ -8148,10 +8157,10 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 7,
-    "status": "overený"
+    "photos": 7
    },
    "upOk": true,
    "agent": "Realitné kancelárie",
@@ -8210,16 +8219,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -8252,8 +8261,8 @@
    "cadastralArea": null,
    "area": 1006,
    "price": 75450,
-   "width": 25,
-   "length": 41,
+   "width": 25.0,
+   "length": 41.0,
    "terrain": "mierny svah",
    "utilities": {},
    "mainRoad": null,
@@ -8294,10 +8303,10 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "upOk": true,
    "agent": "Invest & Real realitná spoločnosť s. r. o.",
@@ -8356,15 +8365,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 18,
-    "status": "overený"
+    "photos": 18
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": "úzky pás",
    "access": null,
@@ -8423,15 +8432,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá",
-    "voda": "spomenutá"
+    "kanalizacia": "spomenutá"
    },
    "street": "tichá časť",
    "project": true,
@@ -8490,15 +8499,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
-    "kanalizacia": "v dosahu",
-    "voda": "v dosahu"
+    "kanalizacia": "v dosahu"
    },
    "shape": null,
    "access": "asfaltová cesta",
@@ -8548,12 +8557,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "chybný",
+    "at": "2026-11-28",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0,
-    "status": "chybný"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -8603,15 +8612,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 12,
-    "status": "overený"
+    "photos": 12
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "spomenutá"
+    "kanalizacia": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -8655,12 +8664,12 @@
    "priceHistory": [],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "chybný",
+    "at": "2026-11-28",
     "issues": [
      "žiadny odkaz nevedie na konkrétny inzerát"
     ],
-    "photos": 0,
-    "status": "chybný"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -8676,8 +8685,8 @@
    "precise": true,
    "area": 876,
    "price": 179900,
-   "width": 25,
-   "length": 35,
+   "width": 25.0,
+   "length": 35.0,
    "terrain": "rovina",
    "utilities": {
     "elektrina": true,
@@ -8709,16 +8718,16 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 18,
-    "status": "overený"
+    "photos": 18
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "access": "asfaltová cesta",
    "agent": "Reality s VAMI s.r.o.",
@@ -8745,8 +8754,8 @@
    "cadastralArea": null,
    "area": 603,
    "price": 93000,
-   "width": 20,
-   "length": 29,
+   "width": 20.0,
+   "length": 29.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -8775,14 +8784,14 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 4,
-    "status": "overený"
+    "photos": 4
    },
    "utilDetail": {
-    "elektrina": "na pozemku",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "na pozemku"
    },
    "access": "spevnená cesta",
    "street": "tichá časť",
@@ -8845,18 +8854,18 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [
      "poloha z portálu je 5638 km od obce Sady nad Torysou (Byster) – použitý stred obce"
     ],
-    "photos": 10,
-    "status": "overený"
+    "photos": 10
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "spomenutá",
-    "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "plyn": "spomenutá"
    },
    "shape": null,
    "access": "spevnená cesta",
@@ -8916,12 +8925,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "zrušený",
+    "at": "2026-11-28",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0,
-    "status": "zrušený"
+    "photos": 0
    },
    "locSource": "stred obce",
    "id": "sady-nad-torysou-932"
@@ -8965,12 +8974,12 @@
    "gone": false,
    "source": "ručne",
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "locSource": "stred obce",
    "id": "sarisske-bohdanovce-197216051",
@@ -9022,14 +9031,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 19,
-    "status": "overený"
+    "photos": 19
    },
    "utilDetail": {
-    "optika": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "optika": "spomenutá"
    },
    "shape": "pravidelný",
    "access": "asfaltová cesta",
@@ -9037,7 +9046,7 @@
    "project": null,
    "upOk": true,
    "agent": "ADOMIS, realitná spoločnosť",
-   "published": "2026-11-20",
+   "published": "2026-11-27",
    "multi": null,
    "kind": "stavebný",
    "firstPublished": "2026-06-04",
@@ -9097,14 +9106,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 20,
-    "status": "overený"
+    "photos": 20
    },
    "utilDetail": {
-    "optika": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "optika": "spomenutá"
    },
    "shape": null,
    "access": "asfaltová cesta",
@@ -9173,17 +9182,17 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 25,
-    "status": "overený"
+    "photos": 25
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "optika": "spomenutá",
     "plyn": "spomenutá",
-    "voda": "spomenutá"
+    "optika": "spomenutá"
    },
    "shape": "štvorcový",
    "access": "asfaltová cesta",
@@ -9249,15 +9258,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 13,
-    "status": "overený"
+    "photos": 13
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "spomenutá"
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": null,
    "access": null,
@@ -9323,14 +9332,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 9,
-    "status": "overený"
+    "photos": 9
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "shape": "nepravidelný",
    "access": "nespevnená cesta",
@@ -9400,17 +9409,17 @@
    "gone": false,
    "source": "bazos-email",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "spomenutá",
     "kanalizacia": "žumpa / bez kanalizácie",
-    "optika": "na pozemku",
     "plyn": "v dosahu",
-    "voda": "na pozemku"
+    "optika": "na pozemku"
    },
    "shape": "nepravidelný",
    "access": null,
@@ -9419,7 +9428,7 @@
    "project": null,
    "upOk": true,
    "agent": "Realitná kancelária",
-   "published": "2026-11-20",
+   "published": "2026-11-28",
    "multi": null,
    "kind": "stavebný",
    "firstPublished": "2026-11-20",
@@ -9471,14 +9480,14 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 2,
-    "status": "overený"
+    "photos": 2
    },
    "utilDetail": {
-    "elektrina": "spomenutá",
-    "voda": "spomenutá"
+    "voda": "spomenutá",
+    "elektrina": "spomenutá"
    },
    "shape": null,
    "access": null,
@@ -9542,16 +9551,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -9584,8 +9593,8 @@
    "cadastralArea": null,
    "area": 1000,
    "price": 120000,
-   "width": 15,
-   "length": 60,
+   "width": 15.0,
+   "length": 60.0,
    "terrain": null,
    "utilities": {
     "elektrina": true,
@@ -9620,16 +9629,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 8,
-    "status": "overený"
+    "photos": 8
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "na pozemku",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "shape": null,
    "access": "asfaltová cesta",
@@ -9681,12 +9690,12 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -9732,15 +9741,15 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 3,
-    "status": "overený"
+    "photos": 3
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "spomenutá",
-    "voda": "spomenutá"
+    "kanalizacia": "spomenutá"
    },
    "access": "asfaltová cesta",
    "street": "tichá časť",
@@ -9803,15 +9812,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "spomenutá"
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": null,
    "access": "asfaltová cesta",
@@ -9872,12 +9881,12 @@
    "goneReason": "inzerát stiahnutý z portálu",
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "zrušený",
+    "at": "2026-11-28",
     "issues": [
      "inzerát už na portáli nie je"
     ],
-    "photos": 0,
-    "status": "zrušený"
+    "photos": 0
    },
    "utilDetail": null,
    "shape": null,
@@ -9945,17 +9954,15 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
-    "issues": [
-     "cena podľa inzerátu 130 000 € (bolo 135 000 €)"
-    ],
-    "photos": 8,
-    "status": "overený"
+    "status": "overený",
+    "at": "2026-11-28",
+    "issues": [],
+    "photos": 8
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "na pozemku",
-    "voda": "na pozemku"
+    "kanalizacia": "na pozemku"
    },
    "shape": "nepravidelný",
    "access": null,
@@ -9969,7 +9976,7 @@
    "kind": "stavebný",
    "firstPublished": "2026-09-01",
    "locSource": "inzerát (±200 m)",
-   "description": "Realitná kancelária MH Real Vám ponúka na predaj stavebný pozemok v obci Vajkovce.\n\nRovinatý pozemok v tvare trojuholníka o rozlohe 512 m² sa nachádza v okrajovej časti obce, je komplet oplotený, uzatvorený bránkou a bránou oplotenia.\n\nNa pozemku bol postavený RD o rozlohe 137 m² - zastavaná plocha a nádvoria. Zastavanosť územia, podľa územného plánu obce je max. 30 % z plochy pozemku.\n\nInžinierske siete: nové prípojky r. 2026 - elektrina, obecná voda a kanalizácia.\n\nObec Vajkovce je vzdialená iba 10 km od Košíc a 3 km od diaľničného privádzača. Občianska vybavenosť: materská škôlka, potraviny, multifunkčné ihrisko, kostoly. Základná škola roč. 1-9 v susednej obci Budimír (školský spoj SAD).\n\nV cene je zahrnutá sprostredkovateľská provízia a kompletný servis vrátane vypracovania zmlúv advokátskou kanceláriou. V prípade záujmu, Vám radi pomôžeme s možnosťou financovania prostredníctvom HÚ.\n\nPre bližšie informácie a dojednanie obhliadky nás kontaktujte na tel. čísle ...\nM. Hrehorová.",
+   "description": "Realitná kancelária MH Real Vám ponúka na predaj stavebný pozemok v obci Vajkovce.\n\nRovinatý pozemok o rozlohe 512 m² sa nachádza v okrajovej časti obce, je komplet oplotený, uzatvorený bránkou a bránou oplotenia.\n\nNa pozemku bol postavený RD o rozlohe 137 m² - zastavaná plocha a nádvoria. Zastavanosť územia, podľa územného plánu obce je max. 30 % z plochy pozemku.\n\nInžinierske siete: nové prípojky r. 2026 - elektrina, obecná voda a kanalizácia.\n\nObec Vajkovce je vzdialená iba 10 km od Košíc a 3 km od diaľničného privádzača. Občianska vybavenosť: materská škôlka, potraviny, multifunkčné ihrisko, kostoly. Základná škola roč. 1-9 v susednej obci Budimír (školský spoj SAD).\n\nV cene je zahrnutá sprostredkovateľská provízia a kompletný servis vrátane vypracovania zmlúv advokátskou kanceláriou. V prípade záujmu, Vám radi pomôžeme s možnosťou financovania prostredníctvom HÚ.\n\nPre bližšie informácie a dojednanie obhliadky nás kontaktujte na tel. čísle ...\nM. Hrehorová.",
    "listingTitle": "VAJKOVCE rovinatý stavebný pozemok iba 10 km od Košíc",
    "id": "vajkovce-512",
    "rating": "no",
@@ -10019,16 +10026,16 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 5,
-    "status": "overený"
+    "photos": 5
    },
    "utilDetail": {
+    "voda": "v dosahu",
     "elektrina": "v dosahu",
     "kanalizacia": "v dosahu",
-    "plyn": "v dosahu",
-    "voda": "v dosahu"
+    "plyn": "v dosahu"
    },
    "agent": "Realitné kancelárie SR",
    "published": "2026-11-22",
@@ -10075,12 +10082,12 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "neoverený",
+    "at": "2026-11-28",
     "issues": [
      "len Bazoš – údaje neoverené z detailu"
     ],
-    "photos": 0,
-    "status": "neoverený"
+    "photos": 0
    },
    "invalid": true,
    "locSource": "stred obce",
@@ -10129,15 +10136,15 @@
    ],
    "gone": false,
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "spomenutá",
     "elektrina": "spomenutá",
-    "kanalizacia": "na pozemku",
-    "voda": "spomenutá"
+    "kanalizacia": "na pozemku"
    },
    "access": "asfaltová cesta",
    "upOk": true,
@@ -10201,16 +10208,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 20,
-    "status": "overený"
+    "photos": 20
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
     "kanalizacia": "spomenutá",
-    "plyn": "na pozemku",
-    "voda": "na pozemku"
+    "plyn": "na pozemku"
    },
    "shape": null,
    "access": null,
@@ -10270,15 +10277,15 @@
    "gone": false,
    "source": "web",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa / bez kanalizácie",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa / bez kanalizácie"
    },
    "shape": null,
    "access": null,
@@ -10310,7 +10317,7 @@
    "area": 725,
    "price": 99900,
    "width": 14.5,
-   "length": 50,
+   "length": 50.0,
    "terrain": "mierny svah",
    "utilities": {
     "elektrina": true,
@@ -10341,16 +10348,16 @@
    "gone": false,
    "source": "rk",
    "check": {
-    "at": "2026-11-27",
+    "status": "overený",
+    "at": "2026-11-28",
     "issues": [],
-    "photos": 6,
-    "status": "overený"
+    "photos": 6
    },
    "utilDetail": {
+    "voda": "na pozemku",
     "elektrina": "na pozemku",
-    "kanalizacia": "žumpa",
     "plyn": "spomenutá",
-    "voda": "na pozemku"
+    "kanalizacia": "žumpa"
    },
    "shape": "pravidelný",
    "access": null,
